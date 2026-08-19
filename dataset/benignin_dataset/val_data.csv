@@ -1,0 +1,1201 @@
+response,instructions,context,combined_column,combined_column_len
+SELECT to_par FROM table_name_70 WHERE score = 68 - 74 - 69 = 211,What was the to par that goes with the score 68-74-69=211?,"CREATE TABLE table_name_70 (to_par VARCHAR, score VARCHAR)","Instructions: What was the to par that goes with the score 68-74-69=211?
+Context: CREATE TABLE table_name_70 (to_par VARCHAR, score VARCHAR)
+Response: SELECT to_par FROM table_name_70 WHERE score = 68 - 74 - 69 = 211",216
+SELECT name FROM user_profiles WHERE email LIKE '%superstar%' OR email LIKE '%edu%',Find the names of users whose emails contain ‘superstar’ or ‘edu’.,"CREATE TABLE user_profiles (name VARCHAR, email VARCHAR)","Instructions: Find the names of users whose emails contain ‘superstar’ or ‘edu’.
+Context: CREATE TABLE user_profiles (name VARCHAR, email VARCHAR)
+Response: SELECT name FROM user_profiles WHERE email LIKE '%superstar%' OR email LIKE '%edu%'",240
+"SELECT date FROM table_name_52 WHERE away_team = ""southampton""",What is the date southampton was the away team?,"CREATE TABLE table_name_52 (date VARCHAR, away_team VARCHAR)","Instructions: What is the date southampton was the away team?
+Context: CREATE TABLE table_name_52 (date VARCHAR, away_team VARCHAR)
+Response: SELECT date FROM table_name_52 WHERE away_team = ""southampton""",204
+"SELECT to_par FROM table_name_79 WHERE place = ""t8"" AND score = 72 - 70 - 66 = 208",What is the To par of the T8 Place Player with a Score of 72-70-66=208?,"CREATE TABLE table_name_79 (to_par VARCHAR, place VARCHAR, score VARCHAR)","Instructions: What is the To par of the T8 Place Player with a Score of 72-70-66=208?
+Context: CREATE TABLE table_name_79 (to_par VARCHAR, place VARCHAR, score VARCHAR)
+Response: SELECT to_par FROM table_name_79 WHERE place = ""t8"" AND score = 72 - 70 - 66 = 208",261
+"SELECT 1998 FROM table_name_65 WHERE 2002 = ""2–4""",Which 1998 has a 2002 of 2–4?,CREATE TABLE table_name_65 (Id VARCHAR),"Instructions: Which 1998 has a 2002 of 2–4?
+Context: CREATE TABLE table_name_65 (Id VARCHAR)
+Response: SELECT 1998 FROM table_name_65 WHERE 2002 = ""2–4""",152
+"SELECT player FROM table_11734041_1 WHERE school_club_team_country = ""Australia""",What was the player name who came from Australia?,"CREATE TABLE table_11734041_1 (player VARCHAR, school_club_team_country VARCHAR)","Instructions: What was the player name who came from Australia?
+Context: CREATE TABLE table_11734041_1 (player VARCHAR, school_club_team_country VARCHAR)
+Response: SELECT player FROM table_11734041_1 WHERE school_club_team_country = ""Australia""",244
+"SELECT position FROM table_23619005_3 WHERE cfl_team = ""Saskatchewan Roughriders""",What was the position of the player from Saskatchewan Roughriders?,"CREATE TABLE table_23619005_3 (position VARCHAR, cfl_team VARCHAR)","Instructions: What was the position of the player from Saskatchewan Roughriders?
+Context: CREATE TABLE table_23619005_3 (position VARCHAR, cfl_team VARCHAR)
+Response: SELECT position FROM table_23619005_3 WHERE cfl_team = ""Saskatchewan Roughriders""",248
+"SELECT dish FROM table_name_46 WHERE official_website = ""ksat.com""",Which dish belongs to the network that has the official website of ksat.com?,"CREATE TABLE table_name_46 (dish VARCHAR, official_website VARCHAR)","Instructions: Which dish belongs to the network that has the official website of ksat.com?
+Context: CREATE TABLE table_name_46 (dish VARCHAR, official_website VARCHAR)
+Response: SELECT dish FROM table_name_46 WHERE official_website = ""ksat.com""",244
+"SELECT to_club FROM table_name_52 WHERE transfer_fee = ""free"" AND pos = ""df""",What club received a DF player for free?,"CREATE TABLE table_name_52 (to_club VARCHAR, transfer_fee VARCHAR, pos VARCHAR)","Instructions: What club received a DF player for free?
+Context: CREATE TABLE table_name_52 (to_club VARCHAR, transfer_fee VARCHAR, pos VARCHAR)
+Response: SELECT to_club FROM table_name_52 WHERE transfer_fee = ""free"" AND pos = ""df""",230
+"SELECT MIN(production_code) FROM table_2818164_5 WHERE no_in_series = ""96""",What is the production code for episode 96 in the series?,"CREATE TABLE table_2818164_5 (production_code INTEGER, no_in_series VARCHAR)","Instructions: What is the production code for episode 96 in the series?
+Context: CREATE TABLE table_2818164_5 (production_code INTEGER, no_in_series VARCHAR)
+Response: SELECT MIN(production_code) FROM table_2818164_5 WHERE no_in_series = ""96""",242
+SELECT position FROM table_name_9 WHERE round > 6 AND overall = 191,"WHAT IS THE POSITION WITH A ROUND LARGER THAN 6, AND OVERALL OF 191?","CREATE TABLE table_name_9 (position VARCHAR, round VARCHAR, overall VARCHAR)","Instructions: WHAT IS THE POSITION WITH A ROUND LARGER THAN 6, AND OVERALL OF 191?
+Context: CREATE TABLE table_name_9 (position VARCHAR, round VARCHAR, overall VARCHAR)
+Response: SELECT position FROM table_name_9 WHERE round > 6 AND overall = 191",246
+"SELECT leading_scorer FROM table_name_59 WHERE visitor = ""celtics""",What is the leading scorer of the game with the Celtics as the visiting team?,"CREATE TABLE table_name_59 (leading_scorer VARCHAR, visitor VARCHAR)","Instructions: What is the leading scorer of the game with the Celtics as the visiting team?
+Context: CREATE TABLE table_name_59 (leading_scorer VARCHAR, visitor VARCHAR)
+Response: SELECT leading_scorer FROM table_name_59 WHERE visitor = ""celtics""",246
+SELECT COUNT(_percentage_of_popular_vote) FROM table_19769687_3 WHERE _number_of_seats_won = 83,Name the total number for % popular vote for # of seats won for 83,"CREATE TABLE table_19769687_3 (_percentage_of_popular_vote VARCHAR, _number_of_seats_won VARCHAR)","Instructions: Name the total number for % popular vote for # of seats won for 83
+Context: CREATE TABLE table_19769687_3 (_percentage_of_popular_vote VARCHAR, _number_of_seats_won VARCHAR)
+Response: SELECT COUNT(_percentage_of_popular_vote) FROM table_19769687_3 WHERE _number_of_seats_won = 83",293
+SELECT MIN(attendance) FROM table_name_88 WHERE week = 15,What's the lowest attendance recorded for week 15?,"CREATE TABLE table_name_88 (attendance INTEGER, week VARCHAR)","Instructions: What's the lowest attendance recorded for week 15?
+Context: CREATE TABLE table_name_88 (attendance INTEGER, week VARCHAR)
+Response: SELECT MIN(attendance) FROM table_name_88 WHERE week = 15",203
+"SELECT place FROM table_name_93 WHERE building = ""victoria hall""",Name the place with building of victoria hall,"CREATE TABLE table_name_93 (place VARCHAR, building VARCHAR)","Instructions: Name the place with building of victoria hall
+Context: CREATE TABLE table_name_93 (place VARCHAR, building VARCHAR)
+Response: SELECT place FROM table_name_93 WHERE building = ""victoria hall""",204
+"SELECT COUNT(overall) FROM table_name_6 WHERE college = ""wyoming""",What is the overall number for the College of Wyoming?,"CREATE TABLE table_name_6 (overall VARCHAR, college VARCHAR)","Instructions: What is the overall number for the College of Wyoming?
+Context: CREATE TABLE table_name_6 (overall VARCHAR, college VARCHAR)
+Response: SELECT COUNT(overall) FROM table_name_6 WHERE college = ""wyoming""",214
+SELECT MAX(no_in_series) FROM table_19897294_4,How many series are there total?,CREATE TABLE table_19897294_4 (no_in_series INTEGER),"Instructions: How many series are there total?
+Context: CREATE TABLE table_19897294_4 (no_in_series INTEGER)
+Response: SELECT MAX(no_in_series) FROM table_19897294_4",165
+"SELECT original_artist FROM table_15383430_1 WHERE theme = ""Year They Were Born""",The theme year they were born belongs to what artist?,"CREATE TABLE table_15383430_1 (original_artist VARCHAR, theme VARCHAR)","Instructions: The theme year they were born belongs to what artist?
+Context: CREATE TABLE table_15383430_1 (original_artist VARCHAR, theme VARCHAR)
+Response: SELECT original_artist FROM table_15383430_1 WHERE theme = ""Year They Were Born""",238
+SELECT COUNT(runner_up) FROM table_18828487_1 WHERE year = 2009,"In 2009, how many were runner-up?","CREATE TABLE table_18828487_1 (runner_up VARCHAR, year VARCHAR)","Instructions: In 2009, how many were runner-up?
+Context: CREATE TABLE table_18828487_1 (runner_up VARCHAR, year VARCHAR)
+Response: SELECT COUNT(runner_up) FROM table_18828487_1 WHERE year = 2009",194
+SELECT incumbent FROM table_19753079_8 WHERE first_elected = 2009,What incumbent was first elected in 2009?,"CREATE TABLE table_19753079_8 (incumbent VARCHAR, first_elected VARCHAR)","Instructions: What incumbent was first elected in 2009?
+Context: CREATE TABLE table_19753079_8 (incumbent VARCHAR, first_elected VARCHAR)
+Response: SELECT incumbent FROM table_19753079_8 WHERE first_elected = 2009",213
+"SELECT home_team FROM table_name_19 WHERE away_team = ""south melbourne""",What home team did South Melbourne play as the away team?,"CREATE TABLE table_name_19 (home_team VARCHAR, away_team VARCHAR)","Instructions: What home team did South Melbourne play as the away team?
+Context: CREATE TABLE table_name_19 (home_team VARCHAR, away_team VARCHAR)
+Response: SELECT home_team FROM table_name_19 WHERE away_team = ""south melbourne""",228
+"SELECT tie_no FROM table_name_73 WHERE away_team = ""lewes""",What is the tie number when the away team is Lewes?,"CREATE TABLE table_name_73 (tie_no VARCHAR, away_team VARCHAR)","Instructions: What is the tie number when the away team is Lewes?
+Context: CREATE TABLE table_name_73 (tie_no VARCHAR, away_team VARCHAR)
+Response: SELECT tie_no FROM table_name_73 WHERE away_team = ""lewes""",206
+"SELECT date FROM table_name_98 WHERE opponent = ""vfl sindelfingen""",What date was the opponent VFL Sindelfingen?,"CREATE TABLE table_name_98 (date VARCHAR, opponent VARCHAR)","Instructions: What date was the opponent VFL Sindelfingen?
+Context: CREATE TABLE table_name_98 (date VARCHAR, opponent VARCHAR)
+Response: SELECT date FROM table_name_98 WHERE opponent = ""vfl sindelfingen""",204
+"SELECT weeks_on_chart FROM table_name_92 WHERE country = ""france""",what is the weeks on chart for the single from france?,"CREATE TABLE table_name_92 (weeks_on_chart VARCHAR, country VARCHAR)","Instructions: what is the weeks on chart for the single from france?
+Context: CREATE TABLE table_name_92 (weeks_on_chart VARCHAR, country VARCHAR)
+Response: SELECT weeks_on_chart FROM table_name_92 WHERE country = ""france""",222
+"SELECT finale FROM table_28962227_1 WHERE runners_up = ""Miranda Gore Browne""",What is the date when Miranda Gore Browne was runner-up?,"CREATE TABLE table_28962227_1 (finale VARCHAR, runners_up VARCHAR)","Instructions: What is the date when Miranda Gore Browne was runner-up?
+Context: CREATE TABLE table_28962227_1 (finale VARCHAR, runners_up VARCHAR)
+Response: SELECT finale FROM table_28962227_1 WHERE runners_up = ""Miranda Gore Browne""",233
+"SELECT COUNT(name_of_film) FROM table_25926120_3 WHERE language = ""Hindi""",How many films were in hindi?,"CREATE TABLE table_25926120_3 (name_of_film VARCHAR, language VARCHAR)","Instructions: How many films were in hindi?
+Context: CREATE TABLE table_25926120_3 (name_of_film VARCHAR, language VARCHAR)
+Response: SELECT COUNT(name_of_film) FROM table_25926120_3 WHERE language = ""Hindi""",207
+"SELECT rank FROM table_name_52 WHERE 2010 = ""2,903,000""","what is the ranking for 2010 production of 2,903,000?",CREATE TABLE table_name_52 (rank VARCHAR),"Instructions: what is the ranking for 2010 production of 2,903,000?
+Context: CREATE TABLE table_name_52 (rank VARCHAR)
+Response: SELECT rank FROM table_name_52 WHERE 2010 = ""2,903,000""",184
+"SELECT nationality FROM table_10015132_21 WHERE school_club_team = ""Georgetown""",Which country is the player that went to Georgetown from?,"CREATE TABLE table_10015132_21 (nationality VARCHAR, school_club_team VARCHAR)","Instructions: Which country is the player that went to Georgetown from?
+Context: CREATE TABLE table_10015132_21 (nationality VARCHAR, school_club_team VARCHAR)
+Response: SELECT nationality FROM table_10015132_21 WHERE school_club_team = ""Georgetown""",249
+"SELECT MAX(first_season_in_the_serie_a) FROM table_2454589_1 WHERE stadium = ""7 de Octubre""",Name the most for first season in the serie a for 7 de octubre,"CREATE TABLE table_2454589_1 (first_season_in_the_serie_a INTEGER, stadium VARCHAR)","Instructions: Name the most for first season in the serie a for 7 de octubre
+Context: CREATE TABLE table_2454589_1 (first_season_in_the_serie_a INTEGER, stadium VARCHAR)
+Response: SELECT MAX(first_season_in_the_serie_a) FROM table_2454589_1 WHERE stadium = ""7 de Octubre""",271
+"SELECT record FROM table_name_13 WHERE event = ""cage combat fighting championships: mayhem""","For the Cage Combat Fighting Championships: Mayhem, what was the record?","CREATE TABLE table_name_13 (record VARCHAR, event VARCHAR)","Instructions: For the Cage Combat Fighting Championships: Mayhem, what was the record?
+Context: CREATE TABLE table_name_13 (record VARCHAR, event VARCHAR)
+Response: SELECT record FROM table_name_13 WHERE event = ""cage combat fighting championships: mayhem""",256
+SELECT COUNT(innings) FROM table_13337302_16 WHERE catches = 2 AND stumpings = 0,How many innings had a total of 2 catches and 0 stumpings?,"CREATE TABLE table_13337302_16 (innings VARCHAR, catches VARCHAR, stumpings VARCHAR)","Instructions: How many innings had a total of 2 catches and 0 stumpings?
+Context: CREATE TABLE table_13337302_16 (innings VARCHAR, catches VARCHAR, stumpings VARCHAR)
+Response: SELECT COUNT(innings) FROM table_13337302_16 WHERE catches = 2 AND stumpings = 0",257
+SELECT college FROM table_name_92 WHERE pick < 5,Which college had a pick of under 5?,"CREATE TABLE table_name_92 (college VARCHAR, pick INTEGER)","Instructions: Which college had a pick of under 5?
+Context: CREATE TABLE table_name_92 (college VARCHAR, pick INTEGER)
+Response: SELECT college FROM table_name_92 WHERE pick < 5",177
+"SELECT district FROM table_name_99 WHERE first_elected > 2000 AND incumbent = ""russ carnahan""",In what district was incumbent Russ Carnahan elected after 2000?,"CREATE TABLE table_name_99 (district VARCHAR, first_elected VARCHAR, incumbent VARCHAR)","Instructions: In what district was incumbent Russ Carnahan elected after 2000?
+Context: CREATE TABLE table_name_99 (district VARCHAR, first_elected VARCHAR, incumbent VARCHAR)
+Response: SELECT district FROM table_name_99 WHERE first_elected > 2000 AND incumbent = ""russ carnahan""",279
+"SELECT result FROM table_name_14 WHERE record = ""5–4""",Which Result has a Record of 5–4?,"CREATE TABLE table_name_14 (result VARCHAR, record VARCHAR)","Instructions: Which Result has a Record of 5–4?
+Context: CREATE TABLE table_name_14 (result VARCHAR, record VARCHAR)
+Response: SELECT result FROM table_name_14 WHERE record = ""5–4""",180
+"SELECT record FROM table_11964154_11 WHERE high_rebounds = ""Nick Collison (11)""",What was the record when the high rebounds was from Nick Collison (11)?,"CREATE TABLE table_11964154_11 (record VARCHAR, high_rebounds VARCHAR)","Instructions: What was the record when the high rebounds was from Nick Collison (11)?
+Context: CREATE TABLE table_11964154_11 (record VARCHAR, high_rebounds VARCHAR)
+Response: SELECT record FROM table_11964154_11 WHERE high_rebounds = ""Nick Collison (11)""",255
+"SELECT COUNT(appearances) FROM table_name_41 WHERE name = ""batram suri category:articles with hcards"" AND goals < 2",how many appearances did batram suri category:articles with hcards have scoring less than 2 goals?,"CREATE TABLE table_name_41 (appearances VARCHAR, name VARCHAR, goals VARCHAR)","Instructions: how many appearances did batram suri category:articles with hcards have scoring less than 2 goals?
+Context: CREATE TABLE table_name_41 (appearances VARCHAR, name VARCHAR, goals VARCHAR)
+Response: SELECT COUNT(appearances) FROM table_name_41 WHERE name = ""batram suri category:articles with hcards"" AND goals < 2",325
+"SELECT points_for FROM table_name_52 WHERE points_against = ""414""",What were the points for a team that 414 points against?,"CREATE TABLE table_name_52 (points_for VARCHAR, points_against VARCHAR)","Instructions: What were the points for a team that 414 points against?
+Context: CREATE TABLE table_name_52 (points_for VARCHAR, points_against VARCHAR)
+Response: SELECT points_for FROM table_name_52 WHERE points_against = ""414""",227
+SELECT SUM(bronze) FROM table_name_47 WHERE rank > 11 AND gold < 0,What is the sum of Bronze when the rank is more than 11 and gold is less than 0?,"CREATE TABLE table_name_47 (bronze INTEGER, rank VARCHAR, gold VARCHAR)","Instructions: What is the sum of Bronze when the rank is more than 11 and gold is less than 0?
+Context: CREATE TABLE table_name_47 (bronze INTEGER, rank VARCHAR, gold VARCHAR)
+Response: SELECT SUM(bronze) FROM table_name_47 WHERE rank > 11 AND gold < 0",252
+"SELECT attendance FROM table_name_37 WHERE loss = ""yates (3-2)""",What's the attendance of the game where there was a Loss of Yates (3-2)?,"CREATE TABLE table_name_37 (attendance VARCHAR, loss VARCHAR)","Instructions: What's the attendance of the game where there was a Loss of Yates (3-2)?
+Context: CREATE TABLE table_name_37 (attendance VARCHAR, loss VARCHAR)
+Response: SELECT attendance FROM table_name_37 WHERE loss = ""yates (3-2)""",231
+"SELECT total_itv_viewers__millions_ FROM table_27319183_7 WHERE official_itv_hd_rating__millions_ = ""1.12""",How many total itv viewers were there for the episode with official itv hd ratings of 1.12 million?,"CREATE TABLE table_27319183_7 (total_itv_viewers__millions_ VARCHAR, official_itv_hd_rating__millions_ VARCHAR)","Instructions: How many total itv viewers were there for the episode with official itv hd ratings of 1.12 million?
+Context: CREATE TABLE table_27319183_7 (total_itv_viewers__millions_ VARCHAR, official_itv_hd_rating__millions_ VARCHAR)
+Response: SELECT total_itv_viewers__millions_ FROM table_27319183_7 WHERE official_itv_hd_rating__millions_ = ""1.12""",351
+SELECT name_of_ship FROM table_name_8 WHERE tonnage > 8 OFFSET 782,"Which ship had a tonnage over 8,782?","CREATE TABLE table_name_8 (name_of_ship VARCHAR, tonnage INTEGER)","Instructions: Which ship had a tonnage over 8,782?
+Context: CREATE TABLE table_name_8 (name_of_ship VARCHAR, tonnage INTEGER)
+Response: SELECT name_of_ship FROM table_name_8 WHERE tonnage > 8 OFFSET 782",202
+"SELECT date FROM table_name_70 WHERE attendance = ""25,022""","What was the date of the game attended by 25,022?","CREATE TABLE table_name_70 (date VARCHAR, attendance VARCHAR)","Instructions: What was the date of the game attended by 25,022?
+Context: CREATE TABLE table_name_70 (date VARCHAR, attendance VARCHAR)
+Response: SELECT date FROM table_name_70 WHERE attendance = ""25,022""",203
+"SELECT result FROM table_name_35 WHERE opponent = ""san francisco 49ers""",What was the result when the San Francisco 49ers were the opponents?,"CREATE TABLE table_name_35 (result VARCHAR, opponent VARCHAR)","Instructions: What was the result when the San Francisco 49ers were the opponents?
+Context: CREATE TABLE table_name_35 (result VARCHAR, opponent VARCHAR)
+Response: SELECT result FROM table_name_35 WHERE opponent = ""san francisco 49ers""",235
+"SELECT winner FROM table_name_90 WHERE location = ""georgia"" AND date = ""oct 3""",Who is the winner of the tournament in Georgia on Oct 3?,"CREATE TABLE table_name_90 (winner VARCHAR, location VARCHAR, date VARCHAR)","Instructions: Who is the winner of the tournament in Georgia on Oct 3?
+Context: CREATE TABLE table_name_90 (winner VARCHAR, location VARCHAR, date VARCHAR)
+Response: SELECT winner FROM table_name_90 WHERE location = ""georgia"" AND date = ""oct 3""",244
+"SELECT player FROM table_name_37 WHERE place = ""t1"" AND country = ""scotland""",Who placed t1 in Scotland?,"CREATE TABLE table_name_37 (player VARCHAR, place VARCHAR, country VARCHAR)","Instructions: Who placed t1 in Scotland?
+Context: CREATE TABLE table_name_37 (player VARCHAR, place VARCHAR, country VARCHAR)
+Response: SELECT player FROM table_name_37 WHERE place = ""t1"" AND country = ""scotland""",212
+"SELECT date FROM table_17326036_7 WHERE high_rebounds = ""Troy Murphy (15)""","What was the date when Troy Murphy (15), got high rebounds? ","CREATE TABLE table_17326036_7 (date VARCHAR, high_rebounds VARCHAR)","Instructions: What was the date when Troy Murphy (15), got high rebounds? 
+Context: CREATE TABLE table_17326036_7 (date VARCHAR, high_rebounds VARCHAR)
+Response: SELECT date FROM table_17326036_7 WHERE high_rebounds = ""Troy Murphy (15)""",236
+"SELECT MIN(nsg_nr) FROM table_26013618_1 WHERE date_established = ""19961220 20.12.1996""",What Nature reserve number was established on 19961220 20.12.1996,"CREATE TABLE table_26013618_1 (nsg_nr INTEGER, date_established VARCHAR)","Instructions: What Nature reserve number was established on 19961220 20.12.1996
+Context: CREATE TABLE table_26013618_1 (nsg_nr INTEGER, date_established VARCHAR)
+Response: SELECT MIN(nsg_nr) FROM table_26013618_1 WHERE date_established = ""19961220 20.12.1996""",259
+"SELECT COUNT(week) FROM table_name_38 WHERE opponent = ""chicago bears""",What is the total for the week in the game against the Chicago Bears,"CREATE TABLE table_name_38 (week VARCHAR, opponent VARCHAR)","Instructions: What is the total for the week in the game against the Chicago Bears
+Context: CREATE TABLE table_name_38 (week VARCHAR, opponent VARCHAR)
+Response: SELECT COUNT(week) FROM table_name_38 WHERE opponent = ""chicago bears""",232
+"SELECT SUM(points) FROM table_name_65 WHERE class = ""125cc"" AND rank = ""3rd"" AND year < 1996","For years before 1996, having a rank of 3rd in the 125cc class, what is the sum of the points?","CREATE TABLE table_name_65 (points INTEGER, year VARCHAR, class VARCHAR, rank VARCHAR)","Instructions: For years before 1996, having a rank of 3rd in the 125cc class, what is the sum of the points?
+Context: CREATE TABLE table_name_65 (points INTEGER, year VARCHAR, class VARCHAR, rank VARCHAR)
+Response: SELECT SUM(points) FROM table_name_65 WHERE class = ""125cc"" AND rank = ""3rd"" AND year < 1996",307
+"SELECT authority FROM table_name_64 WHERE roll < 254 AND decile = ""8"" AND area = ""te akau""",Name the authority for te akau with roll less than 254 and decile of 8,"CREATE TABLE table_name_64 (authority VARCHAR, area VARCHAR, roll VARCHAR, decile VARCHAR)","Instructions: Name the authority for te akau with roll less than 254 and decile of 8
+Context: CREATE TABLE table_name_64 (authority VARCHAR, area VARCHAR, roll VARCHAR, decile VARCHAR)
+Response: SELECT authority FROM table_name_64 WHERE roll < 254 AND decile = ""8"" AND area = ""te akau""",285
+"SELECT institution FROM table_10577579_3 WHERE men’s_nickname = ""Blazers""",Which college has the men's nickname of the blazers?,"CREATE TABLE table_10577579_3 (institution VARCHAR, men’s_nickname VARCHAR)","Instructions: Which college has the men's nickname of the blazers?
+Context: CREATE TABLE table_10577579_3 (institution VARCHAR, men’s_nickname VARCHAR)
+Response: SELECT institution FROM table_10577579_3 WHERE men’s_nickname = ""Blazers""",235
+"SELECT MAX(played) FROM table_name_19 WHERE against < 15 AND team = ""bangu"" AND points > 9","How many games played for team bangu with under 15 against, and over 9 points?","CREATE TABLE table_name_19 (played INTEGER, points VARCHAR, against VARCHAR, team VARCHAR)","Instructions: How many games played for team bangu with under 15 against, and over 9 points?
+Context: CREATE TABLE table_name_19 (played INTEGER, points VARCHAR, against VARCHAR, team VARCHAR)
+Response: SELECT MAX(played) FROM table_name_19 WHERE against < 15 AND team = ""bangu"" AND points > 9",293
+"SELECT COUNT(rank) FROM table_name_44 WHERE team = ""250cc honda"" AND time = ""1:27.57.28""",What ranking did Team 250cc Honda end up in when it finished a race with a time of 1:27.57.28?,"CREATE TABLE table_name_44 (rank VARCHAR, team VARCHAR, time VARCHAR)","Instructions: What ranking did Team 250cc Honda end up in when it finished a race with a time of 1:27.57.28?
+Context: CREATE TABLE table_name_44 (rank VARCHAR, team VARCHAR, time VARCHAR)
+Response: SELECT COUNT(rank) FROM table_name_44 WHERE team = ""250cc honda"" AND time = ""1:27.57.28""",286
+"SELECT airport FROM table_name_16 WHERE icao = ""birk""",What airport has an ICAO of Birk?,"CREATE TABLE table_name_16 (airport VARCHAR, icao VARCHAR)","Instructions: What airport has an ICAO of Birk?
+Context: CREATE TABLE table_name_16 (airport VARCHAR, icao VARCHAR)
+Response: SELECT airport FROM table_name_16 WHERE icao = ""birk""",179
+"SELECT gender FROM table_name_23 WHERE area = ""otama""",What is the gender for Otama?,"CREATE TABLE table_name_23 (gender VARCHAR, area VARCHAR)","Instructions: What is the gender for Otama?
+Context: CREATE TABLE table_name_23 (gender VARCHAR, area VARCHAR)
+Response: SELECT gender FROM table_name_23 WHERE area = ""otama""",174
+"SELECT bronze FROM table_name_31 WHERE notes = ""2.5km, 16controls""","Who won Bronze with Notes of 2.5km, 16controls?","CREATE TABLE table_name_31 (bronze VARCHAR, notes VARCHAR)","Instructions: Who won Bronze with Notes of 2.5km, 16controls?
+Context: CREATE TABLE table_name_31 (bronze VARCHAR, notes VARCHAR)
+Response: SELECT bronze FROM table_name_31 WHERE notes = ""2.5km, 16controls""",206
+"SELECT time FROM table_name_21 WHERE round > 1 AND event = ""total fighting alliance 2""","Which Time has a Round larger than 1, and an Event of total fighting alliance 2?","CREATE TABLE table_name_21 (time VARCHAR, round VARCHAR, event VARCHAR)","Instructions: Which Time has a Round larger than 1, and an Event of total fighting alliance 2?
+Context: CREATE TABLE table_name_21 (time VARCHAR, round VARCHAR, event VARCHAR)
+Response: SELECT time FROM table_name_21 WHERE round > 1 AND event = ""total fighting alliance 2""",272
+"SELECT record FROM table_name_45 WHERE streak = ""l1"" AND score = ""l 95–111""",Name the record that has a stream of l1 and score of l 95–111,"CREATE TABLE table_name_45 (record VARCHAR, streak VARCHAR, score VARCHAR)","Instructions: Name the record that has a stream of l1 and score of l 95–111
+Context: CREATE TABLE table_name_45 (record VARCHAR, streak VARCHAR, score VARCHAR)
+Response: SELECT record FROM table_name_45 WHERE streak = ""l1"" AND score = ""l 95–111""",245
+"SELECT opposition FROM table_name_70 WHERE social_democrats__a_ = ""31.1%""",What opposition do 31.1% of Social Democrats have?,"CREATE TABLE table_name_70 (opposition VARCHAR, social_democrats__a_ VARCHAR)","Instructions: What opposition do 31.1% of Social Democrats have?
+Context: CREATE TABLE table_name_70 (opposition VARCHAR, social_democrats__a_ VARCHAR)
+Response: SELECT opposition FROM table_name_70 WHERE social_democrats__a_ = ""31.1%""",235
+"SELECT venue FROM table_name_55 WHERE tournament = ""asian games""",What's the venue for the asian games tournament?,"CREATE TABLE table_name_55 (venue VARCHAR, tournament VARCHAR)","Instructions: What's the venue for the asian games tournament?
+Context: CREATE TABLE table_name_55 (venue VARCHAR, tournament VARCHAR)
+Response: SELECT venue FROM table_name_55 WHERE tournament = ""asian games""",209
+"SELECT city_of_license FROM table_name_22 WHERE frequency_mhz > 89.5 AND call_sign = ""k213el""","Which City of license has a Frequency MHz larger than 89.5, and a Call sign of k213el?","CREATE TABLE table_name_22 (city_of_license VARCHAR, frequency_mhz VARCHAR, call_sign VARCHAR)","Instructions: Which City of license has a Frequency MHz larger than 89.5, and a Call sign of k213el?
+Context: CREATE TABLE table_name_22 (city_of_license VARCHAR, frequency_mhz VARCHAR, call_sign VARCHAR)
+Response: SELECT city_of_license FROM table_name_22 WHERE frequency_mhz > 89.5 AND call_sign = ""k213el""",308
+"SELECT location___state FROM table_name_82 WHERE team = ""castrol perkins motorsport"" AND winner = ""russell ingall""",Castrol Perkins Motorsport and the winner Russell Ingall was in what location/state?,"CREATE TABLE table_name_82 (location___state VARCHAR, team VARCHAR, winner VARCHAR)","Instructions: Castrol Perkins Motorsport and the winner Russell Ingall was in what location/state?
+Context: CREATE TABLE table_name_82 (location___state VARCHAR, team VARCHAR, winner VARCHAR)
+Response: SELECT location___state FROM table_name_82 WHERE team = ""castrol perkins motorsport"" AND winner = ""russell ingall""",316
+SELECT country FROM table_13282157_1 WHERE _number = 8,What is the country for  # 8,"CREATE TABLE table_13282157_1 (country VARCHAR, _number VARCHAR)","Instructions: What is the country for  # 8
+Context: CREATE TABLE table_13282157_1 (country VARCHAR, _number VARCHAR)
+Response: SELECT country FROM table_13282157_1 WHERE _number = 8",181
+"SELECT MAX(money___) AS $__ FROM table_name_64 WHERE place = ""t4"" AND player = ""tiger woods""","What is the largest money for a t4 place, for Tiger Woods?","CREATE TABLE table_name_64 (money___ INTEGER, place VARCHAR, player VARCHAR)","Instructions: What is the largest money for a t4 place, for Tiger Woods?
+Context: CREATE TABLE table_name_64 (money___ INTEGER, place VARCHAR, player VARCHAR)
+Response: SELECT MAX(money___) AS $__ FROM table_name_64 WHERE place = ""t4"" AND player = ""tiger woods""",261
+"SELECT set_1 FROM table_name_33 WHERE date = ""08 jul"" AND set_2 = ""25–21""","What is the Set 1 when the date is 08 jul, and a Set 2 of 25–21?","CREATE TABLE table_name_33 (set_1 VARCHAR, date VARCHAR, set_2 VARCHAR)","Instructions: What is the Set 1 when the date is 08 jul, and a Set 2 of 25–21?
+Context: CREATE TABLE table_name_33 (set_1 VARCHAR, date VARCHAR, set_2 VARCHAR)
+Response: SELECT set_1 FROM table_name_33 WHERE date = ""08 jul"" AND set_2 = ""25–21""",243
+"SELECT district FROM table_19753079_8 WHERE incumbent = ""George Miller""",What district did George Miller belong to?,"CREATE TABLE table_19753079_8 (district VARCHAR, incumbent VARCHAR)","Instructions: What district did George Miller belong to?
+Context: CREATE TABLE table_19753079_8 (district VARCHAR, incumbent VARCHAR)
+Response: SELECT district FROM table_19753079_8 WHERE incumbent = ""George Miller""",215
+"SELECT loss FROM table_name_60 WHERE date = ""april 15""",what team lost on april 15,"CREATE TABLE table_name_60 (loss VARCHAR, date VARCHAR)","Instructions: what team lost on april 15
+Context: CREATE TABLE table_name_60 (loss VARCHAR, date VARCHAR)
+Response: SELECT loss FROM table_name_60 WHERE date = ""april 15""",170
+"SELECT away_team FROM table_name_42 WHERE date = ""21 september""",who is the away team on 21 september?,"CREATE TABLE table_name_42 (away_team VARCHAR, date VARCHAR)","Instructions: who is the away team on 21 september?
+Context: CREATE TABLE table_name_42 (away_team VARCHAR, date VARCHAR)
+Response: SELECT away_team FROM table_name_42 WHERE date = ""21 september""",195
+"SELECT score FROM table_name_8 WHERE time = ""3:27""",What was the score at 3:27?,"CREATE TABLE table_name_8 (score VARCHAR, time VARCHAR)","Instructions: What was the score at 3:27?
+Context: CREATE TABLE table_name_8 (score VARCHAR, time VARCHAR)
+Response: SELECT score FROM table_name_8 WHERE time = ""3:27""",167
+"SELECT report FROM table_22298383_1 WHERE day = ""Sunday"" AND average_speed__mph_ = ""128.27""",What was the report for the Sunday race where the winner had an average speed of 128.27 mph?,"CREATE TABLE table_22298383_1 (report VARCHAR, day VARCHAR, average_speed__mph_ VARCHAR)","Instructions: What was the report for the Sunday race where the winner had an average speed of 128.27 mph?
+Context: CREATE TABLE table_22298383_1 (report VARCHAR, day VARCHAR, average_speed__mph_ VARCHAR)
+Response: SELECT report FROM table_22298383_1 WHERE day = ""Sunday"" AND average_speed__mph_ = ""128.27""",306
+SELECT COUNT(first_place) FROM table_2054561_2 WHERE no_of_weeks = 6,Who took first place in week 6?,"CREATE TABLE table_2054561_2 (first_place VARCHAR, no_of_weeks VARCHAR)","Instructions: Who took first place in week 6?
+Context: CREATE TABLE table_2054561_2 (first_place VARCHAR, no_of_weeks VARCHAR)
+Response: SELECT COUNT(first_place) FROM table_2054561_2 WHERE no_of_weeks = 6",205
+"SELECT COUNT(candidates) FROM table_1342198_38 WHERE district = ""Pennsylvania 3""",What is the number of candidates for pennsylvania 3,"CREATE TABLE table_1342198_38 (candidates VARCHAR, district VARCHAR)","Instructions: What is the number of candidates for pennsylvania 3
+Context: CREATE TABLE table_1342198_38 (candidates VARCHAR, district VARCHAR)
+Response: SELECT COUNT(candidates) FROM table_1342198_38 WHERE district = ""Pennsylvania 3""",234
+"SELECT time FROM table_name_4 WHERE ground = ""ghantoot racing and polo club""",What is the time of the Ghantoot Racing and Polo Club?,"CREATE TABLE table_name_4 (time VARCHAR, ground VARCHAR)","Instructions: What is the time of the Ghantoot Racing and Polo Club?
+Context: CREATE TABLE table_name_4 (time VARCHAR, ground VARCHAR)
+Response: SELECT time FROM table_name_4 WHERE ground = ""ghantoot racing and polo club""",221
+"SELECT incumbent FROM table_2668387_18 WHERE district = ""Virginia 18""",Name the incumbent for virginia 18,"CREATE TABLE table_2668387_18 (incumbent VARCHAR, district VARCHAR)","Instructions: Name the incumbent for virginia 18
+Context: CREATE TABLE table_2668387_18 (incumbent VARCHAR, district VARCHAR)
+Response: SELECT incumbent FROM table_2668387_18 WHERE district = ""Virginia 18""",205
+"SELECT week FROM table_name_6 WHERE finalist = ""martina hingis""",What week was the finalist Martina Hingis?,"CREATE TABLE table_name_6 (week VARCHAR, finalist VARCHAR)","Instructions: What week was the finalist Martina Hingis?
+Context: CREATE TABLE table_name_6 (week VARCHAR, finalist VARCHAR)
+Response: SELECT week FROM table_name_6 WHERE finalist = ""martina hingis""",198
+"SELECT visitor FROM table_name_67 WHERE home = ""minnesota""",Who is the visiting team when Minnesota is the home team?,"CREATE TABLE table_name_67 (visitor VARCHAR, home VARCHAR)","Instructions: Who is the visiting team when Minnesota is the home team?
+Context: CREATE TABLE table_name_67 (visitor VARCHAR, home VARCHAR)
+Response: SELECT visitor FROM table_name_67 WHERE home = ""minnesota""",208
+"SELECT COUNT(attendance) FROM table_name_16 WHERE result = ""l 24-20"" AND week < 5",What is the total attendance in a week less than 5 when the result was l 24-20?,"CREATE TABLE table_name_16 (attendance VARCHAR, result VARCHAR, week VARCHAR)","Instructions: What is the total attendance in a week less than 5 when the result was l 24-20?
+Context: CREATE TABLE table_name_16 (attendance VARCHAR, result VARCHAR, week VARCHAR)
+Response: SELECT COUNT(attendance) FROM table_name_16 WHERE result = ""l 24-20"" AND week < 5",272
+SELECT COUNT(total) FROM table_name_40 WHERE bronze = 2,How many totals have 2 for the bronze?,"CREATE TABLE table_name_40 (total VARCHAR, bronze VARCHAR)","Instructions: How many totals have 2 for the bronze?
+Context: CREATE TABLE table_name_40 (total VARCHAR, bronze VARCHAR)
+Response: SELECT COUNT(total) FROM table_name_40 WHERE bronze = 2",186
+"SELECT qual_2 FROM table_name_49 WHERE qual_1 = ""1:16.841""",What is the qual 2 when the qual 1 is 1:16.841?,"CREATE TABLE table_name_49 (qual_2 VARCHAR, qual_1 VARCHAR)","Instructions: What is the qual 2 when the qual 1 is 1:16.841?
+Context: CREATE TABLE table_name_49 (qual_2 VARCHAR, qual_1 VARCHAR)
+Response: SELECT qual_2 FROM table_name_49 WHERE qual_1 = ""1:16.841""",199
+"SELECT college_junior_club_team FROM table_name_27 WHERE pick__number = ""1""",Which College/junior/club team has a Pick # of 1?,"CREATE TABLE table_name_27 (college_junior_club_team VARCHAR, pick__number VARCHAR)","Instructions: Which College/junior/club team has a Pick # of 1?
+Context: CREATE TABLE table_name_27 (college_junior_club_team VARCHAR, pick__number VARCHAR)
+Response: SELECT college_junior_club_team FROM table_name_27 WHERE pick__number = ""1""",242
+"SELECT engine FROM table_11167610_1 WHERE performance = ""0–100km/h: 10.5s, VMax km/h (mph)"""," what's the engine where performance is 0–100km/h: 10.5s, vmax km/h (mph)","CREATE TABLE table_11167610_1 (engine VARCHAR, performance VARCHAR)","Instructions:  what's the engine where performance is 0–100km/h: 10.5s, vmax km/h (mph)
+Context: CREATE TABLE table_11167610_1 (engine VARCHAR, performance VARCHAR)
+Response: SELECT engine FROM table_11167610_1 WHERE performance = ""0–100km/h: 10.5s, VMax km/h (mph)""",266
+SELECT AVG(points__pts_) FROM table_name_26 WHERE won__pg_ > 17,What is the average number of points of the team with more than 17 pg won?,"CREATE TABLE table_name_26 (points__pts_ INTEGER, won__pg_ INTEGER)","Instructions: What is the average number of points of the team with more than 17 pg won?
+Context: CREATE TABLE table_name_26 (points__pts_ INTEGER, won__pg_ INTEGER)
+Response: SELECT AVG(points__pts_) FROM table_name_26 WHERE won__pg_ > 17",239
+"SELECT T1.activity_name, COUNT(*) FROM Activity AS T1 JOIN Faculty_participates_in AS T2 ON T1.actID = T2.actID GROUP BY T1.actID",Show all the activity names and the number of faculty involved in each activity.,"CREATE TABLE Faculty_participates_in (actID VARCHAR); CREATE TABLE Activity (activity_name VARCHAR, actID VARCHAR)","Instructions: Show all the activity names and the number of faculty involved in each activity.
+Context: CREATE TABLE Faculty_participates_in (actID VARCHAR); CREATE TABLE Activity (activity_name VARCHAR, actID VARCHAR)
+Response: SELECT T1.activity_name, COUNT(*) FROM Activity AS T1 JOIN Faculty_participates_in AS T2 ON T1.actID = T2.actID GROUP BY T1.actID",358
+SELECT MAX(bush_number) FROM table_1756284_1,What was the highest vote number for Bush?,CREATE TABLE table_1756284_1 (bush_number INTEGER),"Instructions: What was the highest vote number for Bush?
+Context: CREATE TABLE table_1756284_1 (bush_number INTEGER)
+Response: SELECT MAX(bush_number) FROM table_1756284_1",171
+"SELECT COUNT(year_named) FROM table_name_72 WHERE longitude = ""36.8e"" AND diameter__km_ > 697",How many years correspond to longitude of 36.8e and diameter greater than 697?,"CREATE TABLE table_name_72 (year_named VARCHAR, longitude VARCHAR, diameter__km_ VARCHAR)","Instructions: How many years correspond to longitude of 36.8e and diameter greater than 697?
+Context: CREATE TABLE table_name_72 (year_named VARCHAR, longitude VARCHAR, diameter__km_ VARCHAR)
+Response: SELECT COUNT(year_named) FROM table_name_72 WHERE longitude = ""36.8e"" AND diameter__km_ > 697",295
+"SELECT MAX(game) FROM table_name_81 WHERE high_assists = ""morris peterson (8)""",What is the highest Game when Morris Peterson (8) had the high assists?,"CREATE TABLE table_name_81 (game INTEGER, high_assists VARCHAR)","Instructions: What is the highest Game when Morris Peterson (8) had the high assists?
+Context: CREATE TABLE table_name_81 (game INTEGER, high_assists VARCHAR)
+Response: SELECT MAX(game) FROM table_name_81 WHERE high_assists = ""morris peterson (8)""",247
+"SELECT gold FROM table_name_50 WHERE bronze = ""chinese taipei""",What country won gold in the year(s) that Chinese Taipei won bronze?,"CREATE TABLE table_name_50 (gold VARCHAR, bronze VARCHAR)","Instructions: What country won gold in the year(s) that Chinese Taipei won bronze?
+Context: CREATE TABLE table_name_50 (gold VARCHAR, bronze VARCHAR)
+Response: SELECT gold FROM table_name_50 WHERE bronze = ""chinese taipei""",222
+"SELECT film_title_used_in_nomination FROM table_name_27 WHERE original_title = ""báng-kah (艋舺)""","What is Film Title Used In Nomination, when Original Title is ""Báng-Kah (艋舺)""","CREATE TABLE table_name_27 (film_title_used_in_nomination VARCHAR, original_title VARCHAR)","Instructions: What is Film Title Used In Nomination, when Original Title is ""Báng-Kah (艋舺)""
+Context: CREATE TABLE table_name_27 (film_title_used_in_nomination VARCHAR, original_title VARCHAR)
+Response: SELECT film_title_used_in_nomination FROM table_name_27 WHERE original_title = ""báng-kah (艋舺)""",296
+"SELECT COUNT(attendance) FROM table_name_17 WHERE record = ""17-7""",What was total attendance on the day they went 17-7?,"CREATE TABLE table_name_17 (attendance VARCHAR, record VARCHAR)","Instructions: What was total attendance on the day they went 17-7?
+Context: CREATE TABLE table_name_17 (attendance VARCHAR, record VARCHAR)
+Response: SELECT COUNT(attendance) FROM table_name_17 WHERE record = ""17-7""",215
+"SELECT home FROM table_name_93 WHERE competition = ""uefa cup"" AND season = ""2000-2001"" AND round = ""second round""",What is the home team of the UEFA cup in the 2000-2001 season with a second round?,"CREATE TABLE table_name_93 (home VARCHAR, round VARCHAR, competition VARCHAR, season VARCHAR)","Instructions: What is the home team of the UEFA cup in the 2000-2001 season with a second round?
+Context: CREATE TABLE table_name_93 (home VARCHAR, round VARCHAR, competition VARCHAR, season VARCHAR)
+Response: SELECT home FROM table_name_93 WHERE competition = ""uefa cup"" AND season = ""2000-2001"" AND round = ""second round""",323
+"SELECT fastest_lap FROM table_name_68 WHERE round = ""5"" AND winning_driver = ""james winslow""","What is Fastest Lap, when Round is 5, and when Winning Driver is James Winslow?","CREATE TABLE table_name_68 (fastest_lap VARCHAR, round VARCHAR, winning_driver VARCHAR)","Instructions: What is Fastest Lap, when Round is 5, and when Winning Driver is James Winslow?
+Context: CREATE TABLE table_name_68 (fastest_lap VARCHAR, round VARCHAR, winning_driver VARCHAR)
+Response: SELECT fastest_lap FROM table_name_68 WHERE round = ""5"" AND winning_driver = ""james winslow""",293
+"SELECT driver FROM table_21297652_1 WHERE series = ""NASCAR Winston Cup"" AND winnings = ""$40,000""","Which drivers won $40,000 in the NASCAR Winston Cup?","CREATE TABLE table_21297652_1 (driver VARCHAR, series VARCHAR, winnings VARCHAR)","Instructions: Which drivers won $40,000 in the NASCAR Winston Cup?
+Context: CREATE TABLE table_21297652_1 (driver VARCHAR, series VARCHAR, winnings VARCHAR)
+Response: SELECT driver FROM table_21297652_1 WHERE series = ""NASCAR Winston Cup"" AND winnings = ""$40,000""",263
+"SELECT replaced_by FROM table_name_97 WHERE team = ""port vale""",who is the replacement when the team is port vale?,"CREATE TABLE table_name_97 (replaced_by VARCHAR, team VARCHAR)","Instructions: who is the replacement when the team is port vale?
+Context: CREATE TABLE table_name_97 (replaced_by VARCHAR, team VARCHAR)
+Response: SELECT replaced_by FROM table_name_97 WHERE team = ""port vale""",209
+"SELECT race_time FROM table_1771753_3 WHERE team = ""Chip Ganassi Racing"" AND laps = ""228""",When 228 is the lap and chip ganassi racing is the team what is the race time?,"CREATE TABLE table_1771753_3 (race_time VARCHAR, team VARCHAR, laps VARCHAR)","Instructions: When 228 is the lap and chip ganassi racing is the team what is the race time?
+Context: CREATE TABLE table_1771753_3 (race_time VARCHAR, team VARCHAR, laps VARCHAR)
+Response: SELECT race_time FROM table_1771753_3 WHERE team = ""Chip Ganassi Racing"" AND laps = ""228""",278
+"SELECT altadeña FROM table_name_83 WHERE aprende = ""jaguars""",Which Altadeña has a Aprende of jaguars?,"CREATE TABLE table_name_83 (altadeña VARCHAR, aprende VARCHAR)","Instructions: Which Altadeña has a Aprende of jaguars?
+Context: CREATE TABLE table_name_83 (altadeña VARCHAR, aprende VARCHAR)
+Response: SELECT altadeña FROM table_name_83 WHERE aprende = ""jaguars""",197
+SELECT MIN(wins) FROM table_name_94 WHERE points = 28 AND year < 1972,"Name the lowest Wins which has Points of 28, and a Year smaller than 1972?","CREATE TABLE table_name_94 (wins INTEGER, points VARCHAR, year VARCHAR)","Instructions: Name the lowest Wins which has Points of 28, and a Year smaller than 1972?
+Context: CREATE TABLE table_name_94 (wins INTEGER, points VARCHAR, year VARCHAR)
+Response: SELECT MIN(wins) FROM table_name_94 WHERE points = 28 AND year < 1972",249
+SELECT rank__week_ FROM table_name_77 WHERE share > 7 AND rating / SHARE(18 - 49) = 2.3 / 7,What is the weekly rank for the episode with a share over 7 and a rating/share of 2.3/7?,"CREATE TABLE table_name_77 (rank__week_ VARCHAR, share VARCHAR, rating VARCHAR)","Instructions: What is the weekly rank for the episode with a share over 7 and a rating/share of 2.3/7?
+Context: CREATE TABLE table_name_77 (rank__week_ VARCHAR, share VARCHAR, rating VARCHAR)
+Response: SELECT rank__week_ FROM table_name_77 WHERE share > 7 AND rating / SHARE(18 - 49) = 2.3 / 7",293
+"SELECT staten_island FROM table_1108394_6 WHERE brooklyn = ""940""",What was Staten Island when Brooklyn was 940?,"CREATE TABLE table_1108394_6 (staten_island VARCHAR, brooklyn VARCHAR)","Instructions: What was Staten Island when Brooklyn was 940?
+Context: CREATE TABLE table_1108394_6 (staten_island VARCHAR, brooklyn VARCHAR)
+Response: SELECT staten_island FROM table_1108394_6 WHERE brooklyn = ""940""",214
+"SELECT SUM(game) FROM table_name_71 WHERE november < 27 AND record = ""2-0-0""","When the record is listed as 2-0-0, and the November date is less than 27, what is the sum of the game?","CREATE TABLE table_name_71 (game INTEGER, november VARCHAR, record VARCHAR)","Instructions: When the record is listed as 2-0-0, and the November date is less than 27, what is the sum of the game?
+Context: CREATE TABLE table_name_71 (game INTEGER, november VARCHAR, record VARCHAR)
+Response: SELECT SUM(game) FROM table_name_71 WHERE november < 27 AND record = ""2-0-0""",289
+"SELECT Author, College FROM submission",What are the authors of submissions and their colleges?,"CREATE TABLE submission (Author VARCHAR, College VARCHAR)","Instructions: What are the authors of submissions and their colleges?
+Context: CREATE TABLE submission (Author VARCHAR, College VARCHAR)
+Response: SELECT Author, College FROM submission",185
+"SELECT 2007 FROM table_name_5 WHERE tournament = ""madrid masters""",WHAT IS THE 2007 AT MADRID MASTERS?,CREATE TABLE table_name_5 (tournament VARCHAR),"Instructions: WHAT IS THE 2007 AT MADRID MASTERS?
+Context: CREATE TABLE table_name_5 (tournament VARCHAR)
+Response: SELECT 2007 FROM table_name_5 WHERE tournament = ""madrid masters""",181
+SELECT shareholder_name FROM table_206359_1 WHERE a_shares = 0,What shareholders have 0 A shares?,"CREATE TABLE table_206359_1 (shareholder_name VARCHAR, a_shares VARCHAR)","Instructions: What shareholders have 0 A shares?
+Context: CREATE TABLE table_206359_1 (shareholder_name VARCHAR, a_shares VARCHAR)
+Response: SELECT shareholder_name FROM table_206359_1 WHERE a_shares = 0",203
+"SELECT campus FROM campuses WHERE LOCATION = ""Chico""",What are the names of all campuses located at Chico?,"CREATE TABLE campuses (campus VARCHAR, LOCATION VARCHAR)","Instructions: What are the names of all campuses located at Chico?
+Context: CREATE TABLE campuses (campus VARCHAR, LOCATION VARCHAR)
+Response: SELECT campus FROM campuses WHERE LOCATION = ""Chico""",195
+"SELECT independent_socialist_ticket FROM table_name_35 WHERE office = ""comptroller""",Who was the Independent Socialist candidate for the office of comptroller?,"CREATE TABLE table_name_35 (independent_socialist_ticket VARCHAR, office VARCHAR)","Instructions: Who was the Independent Socialist candidate for the office of comptroller?
+Context: CREATE TABLE table_name_35 (independent_socialist_ticket VARCHAR, office VARCHAR)
+Response: SELECT independent_socialist_ticket FROM table_name_35 WHERE office = ""comptroller""",273
+"SELECT 1996 FROM table_name_45 WHERE 1987 = ""nme"" AND tournament = ""monte carlo""",What Tournament of monte carlo had 1996 and a 1987 of nme?,CREATE TABLE table_name_45 (tournament VARCHAR),"Instructions: What Tournament of monte carlo had 1996 and a 1987 of nme?
+Context: CREATE TABLE table_name_45 (tournament VARCHAR)
+Response: SELECT 1996 FROM table_name_45 WHERE 1987 = ""nme"" AND tournament = ""monte carlo""",220
+"SELECT AVG(year) FROM table_name_94 WHERE competition = ""commonwealth youth games""",Which Year has a Competition of commonwealth youth games?,"CREATE TABLE table_name_94 (year INTEGER, competition VARCHAR)","Instructions: Which Year has a Competition of commonwealth youth games?
+Context: CREATE TABLE table_name_94 (year INTEGER, competition VARCHAR)
+Response: SELECT AVG(year) FROM table_name_94 WHERE competition = ""commonwealth youth games""",236
+SELECT venue FROM table_name_81 WHERE year < 2003,Tell me the venue for year less than 2003,"CREATE TABLE table_name_81 (venue VARCHAR, year INTEGER)","Instructions: Tell me the venue for year less than 2003
+Context: CREATE TABLE table_name_81 (venue VARCHAR, year INTEGER)
+Response: SELECT venue FROM table_name_81 WHERE year < 2003",181
+SELECT MIN(prod_code) FROM table_23937219_3 WHERE series__number = 31,What is the production code for episode 31 in the series?,"CREATE TABLE table_23937219_3 (prod_code INTEGER, series__number VARCHAR)","Instructions: What is the production code for episode 31 in the series?
+Context: CREATE TABLE table_23937219_3 (prod_code INTEGER, series__number VARCHAR)
+Response: SELECT MIN(prod_code) FROM table_23937219_3 WHERE series__number = 31",234
+"SELECT performer_4 FROM table_name_86 WHERE performer_1 = ""jim sweeney"" AND episode = 3","Who is performer 4 on episode 3, where Jim Sweeney was performer 1?","CREATE TABLE table_name_86 (performer_4 VARCHAR, performer_1 VARCHAR, episode VARCHAR)","Instructions: Who is performer 4 on episode 3, where Jim Sweeney was performer 1?
+Context: CREATE TABLE table_name_86 (performer_4 VARCHAR, performer_1 VARCHAR, episode VARCHAR)
+Response: SELECT performer_4 FROM table_name_86 WHERE performer_1 = ""jim sweeney"" AND episode = 3",275
+"SELECT week FROM table_name_89 WHERE attendance = ""39,056""","Which week had 39,056 people in attendance?","CREATE TABLE table_name_89 (week VARCHAR, attendance VARCHAR)","Instructions: Which week had 39,056 people in attendance?
+Context: CREATE TABLE table_name_89 (week VARCHAR, attendance VARCHAR)
+Response: SELECT week FROM table_name_89 WHERE attendance = ""39,056""",197
+"SELECT MIN(crowd) FROM table_name_25 WHERE venue = ""princes park""",Which Crowd has a Venue of princes park?,"CREATE TABLE table_name_25 (crowd INTEGER, venue VARCHAR)","Instructions: Which Crowd has a Venue of princes park?
+Context: CREATE TABLE table_name_25 (crowd INTEGER, venue VARCHAR)
+Response: SELECT MIN(crowd) FROM table_name_25 WHERE venue = ""princes park""",197
+SELECT SUM(draws) FROM table_name_27 WHERE el_zamalek_wins < 36 AND total > 2 AND al_ahly_wins > 37,"What is the sum of draws for El Zamalek wins under 36, total over 2, and Al Ahly wins over 37?","CREATE TABLE table_name_27 (draws INTEGER, al_ahly_wins VARCHAR, el_zamalek_wins VARCHAR, total VARCHAR)","Instructions: What is the sum of draws for El Zamalek wins under 36, total over 2, and Al Ahly wins over 37?
+Context: CREATE TABLE table_name_27 (draws INTEGER, al_ahly_wins VARCHAR, el_zamalek_wins VARCHAR, total VARCHAR)
+Response: SELECT SUM(draws) FROM table_name_27 WHERE el_zamalek_wins < 36 AND total > 2 AND al_ahly_wins > 37",332
+"SELECT bowling_style FROM table_11950720_8 WHERE player = ""Shivnarine Chanderpaul""",Shivnarine Chanderpaul used what bowling style? ,"CREATE TABLE table_11950720_8 (bowling_style VARCHAR, player VARCHAR)","Instructions: Shivnarine Chanderpaul used what bowling style? 
+Context: CREATE TABLE table_11950720_8 (bowling_style VARCHAR, player VARCHAR)
+Response: SELECT bowling_style FROM table_11950720_8 WHERE player = ""Shivnarine Chanderpaul""",234
+"SELECT COUNT(population__2010_) FROM table_261222_1 WHERE area__km_2__ = ""409.41""",How many places have an area of 409.41 (km2)?,"CREATE TABLE table_261222_1 (population__2010_ VARCHAR, area__km_2__ VARCHAR)","Instructions: How many places have an area of 409.41 (km2)?
+Context: CREATE TABLE table_261222_1 (population__2010_ VARCHAR, area__km_2__ VARCHAR)
+Response: SELECT COUNT(population__2010_) FROM table_261222_1 WHERE area__km_2__ = ""409.41""",238
+"SELECT country FROM table_28281704_1 WHERE stadium = ""Lusail National stadium""",Name the country for lusail national stadium,"CREATE TABLE table_28281704_1 (country VARCHAR, stadium VARCHAR)","Instructions: Name the country for lusail national stadium
+Context: CREATE TABLE table_28281704_1 (country VARCHAR, stadium VARCHAR)
+Response: SELECT country FROM table_28281704_1 WHERE stadium = ""Lusail National stadium""",221
+"SELECT COUNT(result) FROM table_1341672_6 WHERE candidates = ""Robert L. Leggett (D) 50.2% Albert Dehr (R) 49.8%""",How many times did an election feature the result robert l. leggett (d) 50.2% albert dehr (r) 49.8%?,"CREATE TABLE table_1341672_6 (result VARCHAR, candidates VARCHAR)","Instructions: How many times did an election feature the result robert l. leggett (d) 50.2% albert dehr (r) 49.8%?
+Context: CREATE TABLE table_1341672_6 (result VARCHAR, candidates VARCHAR)
+Response: SELECT COUNT(result) FROM table_1341672_6 WHERE candidates = ""Robert L. Leggett (D) 50.2% Albert Dehr (R) 49.8%""",312
+"SELECT SUM(points) FROM table_name_91 WHERE score = ""4–1"" AND game < 39","Which Points have a Score of 4–1, and a Game smaller than 39?","CREATE TABLE table_name_91 (points INTEGER, score VARCHAR, game VARCHAR)","Instructions: Which Points have a Score of 4–1, and a Game smaller than 39?
+Context: CREATE TABLE table_name_91 (points INTEGER, score VARCHAR, game VARCHAR)
+Response: SELECT SUM(points) FROM table_name_91 WHERE score = ""4–1"" AND game < 39",239
+"SELECT place_of_action FROM table_name_45 WHERE service = ""marine corps"" AND rank = ""corporal""",Name the place of action for the marine corps and corporal rank,"CREATE TABLE table_name_45 (place_of_action VARCHAR, service VARCHAR, rank VARCHAR)","Instructions: Name the place of action for the marine corps and corporal rank
+Context: CREATE TABLE table_name_45 (place_of_action VARCHAR, service VARCHAR, rank VARCHAR)
+Response: SELECT place_of_action FROM table_name_45 WHERE service = ""marine corps"" AND rank = ""corporal""",275
+"SELECT college FROM table_14999879_2 WHERE player = ""Steve Justice""",What college did steve justice attend?,"CREATE TABLE table_14999879_2 (college VARCHAR, player VARCHAR)","Instructions: What college did steve justice attend?
+Context: CREATE TABLE table_14999879_2 (college VARCHAR, player VARCHAR)
+Response: SELECT college FROM table_14999879_2 WHERE player = ""Steve Justice""",203
+"SELECT quantity_made FROM table_name_65 WHERE quantity_preserved = ""4-6-0 — ooooo — ten-wheeler""",What is the quantity made number for the quantity preserved 4-6-0 — ooooo — ten-wheeler?,"CREATE TABLE table_name_65 (quantity_made VARCHAR, quantity_preserved VARCHAR)","Instructions: What is the quantity made number for the quantity preserved 4-6-0 — ooooo — ten-wheeler?
+Context: CREATE TABLE table_name_65 (quantity_made VARCHAR, quantity_preserved VARCHAR)
+Response: SELECT quantity_made FROM table_name_65 WHERE quantity_preserved = ""4-6-0 — ooooo — ten-wheeler""",297
+"SELECT country FROM table_name_55 WHERE time = ""7:03.91""",Which country timed at 7:03.91?,"CREATE TABLE table_name_55 (country VARCHAR, time VARCHAR)","Instructions: Which country timed at 7:03.91?
+Context: CREATE TABLE table_name_55 (country VARCHAR, time VARCHAR)
+Response: SELECT country FROM table_name_55 WHERE time = ""7:03.91""",180
+"SELECT date FROM table_name_26 WHERE decision = ""niittymaki"" AND record = ""30–21–5""",What was the date of the game with a decision of Niittymaki and when the Flyers had a record of 30–21–5?,"CREATE TABLE table_name_26 (date VARCHAR, decision VARCHAR, record VARCHAR)","Instructions: What was the date of the game with a decision of Niittymaki and when the Flyers had a record of 30–21–5?
+Context: CREATE TABLE table_name_26 (date VARCHAR, decision VARCHAR, record VARCHAR)
+Response: SELECT date FROM table_name_26 WHERE decision = ""niittymaki"" AND record = ""30–21–5""",297
+"SELECT manufacturer FROM table_name_43 WHERE fleet_numbers = ""wlwr 2, 4, 11""","Who manufactured fleet numbers of wlwr 2, 4, 11?","CREATE TABLE table_name_43 (manufacturer VARCHAR, fleet_numbers VARCHAR)","Instructions: Who manufactured fleet numbers of wlwr 2, 4, 11?
+Context: CREATE TABLE table_name_43 (manufacturer VARCHAR, fleet_numbers VARCHAR)
+Response: SELECT manufacturer FROM table_name_43 WHERE fleet_numbers = ""wlwr 2, 4, 11""",231
+"SELECT run_1 FROM table_name_9 WHERE run_3 = ""1:21.4"" AND run_4 = ""1:23.0""",What was the run 1 for the team with a run 3 of 1:21.4 and a run 4 of 1:23.0?,"CREATE TABLE table_name_9 (run_1 VARCHAR, run_3 VARCHAR, run_4 VARCHAR)","Instructions: What was the run 1 for the team with a run 3 of 1:21.4 and a run 4 of 1:23.0?
+Context: CREATE TABLE table_name_9 (run_1 VARCHAR, run_3 VARCHAR, run_4 VARCHAR)
+Response: SELECT run_1 FROM table_name_9 WHERE run_3 = ""1:21.4"" AND run_4 = ""1:23.0""",257
+"SELECT network FROM table_name_44 WHERE region_country = ""united kingdom"" AND dates_aired = ""1985–1992""",What is the name of the network in the United Kingdom which aired in 1985–1992?,"CREATE TABLE table_name_44 (network VARCHAR, region_country VARCHAR, dates_aired VARCHAR)","Instructions: What is the name of the network in the United Kingdom which aired in 1985–1992?
+Context: CREATE TABLE table_name_44 (network VARCHAR, region_country VARCHAR, dates_aired VARCHAR)
+Response: SELECT network FROM table_name_44 WHERE region_country = ""united kingdom"" AND dates_aired = ""1985–1992""",306
+"SELECT COUNT(attendance) FROM table_23308178_9 WHERE record = ""49-15-11""",How many times was there a record of 49-15-11?,"CREATE TABLE table_23308178_9 (attendance VARCHAR, record VARCHAR)","Instructions: How many times was there a record of 49-15-11?
+Context: CREATE TABLE table_23308178_9 (attendance VARCHAR, record VARCHAR)
+Response: SELECT COUNT(attendance) FROM table_23308178_9 WHERE record = ""49-15-11""",219
+SELECT COUNT(silver) FROM table_name_4 WHERE rank = 7,How much Silver has a Rank of 7?,"CREATE TABLE table_name_4 (silver VARCHAR, rank VARCHAR)","Instructions: How much Silver has a Rank of 7?
+Context: CREATE TABLE table_name_4 (silver VARCHAR, rank VARCHAR)
+Response: SELECT COUNT(silver) FROM table_name_4 WHERE rank = 7",176
+"SELECT batting_partners FROM table_1670921_2 WHERE venue = ""Sydney""",What batting partners played in sydney?,"CREATE TABLE table_1670921_2 (batting_partners VARCHAR, venue VARCHAR)","Instructions: What batting partners played in sydney?
+Context: CREATE TABLE table_1670921_2 (batting_partners VARCHAR, venue VARCHAR)
+Response: SELECT batting_partners FROM table_1670921_2 WHERE venue = ""Sydney""",211
+"SELECT title FROM table_2618061_1 WHERE directed_by = ""Daniel Sackheim""",What is the title of the episode written by daniel sackheim?,"CREATE TABLE table_2618061_1 (title VARCHAR, directed_by VARCHAR)","Instructions: What is the title of the episode written by daniel sackheim?
+Context: CREATE TABLE table_2618061_1 (title VARCHAR, directed_by VARCHAR)
+Response: SELECT title FROM table_2618061_1 WHERE directed_by = ""Daniel Sackheim""",231
+"SELECT location FROM table_name_69 WHERE mascot = ""lakers""",Can you tell me the Location that has the Mascot of lakers?,"CREATE TABLE table_name_69 (location VARCHAR, mascot VARCHAR)","Instructions: Can you tell me the Location that has the Mascot of lakers?
+Context: CREATE TABLE table_name_69 (location VARCHAR, mascot VARCHAR)
+Response: SELECT location FROM table_name_69 WHERE mascot = ""lakers""",213
+"SELECT COUNT(laps) FROM table_name_55 WHERE driver = ""jacques villeneuve"" AND grid > 7",how many laps was the driver jacques villeneuve and the grid more than 7?,"CREATE TABLE table_name_55 (laps VARCHAR, driver VARCHAR, grid VARCHAR)","Instructions: how many laps was the driver jacques villeneuve and the grid more than 7?
+Context: CREATE TABLE table_name_55 (laps VARCHAR, driver VARCHAR, grid VARCHAR)
+Response: SELECT COUNT(laps) FROM table_name_55 WHERE driver = ""jacques villeneuve"" AND grid > 7",265
+"SELECT date FROM table_name_31 WHERE away_team = ""geelong""",When did Geelong play as the away team?,"CREATE TABLE table_name_31 (date VARCHAR, away_team VARCHAR)","Instructions: When did Geelong play as the away team?
+Context: CREATE TABLE table_name_31 (date VARCHAR, away_team VARCHAR)
+Response: SELECT date FROM table_name_31 WHERE away_team = ""geelong""",192
+"SELECT series FROM table_11965481_13 WHERE date = ""June 5""",Name the series on june 5,"CREATE TABLE table_11965481_13 (series VARCHAR, date VARCHAR)","Instructions: Name the series on june 5
+Context: CREATE TABLE table_11965481_13 (series VARCHAR, date VARCHAR)
+Response: SELECT series FROM table_11965481_13 WHERE date = ""June 5""",179
+"SELECT MIN(no_in_series) FROM table_26736342_1 WHERE us_viewers__millions_ = ""1.32""",What is the earliest episode that was watched by 1.32 million viewers?,"CREATE TABLE table_26736342_1 (no_in_series INTEGER, us_viewers__millions_ VARCHAR)","Instructions: What is the earliest episode that was watched by 1.32 million viewers?
+Context: CREATE TABLE table_26736342_1 (no_in_series INTEGER, us_viewers__millions_ VARCHAR)
+Response: SELECT MIN(no_in_series) FROM table_26736342_1 WHERE us_viewers__millions_ = ""1.32""",271
+"SELECT original_nfl_team FROM table_name_86 WHERE conf = ""midwestern""",What was the original nfl team that the player was in from the midwestern conference?,"CREATE TABLE table_name_86 (original_nfl_team VARCHAR, conf VARCHAR)","Instructions: What was the original nfl team that the player was in from the midwestern conference?
+Context: CREATE TABLE table_name_86 (original_nfl_team VARCHAR, conf VARCHAR)
+Response: SELECT original_nfl_team FROM table_name_86 WHERE conf = ""midwestern""",257
+"SELECT COUNT(built) FROM table_name_51 WHERE withdrawn = 1967 AND br_sr_no = ""w27"" AND to_iow < 1926",What is the number for year built of W27 that was withdrawn in 1967 with a To LoW year earlier than 1926?,"CREATE TABLE table_name_51 (built VARCHAR, to_iow VARCHAR, withdrawn VARCHAR, br_sr_no VARCHAR)","Instructions: What is the number for year built of W27 that was withdrawn in 1967 with a To LoW year earlier than 1926?
+Context: CREATE TABLE table_name_51 (built VARCHAR, to_iow VARCHAR, withdrawn VARCHAR, br_sr_no VARCHAR)
+Response: SELECT COUNT(built) FROM table_name_51 WHERE withdrawn = 1967 AND br_sr_no = ""w27"" AND to_iow < 1926",335
+"SELECT AVG(played) FROM table_name_55 WHERE team = ""cerro corá"" AND losses > 4","Which Played has a Team of cerro corá, and Losses larger than 4?","CREATE TABLE table_name_55 (played INTEGER, team VARCHAR, losses VARCHAR)","Instructions: Which Played has a Team of cerro corá, and Losses larger than 4?
+Context: CREATE TABLE table_name_55 (played INTEGER, team VARCHAR, losses VARCHAR)
+Response: SELECT AVG(played) FROM table_name_55 WHERE team = ""cerro corá"" AND losses > 4",250
+"SELECT COUNT(league_goals) FROM table_name_93 WHERE fa_cup_goals = 0 AND league_apps = ""10""",How many league goals did the player with 10 league apps and 0 FA cup goals have?,"CREATE TABLE table_name_93 (league_goals VARCHAR, fa_cup_goals VARCHAR, league_apps VARCHAR)","Instructions: How many league goals did the player with 10 league apps and 0 FA cup goals have?
+Context: CREATE TABLE table_name_93 (league_goals VARCHAR, fa_cup_goals VARCHAR, league_apps VARCHAR)
+Response: SELECT COUNT(league_goals) FROM table_name_93 WHERE fa_cup_goals = 0 AND league_apps = ""10""",299
+"SELECT to_par FROM table_name_36 WHERE place = ""t9"" AND country = ""united states"" AND player = ""john buczek""","What is the to par of player john buczek, who has a t9 place and is from the United States?","CREATE TABLE table_name_36 (to_par VARCHAR, player VARCHAR, place VARCHAR, country VARCHAR)","Instructions: What is the to par of player john buczek, who has a t9 place and is from the United States?
+Context: CREATE TABLE table_name_36 (to_par VARCHAR, player VARCHAR, place VARCHAR, country VARCHAR)
+Response: SELECT to_par FROM table_name_36 WHERE place = ""t9"" AND country = ""united states"" AND player = ""john buczek""",325
+"SELECT candidates FROM table_1342315_10 WHERE district = ""Georgia 4""",Who ran for office at the Georgia 4 district in this election?,"CREATE TABLE table_1342315_10 (candidates VARCHAR, district VARCHAR)","Instructions: Who ran for office at the Georgia 4 district in this election?
+Context: CREATE TABLE table_1342315_10 (candidates VARCHAR, district VARCHAR)
+Response: SELECT candidates FROM table_1342315_10 WHERE district = ""Georgia 4""",233
+"SELECT episode_4 FROM table_name_87 WHERE star = ""anna powierza""",Which episode 4 has a Star of anna powierza?,"CREATE TABLE table_name_87 (episode_4 VARCHAR, star VARCHAR)","Instructions: Which episode 4 has a Star of anna powierza?
+Context: CREATE TABLE table_name_87 (episode_4 VARCHAR, star VARCHAR)
+Response: SELECT episode_4 FROM table_name_87 WHERE star = ""anna powierza""",203
+"SELECT MIN(total) FROM table_1057262_2 WHERE crop__kilotonnes_ = ""s Lupin""",what's the minimum total with crop (kilotonnes) being s lupin,"CREATE TABLE table_1057262_2 (total INTEGER, crop__kilotonnes_ VARCHAR)","Instructions: what's the minimum total with crop (kilotonnes) being s lupin
+Context: CREATE TABLE table_1057262_2 (total INTEGER, crop__kilotonnes_ VARCHAR)
+Response: SELECT MIN(total) FROM table_1057262_2 WHERE crop__kilotonnes_ = ""s Lupin""",241
+"SELECT MIN(kerry__number) FROM table_name_65 WHERE others__percentage = ""0.8%"" AND kerry__percentage = ""70.4%""",What was Kerry's lowest number of votes where Other received 0.8% and Kerry 70.4%?,"CREATE TABLE table_name_65 (kerry__number INTEGER, others__percentage VARCHAR, kerry__percentage VARCHAR)","Instructions: What was Kerry's lowest number of votes where Other received 0.8% and Kerry 70.4%?
+Context: CREATE TABLE table_name_65 (kerry__number INTEGER, others__percentage VARCHAR, kerry__percentage VARCHAR)
+Response: SELECT MIN(kerry__number) FROM table_name_65 WHERE others__percentage = ""0.8%"" AND kerry__percentage = ""70.4%""",332
+"SELECT MAX(episodes) FROM table_14562722_2 WHERE region_4 = ""March 13, 2008""","Name the most epiosdes when region 4 is march 13, 2008","CREATE TABLE table_14562722_2 (episodes INTEGER, region_4 VARCHAR)","Instructions: Name the most epiosdes when region 4 is march 13, 2008
+Context: CREATE TABLE table_14562722_2 (episodes INTEGER, region_4 VARCHAR)
+Response: SELECT MAX(episodes) FROM table_14562722_2 WHERE region_4 = ""March 13, 2008""",231
+"SELECT vehicle_code FROM table_23722304_2 WHERE bore__mm_ = ""79.4""",what is the vehicle code where the bore is 79.4?,"CREATE TABLE table_23722304_2 (vehicle_code VARCHAR, bore__mm_ VARCHAR)","Instructions: what is the vehicle code where the bore is 79.4?
+Context: CREATE TABLE table_23722304_2 (vehicle_code VARCHAR, bore__mm_ VARCHAR)
+Response: SELECT vehicle_code FROM table_23722304_2 WHERE bore__mm_ = ""79.4""",220
+SELECT country FROM table_name_26 WHERE score = 71 - 71 - 69 = 211,"What is Country, when Score is 71-71-69=211?","CREATE TABLE table_name_26 (country VARCHAR, score VARCHAR)","Instructions: What is Country, when Score is 71-71-69=211?
+Context: CREATE TABLE table_name_26 (country VARCHAR, score VARCHAR)
+Response: SELECT country FROM table_name_26 WHERE score = 71 - 71 - 69 = 211",204
+"SELECT chassis FROM table_name_5 WHERE entrant = ""g.a. vandervell""",What chassis had an entrant of G.A. Vandervell?,"CREATE TABLE table_name_5 (chassis VARCHAR, entrant VARCHAR)","Instructions: What chassis had an entrant of G.A. Vandervell?
+Context: CREATE TABLE table_name_5 (chassis VARCHAR, entrant VARCHAR)
+Response: SELECT chassis FROM table_name_5 WHERE entrant = ""g.a. vandervell""",208
+"SELECT MAX(february) FROM table_name_43 WHERE opponent = ""philadelphia flyers"" AND game > 63",What is the highest Feb value having an opponent of the Philadelphia Flyers and is after game 63?,"CREATE TABLE table_name_43 (february INTEGER, opponent VARCHAR, game VARCHAR)","Instructions: What is the highest Feb value having an opponent of the Philadelphia Flyers and is after game 63?
+Context: CREATE TABLE table_name_43 (february INTEGER, opponent VARCHAR, game VARCHAR)
+Response: SELECT MAX(february) FROM table_name_43 WHERE opponent = ""philadelphia flyers"" AND game > 63",301
+"SELECT MIN(november) FROM table_name_67 WHERE record = ""15-7-1""",What is the earliest day in November with a record of 15-7-1?,"CREATE TABLE table_name_67 (november INTEGER, record VARCHAR)","Instructions: What is the earliest day in November with a record of 15-7-1?
+Context: CREATE TABLE table_name_67 (november INTEGER, record VARCHAR)
+Response: SELECT MIN(november) FROM table_name_67 WHERE record = ""15-7-1""",220
+"SELECT MAX(wins) FROM table_1708050_3 WHERE position = ""16th""",Name the most wins where position is 16th,"CREATE TABLE table_1708050_3 (wins INTEGER, position VARCHAR)","Instructions: Name the most wins where position is 16th
+Context: CREATE TABLE table_1708050_3 (wins INTEGER, position VARCHAR)
+Response: SELECT MAX(wins) FROM table_1708050_3 WHERE position = ""16th""",198
+"SELECT net_profit__€m_ FROM table_20614109_1 WHERE earnings_per_share__€_ = ""1.19""",Name the net profit for eps beign 1.19,"CREATE TABLE table_20614109_1 (net_profit__€m_ VARCHAR, earnings_per_share__€_ VARCHAR)","Instructions: Name the net profit for eps beign 1.19
+Context: CREATE TABLE table_20614109_1 (net_profit__€m_ VARCHAR, earnings_per_share__€_ VARCHAR)
+Response: SELECT net_profit__€m_ FROM table_20614109_1 WHERE earnings_per_share__€_ = ""1.19""",242
+"SELECT SUM(withdrawn) FROM table_name_78 WHERE builder = ""ac cars"" AND introduced < 1958",when was the building withdrawn when the builder was ac cars and was introduced before 1958?,"CREATE TABLE table_name_78 (withdrawn INTEGER, builder VARCHAR, introduced VARCHAR)","Instructions: when was the building withdrawn when the builder was ac cars and was introduced before 1958?
+Context: CREATE TABLE table_name_78 (withdrawn INTEGER, builder VARCHAR, introduced VARCHAR)
+Response: SELECT SUM(withdrawn) FROM table_name_78 WHERE builder = ""ac cars"" AND introduced < 1958",298
+"SELECT general_election FROM table_106367_2 WHERE result = ""PQ majority"" AND _percentage_of_popular_vote = ""44.75%""",Which general election had a pq majority and a 44.75% of the popular vote?,"CREATE TABLE table_106367_2 (general_election VARCHAR, result VARCHAR, _percentage_of_popular_vote VARCHAR)","Instructions: Which general election had a pq majority and a 44.75% of the popular vote?
+Context: CREATE TABLE table_106367_2 (general_election VARCHAR, result VARCHAR, _percentage_of_popular_vote VARCHAR)
+Response: SELECT general_election FROM table_106367_2 WHERE result = ""PQ majority"" AND _percentage_of_popular_vote = ""44.75%""",331
+"SELECT MIN(year) FROM table_name_3 WHERE result = ""2nd"" AND venue = ""izmir, turkey""","When was the first year he placed 2nd in Izmir, Turkey?","CREATE TABLE table_name_3 (year INTEGER, result VARCHAR, venue VARCHAR)","Instructions: When was the first year he placed 2nd in Izmir, Turkey?
+Context: CREATE TABLE table_name_3 (year INTEGER, result VARCHAR, venue VARCHAR)
+Response: SELECT MIN(year) FROM table_name_3 WHERE result = ""2nd"" AND venue = ""izmir, turkey""",244
+"SELECT AVG(grid) FROM table_name_96 WHERE driver = ""piers courage""",What is the average grid for piers courage?,"CREATE TABLE table_name_96 (grid INTEGER, driver VARCHAR)","Instructions: What is the average grid for piers courage?
+Context: CREATE TABLE table_name_96 (grid INTEGER, driver VARCHAR)
+Response: SELECT AVG(grid) FROM table_name_96 WHERE driver = ""piers courage""",201
+"SELECT COUNT(lost) FROM table_name_21 WHERE team = ""corinthians"" AND points > 22",How many losses does corinthians have when they scored over 22 points?,"CREATE TABLE table_name_21 (lost VARCHAR, team VARCHAR, points VARCHAR)","Instructions: How many losses does corinthians have when they scored over 22 points?
+Context: CREATE TABLE table_name_21 (lost VARCHAR, team VARCHAR, points VARCHAR)
+Response: SELECT COUNT(lost) FROM table_name_21 WHERE team = ""corinthians"" AND points > 22",256
+"SELECT location_attendance FROM table_27715173_6 WHERE record = ""10-1""",Where was the game played where the record was 10-1?,"CREATE TABLE table_27715173_6 (location_attendance VARCHAR, record VARCHAR)","Instructions: Where was the game played where the record was 10-1?
+Context: CREATE TABLE table_27715173_6 (location_attendance VARCHAR, record VARCHAR)
+Response: SELECT location_attendance FROM table_27715173_6 WHERE record = ""10-1""",232
+SELECT COUNT(win__percentage) FROM table_name_78 WHERE appearances = 4 AND losses > 3,"What's the total number of Win % with an Appearances of 4, and Losses that's larger than 3?","CREATE TABLE table_name_78 (win__percentage VARCHAR, appearances VARCHAR, losses VARCHAR)","Instructions: What's the total number of Win % with an Appearances of 4, and Losses that's larger than 3?
+Context: CREATE TABLE table_name_78 (win__percentage VARCHAR, appearances VARCHAR, losses VARCHAR)
+Response: SELECT COUNT(win__percentage) FROM table_name_78 WHERE appearances = 4 AND losses > 3",300
+"SELECT location_attendance FROM table_17322817_10 WHERE date = ""April 13""",Name the location attendance for april 13,"CREATE TABLE table_17322817_10 (location_attendance VARCHAR, date VARCHAR)","Instructions: Name the location attendance for april 13
+Context: CREATE TABLE table_17322817_10 (location_attendance VARCHAR, date VARCHAR)
+Response: SELECT location_attendance FROM table_17322817_10 WHERE date = ""April 13""",223
+"SELECT party FROM table_name_2 WHERE end_date = ""22 november 1980""",Name the party with end date of 22 november 1980,"CREATE TABLE table_name_2 (party VARCHAR, end_date VARCHAR)","Instructions: Name the party with end date of 22 november 1980
+Context: CREATE TABLE table_name_2 (party VARCHAR, end_date VARCHAR)
+Response: SELECT party FROM table_name_2 WHERE end_date = ""22 november 1980""",208
+"SELECT attendance FROM table_name_86 WHERE record = ""43-28""",What is the attendance that has a record of 43-28?,"CREATE TABLE table_name_86 (attendance VARCHAR, record VARCHAR)","Instructions: What is the attendance that has a record of 43-28?
+Context: CREATE TABLE table_name_86 (attendance VARCHAR, record VARCHAR)
+Response: SELECT attendance FROM table_name_86 WHERE record = ""43-28""",207
+"SELECT AVG(facility_id) FROM table_name_64 WHERE call_sign = ""wnpr""",WHich Facility ID has a Call sign of wnpr?,"CREATE TABLE table_name_64 (facility_id INTEGER, call_sign VARCHAR)","Instructions: WHich Facility ID has a Call sign of wnpr?
+Context: CREATE TABLE table_name_64 (facility_id INTEGER, call_sign VARCHAR)
+Response: SELECT AVG(facility_id) FROM table_name_64 WHERE call_sign = ""wnpr""",211
+"SELECT MIN(episode) FROM table_15187735_20 WHERE segment_a = ""Thinning Shears""",What episode number is the episode with a segment on thinning shears?,"CREATE TABLE table_15187735_20 (episode INTEGER, segment_a VARCHAR)","Instructions: What episode number is the episode with a segment on thinning shears?
+Context: CREATE TABLE table_15187735_20 (episode INTEGER, segment_a VARCHAR)
+Response: SELECT MIN(episode) FROM table_15187735_20 WHERE segment_a = ""Thinning Shears""",249
+SELECT class FROM table_name_26 WHERE year = 2009,What is the class of 2009?,"CREATE TABLE table_name_26 (class VARCHAR, year VARCHAR)","Instructions: What is the class of 2009?
+Context: CREATE TABLE table_name_26 (class VARCHAR, year VARCHAR)
+Response: SELECT class FROM table_name_26 WHERE year = 2009",166
+"SELECT opponent FROM table_name_69 WHERE score = ""18-19""",Who scored 18-19?,"CREATE TABLE table_name_69 (opponent VARCHAR, score VARCHAR)","Instructions: Who scored 18-19?
+Context: CREATE TABLE table_name_69 (opponent VARCHAR, score VARCHAR)
+Response: SELECT opponent FROM table_name_69 WHERE score = ""18-19""",168
+"SELECT location FROM table_28885977_1 WHERE built_for = ""St Kilda Football Club""",In what location was a stadium built for the St Kilda Football Club?,"CREATE TABLE table_28885977_1 (location VARCHAR, built_for VARCHAR)","Instructions: In what location was a stadium built for the St Kilda Football Club?
+Context: CREATE TABLE table_28885977_1 (location VARCHAR, built_for VARCHAR)
+Response: SELECT location FROM table_28885977_1 WHERE built_for = ""St Kilda Football Club""",250
+SELECT nationality FROM table_name_5 WHERE round = 6,"What is Nationality, when Round is 6?","CREATE TABLE table_name_5 (nationality VARCHAR, round VARCHAR)","Instructions: What is Nationality, when Round is 6?
+Context: CREATE TABLE table_name_5 (nationality VARCHAR, round VARCHAR)
+Response: SELECT nationality FROM table_name_5 WHERE round = 6",186
+"SELECT date FROM table_2446333_2 WHERE circuit = ""Eastern Creek Raceway""",Name the date for eastern creek raceway,"CREATE TABLE table_2446333_2 (date VARCHAR, circuit VARCHAR)","Instructions: Name the date for eastern creek raceway
+Context: CREATE TABLE table_2446333_2 (date VARCHAR, circuit VARCHAR)
+Response: SELECT date FROM table_2446333_2 WHERE circuit = ""Eastern Creek Raceway""",206
+"SELECT literacy___percentage_ FROM table_10710364_2 WHERE growth__1991_2001_ = ""103.1%""",What is the literacy rate for groups that grew 103.1% between 1991 and 2001?,"CREATE TABLE table_10710364_2 (literacy___percentage_ VARCHAR, growth__1991_2001_ VARCHAR)","Instructions: What is the literacy rate for groups that grew 103.1% between 1991 and 2001?
+Context: CREATE TABLE table_10710364_2 (literacy___percentage_ VARCHAR, growth__1991_2001_ VARCHAR)
+Response: SELECT literacy___percentage_ FROM table_10710364_2 WHERE growth__1991_2001_ = ""103.1%""",288
+"SELECT round FROM table_name_50 WHERE opponent = ""hereford united""",What round has hereford united as the opponent?,"CREATE TABLE table_name_50 (round VARCHAR, opponent VARCHAR)","Instructions: What round has hereford united as the opponent?
+Context: CREATE TABLE table_name_50 (round VARCHAR, opponent VARCHAR)
+Response: SELECT round FROM table_name_50 WHERE opponent = ""hereford united""",208
+"SELECT nationality FROM table_name_55 WHERE nhl_team = ""montreal canadiens"" AND pick__number = ""25""",Which nationality do the Montreal Canadiens belong to with a pick# of 25?,"CREATE TABLE table_name_55 (nationality VARCHAR, nhl_team VARCHAR, pick__number VARCHAR)","Instructions: Which nationality do the Montreal Canadiens belong to with a pick# of 25?
+Context: CREATE TABLE table_name_55 (nationality VARCHAR, nhl_team VARCHAR, pick__number VARCHAR)
+Response: SELECT nationality FROM table_name_55 WHERE nhl_team = ""montreal canadiens"" AND pick__number = ""25""",295
+"SELECT grid FROM table_name_96 WHERE driver = ""mark webber""",What was the grid when the driver was Mark Webber?,"CREATE TABLE table_name_96 (grid VARCHAR, driver VARCHAR)","Instructions: What was the grid when the driver was Mark Webber?
+Context: CREATE TABLE table_name_96 (grid VARCHAR, driver VARCHAR)
+Response: SELECT grid FROM table_name_96 WHERE driver = ""mark webber""",201
+"SELECT nationality FROM table_name_67 WHERE fate = ""sunk"" AND name = ""alderamin""","Which Nationality has a Fate of sunk, and a Name of alderamin?","CREATE TABLE table_name_67 (nationality VARCHAR, fate VARCHAR, name VARCHAR)","Instructions: Which Nationality has a Fate of sunk, and a Name of alderamin?
+Context: CREATE TABLE table_name_67 (nationality VARCHAR, fate VARCHAR, name VARCHAR)
+Response: SELECT nationality FROM table_name_67 WHERE fate = ""sunk"" AND name = ""alderamin""",253
+"SELECT score FROM table_name_99 WHERE venue = ""sultan qaboos sports complex, muscat""","The game played at Sultan Qaboos Sports Complex, Muscat had what score?","CREATE TABLE table_name_99 (score VARCHAR, venue VARCHAR)","Instructions: The game played at Sultan Qaboos Sports Complex, Muscat had what score?
+Context: CREATE TABLE table_name_99 (score VARCHAR, venue VARCHAR)
+Response: SELECT score FROM table_name_99 WHERE venue = ""sultan qaboos sports complex, muscat""",247
+"SELECT intercepted_by_patriot FROM table_23014685_1 WHERE area_damaged = ""Parking lot""",Was the missile intercepted by patriot when the parking lot was damaged?,"CREATE TABLE table_23014685_1 (intercepted_by_patriot VARCHAR, area_damaged VARCHAR)","Instructions: Was the missile intercepted by patriot when the parking lot was damaged?
+Context: CREATE TABLE table_23014685_1 (intercepted_by_patriot VARCHAR, area_damaged VARCHAR)
+Response: SELECT intercepted_by_patriot FROM table_23014685_1 WHERE area_damaged = ""Parking lot""",277
+"SELECT opponent FROM table_name_2 WHERE event = ""jungle fight 5""",Which Opponent has an Event of jungle fight 5?,"CREATE TABLE table_name_2 (opponent VARCHAR, event VARCHAR)","Instructions: Which Opponent has an Event of jungle fight 5?
+Context: CREATE TABLE table_name_2 (opponent VARCHAR, event VARCHAR)
+Response: SELECT opponent FROM table_name_2 WHERE event = ""jungle fight 5""",204
+"SELECT village FROM table_2588674_1 WHERE area_km² = ""27.19""",What village has an area of 27.19 km2?,"CREATE TABLE table_2588674_1 (village VARCHAR, area_km² VARCHAR)","Instructions: What village has an area of 27.19 km2?
+Context: CREATE TABLE table_2588674_1 (village VARCHAR, area_km² VARCHAR)
+Response: SELECT village FROM table_2588674_1 WHERE area_km² = ""27.19""",197
+"SELECT MIN(elimination_number) FROM table_18598175_2 WHERE time = ""27:27""",What was the elimination number of the fighter who fought within 27:27?,"CREATE TABLE table_18598175_2 (elimination_number INTEGER, time VARCHAR)","Instructions: What was the elimination number of the fighter who fought within 27:27?
+Context: CREATE TABLE table_18598175_2 (elimination_number INTEGER, time VARCHAR)
+Response: SELECT MIN(elimination_number) FROM table_18598175_2 WHERE time = ""27:27""",251
+"SELECT candidates FROM table_1341884_12 WHERE incumbent = ""Carl Vinson""",Name the candidates where incumbent Carl Vinson is?,"CREATE TABLE table_1341884_12 (candidates VARCHAR, incumbent VARCHAR)","Instructions: Name the candidates where incumbent Carl Vinson is?
+Context: CREATE TABLE table_1341884_12 (candidates VARCHAR, incumbent VARCHAR)
+Response: SELECT candidates FROM table_1341884_12 WHERE incumbent = ""Carl Vinson""",226
+"SELECT home_team AS score FROM table_name_35 WHERE home_team = ""south melbourne""",Name the home team score for south melbourne home team,CREATE TABLE table_name_35 (home_team VARCHAR),"Instructions: Name the home team score for south melbourne home team
+Context: CREATE TABLE table_name_35 (home_team VARCHAR)
+Response: SELECT home_team AS score FROM table_name_35 WHERE home_team = ""south melbourne""",215
+"SELECT surface FROM table_name_54 WHERE score = ""6–4, 7–6 (7-5)""","What was the surface type during the match with the score of 6–4, 7–6 (7-5)??","CREATE TABLE table_name_54 (surface VARCHAR, score VARCHAR)","Instructions: What was the surface type during the match with the score of 6–4, 7–6 (7-5)??
+Context: CREATE TABLE table_name_54 (surface VARCHAR, score VARCHAR)
+Response: SELECT surface FROM table_name_54 WHERE score = ""6–4, 7–6 (7-5)""",235
+"SELECT series AS result FROM table_2554479_2 WHERE season = ""1998""",Name the series result for season being 1998,"CREATE TABLE table_2554479_2 (series VARCHAR, season VARCHAR)","Instructions: Name the series result for season being 1998
+Context: CREATE TABLE table_2554479_2 (series VARCHAR, season VARCHAR)
+Response: SELECT series AS result FROM table_2554479_2 WHERE season = ""1998""",206
+"SELECT COUNT(offensive) FROM table_23265433_2 WHERE overall = ""Colin Doyle""",Name the total number of offensive for colin doyle,"CREATE TABLE table_23265433_2 (offensive VARCHAR, overall VARCHAR)","Instructions: Name the total number of offensive for colin doyle
+Context: CREATE TABLE table_23265433_2 (offensive VARCHAR, overall VARCHAR)
+Response: SELECT COUNT(offensive) FROM table_23265433_2 WHERE overall = ""Colin Doyle""",226
+"SELECT nhl_team FROM table_name_97 WHERE player = ""steve durbano""",Which NHL team has a Player of steve durbano?,"CREATE TABLE table_name_97 (nhl_team VARCHAR, player VARCHAR)","Instructions: Which NHL team has a Player of steve durbano?
+Context: CREATE TABLE table_name_97 (nhl_team VARCHAR, player VARCHAR)
+Response: SELECT nhl_team FROM table_name_97 WHERE player = ""steve durbano""",206
+"SELECT music FROM table_name_6 WHERE style = ""samba""",WHAT IS THE MUSIC WITH SAMBA?,"CREATE TABLE table_name_6 (music VARCHAR, style VARCHAR)","Instructions: WHAT IS THE MUSIC WITH SAMBA?
+Context: CREATE TABLE table_name_6 (music VARCHAR, style VARCHAR)
+Response: SELECT music FROM table_name_6 WHERE style = ""samba""",172
+SELECT COUNT(year) FROM table_name_8 WHERE events_won_by_kclMS < 7,How many years were the events won by KCLMS less than 7?,"CREATE TABLE table_name_8 (year VARCHAR, events_won_by_kclMS INTEGER)","Instructions: How many years were the events won by KCLMS less than 7?
+Context: CREATE TABLE table_name_8 (year VARCHAR, events_won_by_kclMS INTEGER)
+Response: SELECT COUNT(year) FROM table_name_8 WHERE events_won_by_kclMS < 7",226
+"SELECT nation FROM table_name_83 WHERE height__m_ = ""1.91"" AND weight__kg_ = ""99""",what is the nation when the height (m) is 1.91 and the weight (kg) is 99?,"CREATE TABLE table_name_83 (nation VARCHAR, height__m_ VARCHAR, weight__kg_ VARCHAR)","Instructions: what is the nation when the height (m) is 1.91 and the weight (kg) is 99?
+Context: CREATE TABLE table_name_83 (nation VARCHAR, height__m_ VARCHAR, weight__kg_ VARCHAR)
+Response: SELECT nation FROM table_name_83 WHERE height__m_ = ""1.91"" AND weight__kg_ = ""99""",273
+"SELECT set_5 FROM table_name_65 WHERE date = ""jun 7"" AND set_4 = ""21-25""","What is the set 5 if the Date is jun 7, and a Set 4 is 21-25?","CREATE TABLE table_name_65 (set_5 VARCHAR, date VARCHAR, set_4 VARCHAR)","Instructions: What is the set 5 if the Date is jun 7, and a Set 4 is 21-25?
+Context: CREATE TABLE table_name_65 (set_5 VARCHAR, date VARCHAR, set_4 VARCHAR)
+Response: SELECT set_5 FROM table_name_65 WHERE date = ""jun 7"" AND set_4 = ""21-25""",239
+SELECT qual FROM table_name_6 WHERE laps = 125,What is the qual when there are 125 laps?,"CREATE TABLE table_name_6 (qual VARCHAR, laps VARCHAR)","Instructions: What is the qual when there are 125 laps?
+Context: CREATE TABLE table_name_6 (qual VARCHAR, laps VARCHAR)
+Response: SELECT qual FROM table_name_6 WHERE laps = 125",176
+"SELECT race_name FROM table_name_3 WHERE winning_driver = ""innes ireland""",What's the race name that the driver Innes Ireland won?,"CREATE TABLE table_name_3 (race_name VARCHAR, winning_driver VARCHAR)","Instructions: What's the race name that the driver Innes Ireland won?
+Context: CREATE TABLE table_name_3 (race_name VARCHAR, winning_driver VARCHAR)
+Response: SELECT race_name FROM table_name_3 WHERE winning_driver = ""innes ireland""",232
+SELECT championship FROM table_name_88 WHERE winning_score = (77 - 76 - 74 - 73 = 300),Which championship has a winning score of (77-76-74-73=300)?,"CREATE TABLE table_name_88 (championship VARCHAR, winning_score VARCHAR)","Instructions: Which championship has a winning score of (77-76-74-73=300)?
+Context: CREATE TABLE table_name_88 (championship VARCHAR, winning_score VARCHAR)
+Response: SELECT championship FROM table_name_88 WHERE winning_score = (77 - 76 - 74 - 73 = 300)",253
+"SELECT date_of_death FROM table_16527640_3 WHERE player = ""Archie Roberts""",What day did ARchie Roberts die?,"CREATE TABLE table_16527640_3 (date_of_death VARCHAR, player VARCHAR)","Instructions: What day did ARchie Roberts die?
+Context: CREATE TABLE table_16527640_3 (date_of_death VARCHAR, player VARCHAR)
+Response: SELECT date_of_death FROM table_16527640_3 WHERE player = ""Archie Roberts""",210
+"SELECT college FROM ""t"" AS able_name_20 WHERE pick__number > 13 AND position = ""t""",What college did the T who was pick after 13 go to?,CREATE TABLE t (Id VARCHAR),"Instructions: What college did the T who was pick after 13 go to?
+Context: CREATE TABLE t (Id VARCHAR)
+Response: SELECT college FROM ""t"" AS able_name_20 WHERE pick__number > 13 AND position = ""t""",195
+"SELECT 2 AS nd_leg FROM table_name_92 WHERE team_2 = ""teram""",What is the 2nd leg in match with team 2 of Teram?,CREATE TABLE table_name_92 (team_2 VARCHAR),"Instructions: What is the 2nd leg in match with team 2 of Teram?
+Context: CREATE TABLE table_name_92 (team_2 VARCHAR)
+Response: SELECT 2 AS nd_leg FROM table_name_92 WHERE team_2 = ""teram""",188
+"SELECT record FROM table_name_82 WHERE week < 13 AND date = ""july 12""",What was the record for a week below 13 on July 12?,"CREATE TABLE table_name_82 (record VARCHAR, week VARCHAR, date VARCHAR)","Instructions: What was the record for a week below 13 on July 12?
+Context: CREATE TABLE table_name_82 (record VARCHAR, week VARCHAR, date VARCHAR)
+Response: SELECT record FROM table_name_82 WHERE week < 13 AND date = ""july 12""",226
+"SELECT type FROM table_name_63 WHERE transfer_fee = ""free"" AND name = ""kapetanos""","Which Type has a Transfer fee of free, and a Name of kapetanos?","CREATE TABLE table_name_63 (type VARCHAR, transfer_fee VARCHAR, name VARCHAR)","Instructions: Which Type has a Transfer fee of free, and a Name of kapetanos?
+Context: CREATE TABLE table_name_63 (type VARCHAR, transfer_fee VARCHAR, name VARCHAR)
+Response: SELECT type FROM table_name_63 WHERE transfer_fee = ""free"" AND name = ""kapetanos""",256
+"SELECT score FROM table_name_46 WHERE year = ""1929""",What is the score in 1929?,"CREATE TABLE table_name_46 (score VARCHAR, year VARCHAR)","Instructions: What is the score in 1929?
+Context: CREATE TABLE table_name_46 (score VARCHAR, year VARCHAR)
+Response: SELECT score FROM table_name_46 WHERE year = ""1929""",168
+SELECT AVG(cuts_made) FROM table_name_59 WHERE events < 4 AND wins > 0,What is the average number of cuts made for events with under 4 entries and more than 0 wins?,"CREATE TABLE table_name_59 (cuts_made INTEGER, events VARCHAR, wins VARCHAR)","Instructions: What is the average number of cuts made for events with under 4 entries and more than 0 wins?
+Context: CREATE TABLE table_name_59 (cuts_made INTEGER, events VARCHAR, wins VARCHAR)
+Response: SELECT AVG(cuts_made) FROM table_name_59 WHERE events < 4 AND wins > 0",274
+"SELECT SUM(broadcasts__tv__1) FROM table_name_47 WHERE series = ""3 4"" AND us_release_date = ""27 december 2006""","What is the sum of Broadcasts (TV) 1, when Series is ""3 4"", and when US Release Date is ""27 December 2006""?","CREATE TABLE table_name_47 (broadcasts__tv__1 INTEGER, series VARCHAR, us_release_date VARCHAR)","Instructions: What is the sum of Broadcasts (TV) 1, when Series is ""3 4"", and when US Release Date is ""27 December 2006""?
+Context: CREATE TABLE table_name_47 (broadcasts__tv__1 INTEGER, series VARCHAR, us_release_date VARCHAR)
+Response: SELECT SUM(broadcasts__tv__1) FROM table_name_47 WHERE series = ""3 4"" AND us_release_date = ""27 december 2006""",347
+SELECT COUNT(no_in_series) FROM table_23799417_1 WHERE production_code = 202,How many series had a production code of 202?,"CREATE TABLE table_23799417_1 (no_in_series VARCHAR, production_code VARCHAR)","Instructions: How many series had a production code of 202?
+Context: CREATE TABLE table_23799417_1 (no_in_series VARCHAR, production_code VARCHAR)
+Response: SELECT COUNT(no_in_series) FROM table_23799417_1 WHERE production_code = 202",233
+"SELECT MIN(total_points) FROM table_name_84 WHERE artist = ""karine trécy"" AND place < 12",What is the lowest total points Karine Trécy has with a less than 12 place?,"CREATE TABLE table_name_84 (total_points INTEGER, artist VARCHAR, place VARCHAR)","Instructions: What is the lowest total points Karine Trécy has with a less than 12 place?
+Context: CREATE TABLE table_name_84 (total_points INTEGER, artist VARCHAR, place VARCHAR)
+Response: SELECT MIN(total_points) FROM table_name_84 WHERE artist = ""karine trécy"" AND place < 12",278
+"SELECT surface FROM table_name_26 WHERE tournament = ""napoli""",What is the Surface of the Court in Napoli?,"CREATE TABLE table_name_26 (surface VARCHAR, tournament VARCHAR)","Instructions: What is the Surface of the Court in Napoli?
+Context: CREATE TABLE table_name_26 (surface VARCHAR, tournament VARCHAR)
+Response: SELECT surface FROM table_name_26 WHERE tournament = ""napoli""",203
+"SELECT date FROM table_27734769_8 WHERE high_rebounds = ""LaMarcus Aldridge (6)""",What is the date the high rebounds were by lamarcus aldridge (6)?,"CREATE TABLE table_27734769_8 (date VARCHAR, high_rebounds VARCHAR)","Instructions: What is the date the high rebounds were by lamarcus aldridge (6)?
+Context: CREATE TABLE table_27734769_8 (date VARCHAR, high_rebounds VARCHAR)
+Response: SELECT date FROM table_27734769_8 WHERE high_rebounds = ""LaMarcus Aldridge (6)""",246
+"SELECT event FROM table_name_86 WHERE name = ""dorcus inzikuru""",In what Event did Dorcus Inzikuru compete?,"CREATE TABLE table_name_86 (event VARCHAR, name VARCHAR)","Instructions: In what Event did Dorcus Inzikuru compete?
+Context: CREATE TABLE table_name_86 (event VARCHAR, name VARCHAR)
+Response: SELECT event FROM table_name_86 WHERE name = ""dorcus inzikuru""",195
+"SELECT high_points FROM table_23285849_5 WHERE record = ""3-0""",How scored the most points where the record is 3-0 for the season?,"CREATE TABLE table_23285849_5 (high_points VARCHAR, record VARCHAR)","Instructions: How scored the most points where the record is 3-0 for the season?
+Context: CREATE TABLE table_23285849_5 (high_points VARCHAR, record VARCHAR)
+Response: SELECT high_points FROM table_23285849_5 WHERE record = ""3-0""",229
+"SELECT opponent FROM table_name_64 WHERE result = ""l 0-14""",Who was the opponent when the result was L 0-14?,"CREATE TABLE table_name_64 (opponent VARCHAR, result VARCHAR)","Instructions: Who was the opponent when the result was L 0-14?
+Context: CREATE TABLE table_name_64 (opponent VARCHAR, result VARCHAR)
+Response: SELECT opponent FROM table_name_64 WHERE result = ""l 0-14""",202
+"SELECT volume__hm³_ FROM table_28702208_1 WHERE reservoir = ""Tanes""",What is the volume when the resrvoir is Tanes?,"CREATE TABLE table_28702208_1 (volume__hm³_ VARCHAR, reservoir VARCHAR)","Instructions: What is the volume when the resrvoir is Tanes?
+Context: CREATE TABLE table_28702208_1 (volume__hm³_ VARCHAR, reservoir VARCHAR)
+Response: SELECT volume__hm³_ FROM table_28702208_1 WHERE reservoir = ""Tanes""",219
+"SELECT COUNT(moto2_winner) FROM table_27948565_1 WHERE circuit = ""Laguna Seca""",Name the total number of moto2 winners for laguna seca,"CREATE TABLE table_27948565_1 (moto2_winner VARCHAR, circuit VARCHAR)","Instructions: Name the total number of moto2 winners for laguna seca
+Context: CREATE TABLE table_27948565_1 (moto2_winner VARCHAR, circuit VARCHAR)
+Response: SELECT COUNT(moto2_winner) FROM table_27948565_1 WHERE circuit = ""Laguna Seca""",236
+SELECT COUNT(title) FROM table_12226390_3 WHERE production_code = 39,what's the total number of title for production code 39,"CREATE TABLE table_12226390_3 (title VARCHAR, production_code VARCHAR)","Instructions: what's the total number of title for production code 39
+Context: CREATE TABLE table_12226390_3 (title VARCHAR, production_code VARCHAR)
+Response: SELECT COUNT(title) FROM table_12226390_3 WHERE production_code = 39",228
+"SELECT week FROM table_name_7 WHERE result = ""w 31-21""",What is the week with w 31-21 result?,"CREATE TABLE table_name_7 (week VARCHAR, result VARCHAR)","Instructions: What is the week with w 31-21 result?
+Context: CREATE TABLE table_name_7 (week VARCHAR, result VARCHAR)
+Response: SELECT week FROM table_name_7 WHERE result = ""w 31-21""",182
+"SELECT gp_gs FROM table_name_13 WHERE long = ""17"" AND season = ""total""",Which GP-GS had a long of 17 and a season of total?,"CREATE TABLE table_name_13 (gp_gs VARCHAR, long VARCHAR, season VARCHAR)","Instructions: Which GP-GS had a long of 17 and a season of total?
+Context: CREATE TABLE table_name_13 (gp_gs VARCHAR, long VARCHAR, season VARCHAR)
+Response: SELECT gp_gs FROM table_name_13 WHERE long = ""17"" AND season = ""total""",228
+"SELECT COUNT(series__number) FROM table_18217753_1 WHERE us_viewers__millions_ = ""23.93""",How many series had viewers totaling 23.93 million?,"CREATE TABLE table_18217753_1 (series__number VARCHAR, us_viewers__millions_ VARCHAR)","Instructions: How many series had viewers totaling 23.93 million?
+Context: CREATE TABLE table_18217753_1 (series__number VARCHAR, us_viewers__millions_ VARCHAR)
+Response: SELECT COUNT(series__number) FROM table_18217753_1 WHERE us_viewers__millions_ = ""23.93""",259
+"SELECT region FROM table_name_63 WHERE catalog = ""885 380-1""",In what Region is Catalog number 885 380-1?,"CREATE TABLE table_name_63 (region VARCHAR, catalog VARCHAR)","Instructions: In what Region is Catalog number 885 380-1?
+Context: CREATE TABLE table_name_63 (region VARCHAR, catalog VARCHAR)
+Response: SELECT region FROM table_name_63 WHERE catalog = ""885 380-1""",198
+"SELECT name, LOCATION FROM track",Show the name and location for all tracks.,"CREATE TABLE track (name VARCHAR, LOCATION VARCHAR)","Instructions: Show the name and location for all tracks.
+Context: CREATE TABLE track (name VARCHAR, LOCATION VARCHAR)
+Response: SELECT name, LOCATION FROM track",160
+"SELECT law_school_attended FROM table_name_14 WHERE appointed > 2004 AND name = ""judge sheila abdus-salaam""","Which law school did judge sheila abdus-salaam attend, who was appointed in 2004?","CREATE TABLE table_name_14 (law_school_attended VARCHAR, appointed VARCHAR, name VARCHAR)","Instructions: Which law school did judge sheila abdus-salaam attend, who was appointed in 2004?
+Context: CREATE TABLE table_name_14 (law_school_attended VARCHAR, appointed VARCHAR, name VARCHAR)
+Response: SELECT law_school_attended FROM table_name_14 WHERE appointed > 2004 AND name = ""judge sheila abdus-salaam""",312
+SELECT COUNT(patient) FROM stay WHERE room = 112,How many patients stay in room 112?,"CREATE TABLE stay (patient VARCHAR, room VARCHAR)","Instructions: How many patients stay in room 112?
+Context: CREATE TABLE stay (patient VARCHAR, room VARCHAR)
+Response: SELECT COUNT(patient) FROM stay WHERE room = 112",167
+SELECT MAX(round) FROM table_name_83 WHERE pick__number > 34,What is the highest round of the player with a pick number lower than 34?,"CREATE TABLE table_name_83 (round INTEGER, pick__number INTEGER)","Instructions: What is the highest round of the player with a pick number lower than 34?
+Context: CREATE TABLE table_name_83 (round INTEGER, pick__number INTEGER)
+Response: SELECT MAX(round) FROM table_name_83 WHERE pick__number > 34",232
+"SELECT attendance FROM table_name_82 WHERE time = ""3:00""",What is the number of people in attendance when the time is 3:00?,"CREATE TABLE table_name_82 (attendance VARCHAR, time VARCHAR)","Instructions: What is the number of people in attendance when the time is 3:00?
+Context: CREATE TABLE table_name_82 (attendance VARCHAR, time VARCHAR)
+Response: SELECT attendance FROM table_name_82 WHERE time = ""3:00""",217
+"SELECT duration FROM table_name_83 WHERE actor = ""joyce jacobs""",How long did Joyce Jacobs portray her character on her show?,"CREATE TABLE table_name_83 (duration VARCHAR, actor VARCHAR)","Instructions: How long did Joyce Jacobs portray her character on her show?
+Context: CREATE TABLE table_name_83 (duration VARCHAR, actor VARCHAR)
+Response: SELECT duration FROM table_name_83 WHERE actor = ""joyce jacobs""",218
+"SELECT english_title FROM table_26555737_1 WHERE arabic_title = ""ملح هذا البحر""",When ملح هذا البحر is the arabic title what is the english title?,"CREATE TABLE table_26555737_1 (english_title VARCHAR, arabic_title VARCHAR)","Instructions: When ملح هذا البحر is the arabic title what is the english title?
+Context: CREATE TABLE table_26555737_1 (english_title VARCHAR, arabic_title VARCHAR)
+Response: SELECT english_title FROM table_26555737_1 WHERE arabic_title = ""ملح هذا البحر""",254
+"SELECT MAX(goals) FROM table_name_8 WHERE name = ""josep samitier""",Name the most goals for josep samitier,"CREATE TABLE table_name_8 (goals INTEGER, name VARCHAR)","Instructions: Name the most goals for josep samitier
+Context: CREATE TABLE table_name_8 (goals INTEGER, name VARCHAR)
+Response: SELECT MAX(goals) FROM table_name_8 WHERE name = ""josep samitier""",193
+"SELECT winner FROM table_23058971_8 WHERE big_ten_team = ""#4 Purdue""",What is the record for Big Ten Team #4 Purdue?,"CREATE TABLE table_23058971_8 (winner VARCHAR, big_ten_team VARCHAR)","Instructions: What is the record for Big Ten Team #4 Purdue?
+Context: CREATE TABLE table_23058971_8 (winner VARCHAR, big_ten_team VARCHAR)
+Response: SELECT winner FROM table_23058971_8 WHERE big_ten_team = ""#4 Purdue""",217
+"SELECT COUNT(year) FROM table_name_16 WHERE time = ""55:29:20""",What year has the time of 55:29:20?,"CREATE TABLE table_name_16 (year VARCHAR, time VARCHAR)","Instructions: What year has the time of 55:29:20?
+Context: CREATE TABLE table_name_16 (year VARCHAR, time VARCHAR)
+Response: SELECT COUNT(year) FROM table_name_16 WHERE time = ""55:29:20""",186
+"SELECT country FROM table_name_64 WHERE player = ""scott verplank""",What country has player Scott Verplank?,"CREATE TABLE table_name_64 (country VARCHAR, player VARCHAR)","Instructions: What country has player Scott Verplank?
+Context: CREATE TABLE table_name_64 (country VARCHAR, player VARCHAR)
+Response: SELECT country FROM table_name_64 WHERE player = ""scott verplank""",199
+"SELECT date FROM table_name_63 WHERE record = ""12-9""",What date was the game when the liberty had a record of 12-9?,"CREATE TABLE table_name_63 (date VARCHAR, record VARCHAR)","Instructions: What date was the game when the liberty had a record of 12-9?
+Context: CREATE TABLE table_name_63 (date VARCHAR, record VARCHAR)
+Response: SELECT date FROM table_name_63 WHERE record = ""12-9""",205
+"SELECT points FROM table_name_68 WHERE division = ""ebl div1"" AND played = ""22""",What's the points when the division is ebl div1 with 22 played?,"CREATE TABLE table_name_68 (points VARCHAR, division VARCHAR, played VARCHAR)","Instructions: What's the points when the division is ebl div1 with 22 played?
+Context: CREATE TABLE table_name_68 (points VARCHAR, division VARCHAR, played VARCHAR)
+Response: SELECT points FROM table_name_68 WHERE division = ""ebl div1"" AND played = ""22""",253
+"SELECT COUNT(attendance) FROM table_name_61 WHERE record = ""23-23""",What is the total attendance for games when the record was 23-23?,"CREATE TABLE table_name_61 (attendance VARCHAR, record VARCHAR)","Instructions: What is the total attendance for games when the record was 23-23?
+Context: CREATE TABLE table_name_61 (attendance VARCHAR, record VARCHAR)
+Response: SELECT COUNT(attendance) FROM table_name_61 WHERE record = ""23-23""",229
+"SELECT Double AS non_suited_match FROM table_name_1 WHERE non_suited_match = ""4:1"" AND house_edge = ""3.63%""","With a House Edge of 3.63% and a Non-Suited Match of 4:1, what is the Double Non-Suited Match?","CREATE TABLE table_name_1 (Double VARCHAR, non_suited_match VARCHAR, house_edge VARCHAR)","Instructions: With a House Edge of 3.63% and a Non-Suited Match of 4:1, what is the Double Non-Suited Match?
+Context: CREATE TABLE table_name_1 (Double VARCHAR, non_suited_match VARCHAR, house_edge VARCHAR)
+Response: SELECT Double AS non_suited_match FROM table_name_1 WHERE non_suited_match = ""4:1"" AND house_edge = ""3.63%""",324
+"SELECT MIN(year) FROM table_name_54 WHERE location = ""giants stadium"" AND winner = ""new york giants""","WHAT YEAR WAS AT GIANTS STADIUM, WITH WINNER OF NEW YORK GIANTS?","CREATE TABLE table_name_54 (year INTEGER, location VARCHAR, winner VARCHAR)","Instructions: WHAT YEAR WAS AT GIANTS STADIUM, WITH WINNER OF NEW YORK GIANTS?
+Context: CREATE TABLE table_name_54 (year INTEGER, location VARCHAR, winner VARCHAR)
+Response: SELECT MIN(year) FROM table_name_54 WHERE location = ""giants stadium"" AND winner = ""new york giants""",274
+SELECT score FROM table_23248940_9 WHERE game = 50,How did the game number 50 end?,"CREATE TABLE table_23248940_9 (score VARCHAR, game VARCHAR)","Instructions: How did the game number 50 end?
+Context: CREATE TABLE table_23248940_9 (score VARCHAR, game VARCHAR)
+Response: SELECT score FROM table_23248940_9 WHERE game = 50",175
+"SELECT COUNT(result) FROM table_20319085_2 WHERE conference_record = ""4-3""",How many different results are there for the season with a 4-3 conference record?,"CREATE TABLE table_20319085_2 (result VARCHAR, conference_record VARCHAR)","Instructions: How many different results are there for the season with a 4-3 conference record?
+Context: CREATE TABLE table_20319085_2 (result VARCHAR, conference_record VARCHAR)
+Response: SELECT COUNT(result) FROM table_20319085_2 WHERE conference_record = ""4-3""",263
+"SELECT MIN(overall) FROM table_name_26 WHERE name = ""derrick harvey"" AND round > 1",What is the overall pick number that Derrick Harvey was when he was picked in a round after round 1?,"CREATE TABLE table_name_26 (overall INTEGER, name VARCHAR, round VARCHAR)","Instructions: What is the overall pick number that Derrick Harvey was when he was picked in a round after round 1?
+Context: CREATE TABLE table_name_26 (overall INTEGER, name VARCHAR, round VARCHAR)
+Response: SELECT MIN(overall) FROM table_name_26 WHERE name = ""derrick harvey"" AND round > 1",290
+"SELECT province FROM table_name_42 WHERE rank > 24 AND name = ""laforge-2""",what is the province when the rank is higher than 24 and the name is laforge-2?,"CREATE TABLE table_name_42 (province VARCHAR, rank VARCHAR, name VARCHAR)","Instructions: what is the province when the rank is higher than 24 and the name is laforge-2?
+Context: CREATE TABLE table_name_42 (province VARCHAR, rank VARCHAR, name VARCHAR)
+Response: SELECT province FROM table_name_42 WHERE rank > 24 AND name = ""laforge-2""",260
+"SELECT category FROM table_28628309_9 WHERE player = ""Olsen Racela""",What are the names of the categories when the player is olsen racela?,"CREATE TABLE table_28628309_9 (category VARCHAR, player VARCHAR)","Instructions: What are the names of the categories when the player is olsen racela?
+Context: CREATE TABLE table_28628309_9 (category VARCHAR, player VARCHAR)
+Response: SELECT category FROM table_28628309_9 WHERE player = ""Olsen Racela""",235
+SELECT chassis FROM table_name_51 WHERE points < 6 AND year = 1961,"In 1961, what was the Chassis when the points were lower than 6?","CREATE TABLE table_name_51 (chassis VARCHAR, points VARCHAR, year VARCHAR)","Instructions: In 1961, what was the Chassis when the points were lower than 6?
+Context: CREATE TABLE table_name_51 (chassis VARCHAR, points VARCHAR, year VARCHAR)
+Response: SELECT chassis FROM table_name_51 WHERE points < 6 AND year = 1961",239
+"SELECT Draft_Pick_Number, Draft_Class FROM match_season WHERE POSITION = ""Defender""",Show the draft pick numbers and draft classes of players whose positions are defenders.,"CREATE TABLE match_season (Draft_Pick_Number VARCHAR, Draft_Class VARCHAR, POSITION VARCHAR)","Instructions: Show the draft pick numbers and draft classes of players whose positions are defenders.
+Context: CREATE TABLE match_season (Draft_Pick_Number VARCHAR, Draft_Class VARCHAR, POSITION VARCHAR)
+Response: SELECT Draft_Pick_Number, Draft_Class FROM match_season WHERE POSITION = ""Defender""",297
+"SELECT ncaat_record FROM table_28001186_8 WHERE date = ""June 26""",What was the NCAA Tournament record after the June 26 game?,"CREATE TABLE table_28001186_8 (ncaat_record VARCHAR, date VARCHAR)","Instructions: What was the NCAA Tournament record after the June 26 game?
+Context: CREATE TABLE table_28001186_8 (ncaat_record VARCHAR, date VARCHAR)
+Response: SELECT ncaat_record FROM table_28001186_8 WHERE date = ""June 26""",224
+"SELECT home_team FROM table_name_59 WHERE date = ""18 february 1956"" AND away_team = ""blackburn rovers""","What is Home Team, when Date is 18 February 1956, and when Away Team is Blackburn Rovers?","CREATE TABLE table_name_59 (home_team VARCHAR, date VARCHAR, away_team VARCHAR)","Instructions: What is Home Team, when Date is 18 February 1956, and when Away Team is Blackburn Rovers?
+Context: CREATE TABLE table_name_59 (home_team VARCHAR, date VARCHAR, away_team VARCHAR)
+Response: SELECT home_team FROM table_name_59 WHERE date = ""18 february 1956"" AND away_team = ""blackburn rovers""",305
+"SELECT school_club_team FROM table_name_83 WHERE player = ""howard wood""",What School/Club Team is Player Howard Wood from?,"CREATE TABLE table_name_83 (school_club_team VARCHAR, player VARCHAR)","Instructions: What School/Club Team is Player Howard Wood from?
+Context: CREATE TABLE table_name_83 (school_club_team VARCHAR, player VARCHAR)
+Response: SELECT school_club_team FROM table_name_83 WHERE player = ""howard wood""",224
+"SELECT year FROM table_name_39 WHERE outcome = ""runner-up"" AND opponent = ""filippo volandri""",What year was the match against filippo volandri where xavier malisse was runner-up?,"CREATE TABLE table_name_39 (year VARCHAR, outcome VARCHAR, opponent VARCHAR)","Instructions: What year was the match against filippo volandri where xavier malisse was runner-up?
+Context: CREATE TABLE table_name_39 (year VARCHAR, outcome VARCHAR, opponent VARCHAR)
+Response: SELECT year FROM table_name_39 WHERE outcome = ""runner-up"" AND opponent = ""filippo volandri""",287
+"SELECT director_s_ FROM table_name_22 WHERE film = ""the chapel""",Who directed the film 'The Chapel'?,"CREATE TABLE table_name_22 (director_s_ VARCHAR, film VARCHAR)","Instructions: Who directed the film 'The Chapel'?
+Context: CREATE TABLE table_name_22 (director_s_ VARCHAR, film VARCHAR)
+Response: SELECT director_s_ FROM table_name_22 WHERE film = ""the chapel""",195
+"SELECT college_junior_club_team FROM table_2886617_8 WHERE player = ""Milan Kostolny""",What college team did Milan Kostolny play for?,"CREATE TABLE table_2886617_8 (college_junior_club_team VARCHAR, player VARCHAR)","Instructions: What college team did Milan Kostolny play for?
+Context: CREATE TABLE table_2886617_8 (college_junior_club_team VARCHAR, player VARCHAR)
+Response: SELECT college_junior_club_team FROM table_2886617_8 WHERE player = ""Milan Kostolny""",244
+SELECT duration FROM table_21422977_2 WHERE nº = 33,What is the duration for no 33?,"CREATE TABLE table_21422977_2 (duration VARCHAR, nº VARCHAR)","Instructions: What is the duration for no 33?
+Context: CREATE TABLE table_21422977_2 (duration VARCHAR, nº VARCHAR)
+Response: SELECT duration FROM table_21422977_2 WHERE nº = 33",177
+"SELECT day_3 FROM table_name_45 WHERE day_4 = ""fr.""",What is the day 3 when day 4 is fr.?,"CREATE TABLE table_name_45 (day_3 VARCHAR, day_4 VARCHAR)","Instructions: What is the day 3 when day 4 is fr.?
+Context: CREATE TABLE table_name_45 (day_3 VARCHAR, day_4 VARCHAR)
+Response: SELECT day_3 FROM table_name_45 WHERE day_4 = ""fr.""",179
+"SELECT class FROM table_19897896_7 WHERE university = ""Ohio state""",in which class was the ohio state university,"CREATE TABLE table_19897896_7 (class VARCHAR, university VARCHAR)","Instructions: in which class was the ohio state university
+Context: CREATE TABLE table_19897896_7 (class VARCHAR, university VARCHAR)
+Response: SELECT class FROM table_19897896_7 WHERE university = ""Ohio state""",210
+"SELECT results FROM table_name_73 WHERE institutional_authority = ""paf""",Name the results for institutional authority of paf,"CREATE TABLE table_name_73 (results VARCHAR, institutional_authority VARCHAR)","Instructions: Name the results for institutional authority of paf
+Context: CREATE TABLE table_name_73 (results VARCHAR, institutional_authority VARCHAR)
+Response: SELECT results FROM table_name_73 WHERE institutional_authority = ""paf""",234
+"SELECT opponent FROM table_name_86 WHERE score = ""7–5, 7–6 (8–6)""","who is the opponent when the score is 7–5, 7–6 (8–6)?","CREATE TABLE table_name_86 (opponent VARCHAR, score VARCHAR)","Instructions: who is the opponent when the score is 7–5, 7–6 (8–6)?
+Context: CREATE TABLE table_name_86 (opponent VARCHAR, score VARCHAR)
+Response: SELECT opponent FROM table_name_86 WHERE score = ""7–5, 7–6 (8–6)""",213
+SELECT name FROM table_name_35 WHERE current_age = 29,What is the prisoner's name that is currently 29 years old?,"CREATE TABLE table_name_35 (name VARCHAR, current_age VARCHAR)","Instructions: What is the prisoner's name that is currently 29 years old?
+Context: CREATE TABLE table_name_35 (name VARCHAR, current_age VARCHAR)
+Response: SELECT name FROM table_name_35 WHERE current_age = 29",209
+"SELECT home_team AS score FROM table_name_9 WHERE home_team = ""south melbourne""",What was South Melbourne's score when they played as the home team?,CREATE TABLE table_name_9 (home_team VARCHAR),"Instructions: What was South Melbourne's score when they played as the home team?
+Context: CREATE TABLE table_name_9 (home_team VARCHAR)
+Response: SELECT home_team AS score FROM table_name_9 WHERE home_team = ""south melbourne""",226
+"SELECT MAX(elevation__m_) FROM table_name_83 WHERE peak = ""daurmål"" AND isolation__km_ > 4","What is the highest elevation for the peak daurmål, and an Isolation (km) larger than 4?","CREATE TABLE table_name_83 (elevation__m_ INTEGER, peak VARCHAR, isolation__km_ VARCHAR)","Instructions: What is the highest elevation for the peak daurmål, and an Isolation (km) larger than 4?
+Context: CREATE TABLE table_name_83 (elevation__m_ INTEGER, peak VARCHAR, isolation__km_ VARCHAR)
+Response: SELECT MAX(elevation__m_) FROM table_name_83 WHERE peak = ""daurmål"" AND isolation__km_ > 4",301
+"SELECT MIN(attendance) FROM table_name_25 WHERE record = ""3-5""",What is the least attendance that has 3-5 as a record?,"CREATE TABLE table_name_25 (attendance INTEGER, record VARCHAR)","Instructions: What is the least attendance that has 3-5 as a record?
+Context: CREATE TABLE table_name_25 (attendance INTEGER, record VARCHAR)
+Response: SELECT MIN(attendance) FROM table_name_25 WHERE record = ""3-5""",214
+"SELECT COUNT(date) FROM table_name_37 WHERE category = ""ladies"" AND team = ""rothaus-cube""",How many dates does the ladies category correspond to Rothaus-Cube?,"CREATE TABLE table_name_37 (date VARCHAR, category VARCHAR, team VARCHAR)","Instructions: How many dates does the ladies category correspond to Rothaus-Cube?
+Context: CREATE TABLE table_name_37 (date VARCHAR, category VARCHAR, team VARCHAR)
+Response: SELECT COUNT(date) FROM table_name_37 WHERE category = ""ladies"" AND team = ""rothaus-cube""",264
+"SELECT MIN(round) FROM table_name_54 WHERE name = ""samuel scheschuk""",What is the smallest round associated with Samuel Scheschuk?,"CREATE TABLE table_name_54 (round INTEGER, name VARCHAR)","Instructions: What is the smallest round associated with Samuel Scheschuk?
+Context: CREATE TABLE table_name_54 (round INTEGER, name VARCHAR)
+Response: SELECT MIN(round) FROM table_name_54 WHERE name = ""samuel scheschuk""",219
+"SELECT cfl_team FROM table_25017530_6 WHERE position = ""LB""",Name the cfl team for lb position,"CREATE TABLE table_25017530_6 (cfl_team VARCHAR, position VARCHAR)","Instructions: Name the cfl team for lb position
+Context: CREATE TABLE table_25017530_6 (cfl_team VARCHAR, position VARCHAR)
+Response: SELECT cfl_team FROM table_25017530_6 WHERE position = ""LB""",193
+"SELECT COUNT(genre) FROM table_26488540_1 WHERE artist = ""The Jimi Hendrix Experience""",How many different genres appear for the Jimi Hendrix Experience?,"CREATE TABLE table_26488540_1 (genre VARCHAR, artist VARCHAR)","Instructions: How many different genres appear for the Jimi Hendrix Experience?
+Context: CREATE TABLE table_26488540_1 (genre VARCHAR, artist VARCHAR)
+Response: SELECT COUNT(genre) FROM table_26488540_1 WHERE artist = ""The Jimi Hendrix Experience""",247
+"SELECT hangul___japanese FROM table_name_55 WHERE year < 2014 AND role = ""baek seung-jo""",What's the Hangul/Japanese that happened before 2014 having a role of Baek Seung-Jo?,"CREATE TABLE table_name_55 (hangul___japanese VARCHAR, year VARCHAR, role VARCHAR)","Instructions: What's the Hangul/Japanese that happened before 2014 having a role of Baek Seung-Jo?
+Context: CREATE TABLE table_name_55 (hangul___japanese VARCHAR, year VARCHAR, role VARCHAR)
+Response: SELECT hangul___japanese FROM table_name_55 WHERE year < 2014 AND role = ""baek seung-jo""",289
+"SELECT award FROM table_name_92 WHERE role = ""elphaba"" AND year = ""2009""",Which award was given for the role of Elphaba in 2009?,"CREATE TABLE table_name_92 (award VARCHAR, role VARCHAR, year VARCHAR)","Instructions: Which award was given for the role of Elphaba in 2009?
+Context: CREATE TABLE table_name_92 (award VARCHAR, role VARCHAR, year VARCHAR)
+Response: SELECT award FROM table_name_92 WHERE role = ""elphaba"" AND year = ""2009""",231
+"SELECT municipality FROM table_157826_1 WHERE county = ""Finnmark"" AND population > 6187.0",Which municipalities located in the county of Finnmark have populations bigger than 6187.0?,"CREATE TABLE table_157826_1 (municipality VARCHAR, county VARCHAR, population VARCHAR)","Instructions: Which municipalities located in the county of Finnmark have populations bigger than 6187.0?
+Context: CREATE TABLE table_157826_1 (municipality VARCHAR, county VARCHAR, population VARCHAR)
+Response: SELECT municipality FROM table_157826_1 WHERE county = ""Finnmark"" AND population > 6187.0",301
+"SELECT score FROM table_name_11 WHERE player = ""curtis strange""",What is Curtis Strange's Score?,"CREATE TABLE table_name_11 (score VARCHAR, player VARCHAR)","Instructions: What is Curtis Strange's Score?
+Context: CREATE TABLE table_name_11 (score VARCHAR, player VARCHAR)
+Response: SELECT score FROM table_name_11 WHERE player = ""curtis strange""",187
+"SELECT COUNT(kickoff_)[a_] FROM table_11406866_2 WHERE ""week"" = ""week""",what is the total number of kickoff [a ] where week is week,"CREATE TABLE table_11406866_2 (a_ VARCHAR, kickoff_ VARCHAR)","Instructions: what is the total number of kickoff [a ] where week is week
+Context: CREATE TABLE table_11406866_2 (a_ VARCHAR, kickoff_ VARCHAR)
+Response: SELECT COUNT(kickoff_)[a_] FROM table_11406866_2 WHERE ""week"" = ""week""",224
+"SELECT MAX(points) FROM table_name_78 WHERE entrant = ""coloni spa""",What was the most points for Coloni Spa?,"CREATE TABLE table_name_78 (points INTEGER, entrant VARCHAR)","Instructions: What was the most points for Coloni Spa?
+Context: CREATE TABLE table_name_78 (points INTEGER, entrant VARCHAR)
+Response: SELECT MAX(points) FROM table_name_78 WHERE entrant = ""coloni spa""",201
+"SELECT us AS AC FROM table_name_13 WHERE album = ""the best"" AND year = 1965",What was the best album in 1965?,"CREATE TABLE table_name_13 (us VARCHAR, album VARCHAR, year VARCHAR)","Instructions: What was the best album in 1965?
+Context: CREATE TABLE table_name_13 (us VARCHAR, album VARCHAR, year VARCHAR)
+Response: SELECT us AS AC FROM table_name_13 WHERE album = ""the best"" AND year = 1965",210
+"SELECT formed_from FROM table_275023_1 WHERE province = ""New Plymouth""",What province was New Plymouth formed from?,"CREATE TABLE table_275023_1 (formed_from VARCHAR, province VARCHAR)","Instructions: What province was New Plymouth formed from?
+Context: CREATE TABLE table_275023_1 (formed_from VARCHAR, province VARCHAR)
+Response: SELECT formed_from FROM table_275023_1 WHERE province = ""New Plymouth""",215
+"SELECT opponent_in_the_final FROM table_name_69 WHERE date = ""november 23, 1998""","Who played the final match on November 23, 1998?","CREATE TABLE table_name_69 (opponent_in_the_final VARCHAR, date VARCHAR)","Instructions: Who played the final match on November 23, 1998?
+Context: CREATE TABLE table_name_69 (opponent_in_the_final VARCHAR, date VARCHAR)
+Response: SELECT opponent_in_the_final FROM table_name_69 WHERE date = ""november 23, 1998""",235
+SELECT COUNT(DISTINCT nationality) FROM swimmer,How many different countries are all the swimmers from?,CREATE TABLE swimmer (nationality VARCHAR),"Instructions: How many different countries are all the swimmers from?
+Context: CREATE TABLE swimmer (nationality VARCHAR)
+Response: SELECT COUNT(DISTINCT nationality) FROM swimmer",179
+SELECT course_name FROM courses ORDER BY course_name,List the names of courses in alphabetical order?,CREATE TABLE courses (course_name VARCHAR),"Instructions: List the names of courses in alphabetical order?
+Context: CREATE TABLE courses (course_name VARCHAR)
+Response: SELECT course_name FROM courses ORDER BY course_name",177
+SELECT driver FROM table_name_35 WHERE points = 6,What is the name of the driver with 6 points?,"CREATE TABLE table_name_35 (driver VARCHAR, points VARCHAR)","Instructions: What is the name of the driver with 6 points?
+Context: CREATE TABLE table_name_35 (driver VARCHAR, points VARCHAR)
+Response: SELECT driver FROM table_name_35 WHERE points = 6",188
+"SELECT MIN(track) FROM table_name_64 WHERE song_title = ""just a little bit""",Which track has a title : Just a little bit,"CREATE TABLE table_name_64 (track INTEGER, song_title VARCHAR)","Instructions: Which track has a title : Just a little bit
+Context: CREATE TABLE table_name_64 (track INTEGER, song_title VARCHAR)
+Response: SELECT MIN(track) FROM table_name_64 WHERE song_title = ""just a little bit""",215
+"SELECT 2012 AS _club FROM table_name_23 WHERE name = ""norbert hosnyánszky category:articles with hcards""",Name the 012 club which has of norbert hosnyánszky category:articles with hcards?,CREATE TABLE table_name_23 (name VARCHAR),"Instructions: Name the 012 club which has of norbert hosnyánszky category:articles with hcards?
+Context: CREATE TABLE table_name_23 (name VARCHAR)
+Response: SELECT 2012 AS _club FROM table_name_23 WHERE name = ""norbert hosnyánszky category:articles with hcards""",261
+"SELECT distance FROM table_2923917_4 WHERE brisbane = ""$4.80""",What is the distance when brisbane is $4.80?,"CREATE TABLE table_2923917_4 (distance VARCHAR, brisbane VARCHAR)","Instructions: What is the distance when brisbane is $4.80?
+Context: CREATE TABLE table_2923917_4 (distance VARCHAR, brisbane VARCHAR)
+Response: SELECT distance FROM table_2923917_4 WHERE brisbane = ""$4.80""",205
+"SELECT MAX(division) FROM table_name_25 WHERE playoffs = ""quarter finals"" AND regular_season = ""5th""","What is the highest Division when the playoffs were the quarter finals, with a Regular Season of 5th?","CREATE TABLE table_name_25 (division INTEGER, playoffs VARCHAR, regular_season VARCHAR)","Instructions: What is the highest Division when the playoffs were the quarter finals, with a Regular Season of 5th?
+Context: CREATE TABLE table_name_25 (division INTEGER, playoffs VARCHAR, regular_season VARCHAR)
+Response: SELECT MAX(division) FROM table_name_25 WHERE playoffs = ""quarter finals"" AND regular_season = ""5th""",323
+SELECT COUNT(domestic_mail) FROM table_1754531_4 WHERE total_freight_and_mail = 7853,Name the total number of domestic mail for 7853 for total frieght and mail,"CREATE TABLE table_1754531_4 (domestic_mail VARCHAR, total_freight_and_mail VARCHAR)","Instructions: Name the total number of domestic mail for 7853 for total frieght and mail
+Context: CREATE TABLE table_1754531_4 (domestic_mail VARCHAR, total_freight_and_mail VARCHAR)
+Response: SELECT COUNT(domestic_mail) FROM table_1754531_4 WHERE total_freight_and_mail = 7853",277
+"SELECT hometown FROM table_name_83 WHERE player = ""cody zeller""",What is the hometown of Cody Zeller?,"CREATE TABLE table_name_83 (hometown VARCHAR, player VARCHAR)","Instructions: What is the hometown of Cody Zeller?
+Context: CREATE TABLE table_name_83 (hometown VARCHAR, player VARCHAR)
+Response: SELECT hometown FROM table_name_83 WHERE player = ""cody zeller""",195
+SELECT MIN(game) FROM table_name_99 WHERE attendance = 24 OFFSET 694,"Where was the game that the attendance was 24,694?","CREATE TABLE table_name_99 (game INTEGER, attendance VARCHAR)","Instructions: Where was the game that the attendance was 24,694?
+Context: CREATE TABLE table_name_99 (game INTEGER, attendance VARCHAR)
+Response: SELECT MIN(game) FROM table_name_99 WHERE attendance = 24 OFFSET 694",214
+"SELECT MAX(attendance) FROM table_name_45 WHERE date = ""december 9, 1973"" AND week < 13","What is the highest attendance for the game before week 13 on December 9, 1973?","CREATE TABLE table_name_45 (attendance INTEGER, date VARCHAR, week VARCHAR)","Instructions: What is the highest attendance for the game before week 13 on December 9, 1973?
+Context: CREATE TABLE table_name_45 (attendance INTEGER, date VARCHAR, week VARCHAR)
+Response: SELECT MAX(attendance) FROM table_name_45 WHERE date = ""december 9, 1973"" AND week < 13",276
+"SELECT muzzle_energy FROM table_name_16 WHERE source = ""hornady""","What is Muzzle energy, when Source is hornady?","CREATE TABLE table_name_16 (muzzle_energy VARCHAR, source VARCHAR)","Instructions: What is Muzzle energy, when Source is hornady?
+Context: CREATE TABLE table_name_16 (muzzle_energy VARCHAR, source VARCHAR)
+Response: SELECT muzzle_energy FROM table_name_16 WHERE source = ""hornady""",211
+"SELECT nationality FROM table_14209245_9 WHERE college_junior_club_team__league_ = ""Seattle Thunderbirds (WHL)""",What is the nationality of the player whose college/junior/club team (league) is Seattle Thunderbirds (WHL)?,"CREATE TABLE table_14209245_9 (nationality VARCHAR, college_junior_club_team__league_ VARCHAR)","Instructions: What is the nationality of the player whose college/junior/club team (league) is Seattle Thunderbirds (WHL)?
+Context: CREATE TABLE table_14209245_9 (nationality VARCHAR, college_junior_club_team__league_ VARCHAR)
+Response: SELECT nationality FROM table_14209245_9 WHERE college_junior_club_team__league_ = ""Seattle Thunderbirds (WHL)""",348
+"SELECT census_ranking FROM table_176524_2 WHERE official_name = ""Perth""",What is the census ranking for the Perth parish?,"CREATE TABLE table_176524_2 (census_ranking VARCHAR, official_name VARCHAR)","Instructions: What is the census ranking for the Perth parish?
+Context: CREATE TABLE table_176524_2 (census_ranking VARCHAR, official_name VARCHAR)
+Response: SELECT census_ranking FROM table_176524_2 WHERE official_name = ""Perth""",229
+"SELECT loss FROM table_name_71 WHERE date = ""july 2""",Which Loss has a Date of july 2?,"CREATE TABLE table_name_71 (loss VARCHAR, date VARCHAR)","Instructions: Which Loss has a Date of july 2?
+Context: CREATE TABLE table_name_71 (loss VARCHAR, date VARCHAR)
+Response: SELECT loss FROM table_name_71 WHERE date = ""july 2""",174
+"SELECT MAX(touchdowns) FROM table_14342592_7 WHERE player = ""Heston""",How many touchdowns were there when Heston was in play?,"CREATE TABLE table_14342592_7 (touchdowns INTEGER, player VARCHAR)","Instructions: How many touchdowns were there when Heston was in play?
+Context: CREATE TABLE table_14342592_7 (touchdowns INTEGER, player VARCHAR)
+Response: SELECT MAX(touchdowns) FROM table_14342592_7 WHERE player = ""Heston""",224
+SELECT COUNT(field_goals) FROM table_24906653_5 WHERE points = 171,List the number of long range shors where the score is 171.,"CREATE TABLE table_24906653_5 (field_goals VARCHAR, points VARCHAR)","Instructions: List the number of long range shors where the score is 171.
+Context: CREATE TABLE table_24906653_5 (field_goals VARCHAR, points VARCHAR)
+Response: SELECT COUNT(field_goals) FROM table_24906653_5 WHERE points = 171",227
+"SELECT winner FROM table_name_81 WHERE type = ""mountain stage"" AND date = ""22 may""",Who was the winner with a mountain stage type on 22 May?,"CREATE TABLE table_name_81 (winner VARCHAR, type VARCHAR, date VARCHAR)","Instructions: Who was the winner with a mountain stage type on 22 May?
+Context: CREATE TABLE table_name_81 (winner VARCHAR, type VARCHAR, date VARCHAR)
+Response: SELECT winner FROM table_name_81 WHERE type = ""mountain stage"" AND date = ""22 may""",244
+SELECT player FROM table_name_79 WHERE score = 71 - 69 - 71 - 69 = 280,What is the name of the player with a 71-69-71-69=280 score?,"CREATE TABLE table_name_79 (player VARCHAR, score VARCHAR)","Instructions: What is the name of the player with a 71-69-71-69=280 score?
+Context: CREATE TABLE table_name_79 (player VARCHAR, score VARCHAR)
+Response: SELECT player FROM table_name_79 WHERE score = 71 - 69 - 71 - 69 = 280",223
+"SELECT score FROM table_name_48 WHERE winning_team = ""san antonio spurs""",What is the Score with a Winning team that is san antonio spurs?,"CREATE TABLE table_name_48 (score VARCHAR, winning_team VARCHAR)","Instructions: What is the Score with a Winning team that is san antonio spurs?
+Context: CREATE TABLE table_name_48 (score VARCHAR, winning_team VARCHAR)
+Response: SELECT score FROM table_name_48 WHERE winning_team = ""san antonio spurs""",235
+"SELECT website FROM table_name_55 WHERE license = ""apache license 2.0""","What is Website, when License is Apache License 2.0?","CREATE TABLE table_name_55 (website VARCHAR, license VARCHAR)","Instructions: What is Website, when License is Apache License 2.0?
+Context: CREATE TABLE table_name_55 (website VARCHAR, license VARCHAR)
+Response: SELECT website FROM table_name_55 WHERE license = ""apache license 2.0""",218
+SELECT AVG(population_estimate_2005) FROM table_name_89 WHERE area__km_2__ = 3 OFFSET 034.08,"what is the population estimate 2005 for the with the area (km2) 3,034.08?","CREATE TABLE table_name_89 (population_estimate_2005 INTEGER, area__km_2__ VARCHAR)","Instructions: what is the population estimate 2005 for the with the area (km2) 3,034.08?
+Context: CREATE TABLE table_name_89 (population_estimate_2005 INTEGER, area__km_2__ VARCHAR)
+Response: SELECT AVG(population_estimate_2005) FROM table_name_89 WHERE area__km_2__ = 3 OFFSET 034.08",284
+"SELECT date FROM table_name_27 WHERE pos < 4 AND venue = ""piraeus""",On which date was the position less than 4 at Piraeus?,"CREATE TABLE table_name_27 (date VARCHAR, pos VARCHAR, venue VARCHAR)","Instructions: On which date was the position less than 4 at Piraeus?
+Context: CREATE TABLE table_name_27 (date VARCHAR, pos VARCHAR, venue VARCHAR)
+Response: SELECT date FROM table_name_27 WHERE pos < 4 AND venue = ""piraeus""",224
+"SELECT wins FROM table_name_12 WHERE points > 145 AND passenger = ""sven verbrugge"" AND races < 17","What were the wins with more than 145 points, less than 17 races, and Sven Verbrugge as a passenger?","CREATE TABLE table_name_12 (wins VARCHAR, races VARCHAR, points VARCHAR, passenger VARCHAR)","Instructions: What were the wins with more than 145 points, less than 17 races, and Sven Verbrugge as a passenger?
+Context: CREATE TABLE table_name_12 (wins VARCHAR, races VARCHAR, points VARCHAR, passenger VARCHAR)
+Response: SELECT wins FROM table_name_12 WHERE points > 145 AND passenger = ""sven verbrugge"" AND races < 17",323
+"SELECT governor FROM table_name_88 WHERE took_office = ""january 8, 1877""","Which governor took office on January 8, 1877?","CREATE TABLE table_name_88 (governor VARCHAR, took_office VARCHAR)","Instructions: Which governor took office on January 8, 1877?
+Context: CREATE TABLE table_name_88 (governor VARCHAR, took_office VARCHAR)
+Response: SELECT governor FROM table_name_88 WHERE took_office = ""january 8, 1877""",219
+"SELECT Party FROM representative WHERE State = ""New York"" INTERSECT SELECT Party FROM representative WHERE State = ""Pennsylvania""",Show the parties that have both representatives in New York state and representatives in Pennsylvania state.,"CREATE TABLE representative (Party VARCHAR, State VARCHAR)","Instructions: Show the parties that have both representatives in New York state and representatives in Pennsylvania state.
+Context: CREATE TABLE representative (Party VARCHAR, State VARCHAR)
+Response: SELECT Party FROM representative WHERE State = ""New York"" INTERSECT SELECT Party FROM representative WHERE State = ""Pennsylvania""",330
+"SELECT record FROM table_23916539_3 WHERE location = ""Clarke Stadium""",What is the record if the location is Clarke Stadium?,"CREATE TABLE table_23916539_3 (record VARCHAR, location VARCHAR)","Instructions: What is the record if the location is Clarke Stadium?
+Context: CREATE TABLE table_23916539_3 (record VARCHAR, location VARCHAR)
+Response: SELECT record FROM table_23916539_3 WHERE location = ""Clarke Stadium""",221
+"SELECT opponent FROM table_name_96 WHERE week > 9 AND attendance = ""44,020""","Who was the opponent after week 9 with an attendance of 44,020?","CREATE TABLE table_name_96 (opponent VARCHAR, week VARCHAR, attendance VARCHAR)","Instructions: Who was the opponent after week 9 with an attendance of 44,020?
+Context: CREATE TABLE table_name_96 (opponent VARCHAR, week VARCHAR, attendance VARCHAR)
+Response: SELECT opponent FROM table_name_96 WHERE week > 9 AND attendance = ""44,020""",252
+"SELECT fastest_lap FROM table_26920192_5 WHERE circuit = ""Magione""",Who had the fastest lap for the circuit magione?,"CREATE TABLE table_26920192_5 (fastest_lap VARCHAR, circuit VARCHAR)","Instructions: Who had the fastest lap for the circuit magione?
+Context: CREATE TABLE table_26920192_5 (fastest_lap VARCHAR, circuit VARCHAR)
+Response: SELECT fastest_lap FROM table_26920192_5 WHERE circuit = ""Magione""",217
+"SELECT location_attendance FROM table_27756572_2 WHERE date = ""October 12""",What was the location and the attendance for the game on October 12?,"CREATE TABLE table_27756572_2 (location_attendance VARCHAR, date VARCHAR)","Instructions: What was the location and the attendance for the game on October 12?
+Context: CREATE TABLE table_27756572_2 (location_attendance VARCHAR, date VARCHAR)
+Response: SELECT location_attendance FROM table_27756572_2 WHERE date = ""October 12""",250
+"SELECT result FROM table_1358608_4 WHERE date = ""19 Oct 2002""",What was Northerly's result at the race on 19 Oct 2002?,"CREATE TABLE table_1358608_4 (result VARCHAR, date VARCHAR)","Instructions: What was Northerly's result at the race on 19 Oct 2002?
+Context: CREATE TABLE table_1358608_4 (result VARCHAR, date VARCHAR)
+Response: SELECT result FROM table_1358608_4 WHERE date = ""19 Oct 2002""",210
+SELECT Accreditation_level FROM phone GROUP BY Accreditation_level HAVING COUNT(*) > 3,Find the accreditation level that more than 3 phones use.,CREATE TABLE phone (Accreditation_level VARCHAR),"Instructions: Find the accreditation level that more than 3 phones use.
+Context: CREATE TABLE phone (Accreditation_level VARCHAR)
+Response: SELECT Accreditation_level FROM phone GROUP BY Accreditation_level HAVING COUNT(*) > 3",226
+SELECT poll_source FROM table_name_88 WHERE lead_margin = 5.5,Which organization administered the poll that showed a lead margin of 5.5?,"CREATE TABLE table_name_88 (poll_source VARCHAR, lead_margin VARCHAR)","Instructions: Which organization administered the poll that showed a lead margin of 5.5?
+Context: CREATE TABLE table_name_88 (poll_source VARCHAR, lead_margin VARCHAR)
+Response: SELECT poll_source FROM table_name_88 WHERE lead_margin = 5.5",239
+"SELECT rushing_yards_per_game FROM table_27487336_1 WHERE sacks = ""25""",What is every value for rushing yards per game if sacks if 25?,"CREATE TABLE table_27487336_1 (rushing_yards_per_game VARCHAR, sacks VARCHAR)","Instructions: What is every value for rushing yards per game if sacks if 25?
+Context: CREATE TABLE table_27487336_1 (rushing_yards_per_game VARCHAR, sacks VARCHAR)
+Response: SELECT rushing_yards_per_game FROM table_27487336_1 WHERE sacks = ""25""",244
+"SELECT report FROM table_name_70 WHERE name = ""lyon grand prix""",Name the Report has a Name of lyon grand prix?,"CREATE TABLE table_name_70 (report VARCHAR, name VARCHAR)","Instructions: Name the Report has a Name of lyon grand prix?
+Context: CREATE TABLE table_name_70 (report VARCHAR, name VARCHAR)
+Response: SELECT report FROM table_name_70 WHERE name = ""lyon grand prix""",201
+"SELECT billing_state, COUNT(*) FROM invoices WHERE billing_country = ""USA"" GROUP BY billing_state ORDER BY COUNT(*) DESC LIMIT 1",List the state in the US with the most invoices.,"CREATE TABLE invoices (billing_state VARCHAR, billing_country VARCHAR)","Instructions: List the state in the US with the most invoices.
+Context: CREATE TABLE invoices (billing_state VARCHAR, billing_country VARCHAR)
+Response: SELECT billing_state, COUNT(*) FROM invoices WHERE billing_country = ""USA"" GROUP BY billing_state ORDER BY COUNT(*) DESC LIMIT 1",281
+"SELECT MAX(losses) FROM table_name_61 WHERE team = ""presidente hayes"" AND draws > 4","What is the highest number of losses for Presidente Hayes, when the draws were more than 4?","CREATE TABLE table_name_61 (losses INTEGER, team VARCHAR, draws VARCHAR)","Instructions: What is the highest number of losses for Presidente Hayes, when the draws were more than 4?
+Context: CREATE TABLE table_name_61 (losses INTEGER, team VARCHAR, draws VARCHAR)
+Response: SELECT MAX(losses) FROM table_name_61 WHERE team = ""presidente hayes"" AND draws > 4",281
+"SELECT COUNT(gold_medals) FROM table_name_73 WHERE ensemble = ""bellbrook hs"" AND silver_medals < 1",How many gold medals for bellbrook HS with less than 1 silver?,"CREATE TABLE table_name_73 (gold_medals VARCHAR, ensemble VARCHAR, silver_medals VARCHAR)","Instructions: How many gold medals for bellbrook HS with less than 1 silver?
+Context: CREATE TABLE table_name_73 (gold_medals VARCHAR, ensemble VARCHAR, silver_medals VARCHAR)
+Response: SELECT COUNT(gold_medals) FROM table_name_73 WHERE ensemble = ""bellbrook hs"" AND silver_medals < 1",284
+"SELECT role FROM table_name_26 WHERE notes = ""antagonist"" AND title = ""salud, dinero y amor""","What is the name of the role that has a Title of Salud, Dinero y Amor and antagonist in the notes field?","CREATE TABLE table_name_26 (role VARCHAR, notes VARCHAR, title VARCHAR)","Instructions: What is the name of the role that has a Title of Salud, Dinero y Amor and antagonist in the notes field?
+Context: CREATE TABLE table_name_26 (role VARCHAR, notes VARCHAR, title VARCHAR)
+Response: SELECT role FROM table_name_26 WHERE notes = ""antagonist"" AND title = ""salud, dinero y amor""",302
+"SELECT round FROM table_name_99 WHERE pick__number > 114 AND player = ""richard crump""",Richard Crump picked after the 114 pick was drafted in what round?,"CREATE TABLE table_name_99 (round VARCHAR, pick__number VARCHAR, player VARCHAR)","Instructions: Richard Crump picked after the 114 pick was drafted in what round?
+Context: CREATE TABLE table_name_99 (round VARCHAR, pick__number VARCHAR, player VARCHAR)
+Response: SELECT round FROM table_name_99 WHERE pick__number > 114 AND player = ""richard crump""",266
+"SELECT date FROM table_name_97 WHERE venue = ""edgbaston""",On what date was the venue at Edgbaston?,"CREATE TABLE table_name_97 (date VARCHAR, venue VARCHAR)","Instructions: On what date was the venue at Edgbaston?
+Context: CREATE TABLE table_name_97 (date VARCHAR, venue VARCHAR)
+Response: SELECT date FROM table_name_97 WHERE venue = ""edgbaston""",187
+"SELECT MAX(week) FROM table_name_89 WHERE result = ""w 34-21""","What is the highest Week, when Result is W 34-21?","CREATE TABLE table_name_89 (week INTEGER, result VARCHAR)","Instructions: What is the highest Week, when Result is W 34-21?
+Context: CREATE TABLE table_name_89 (week INTEGER, result VARCHAR)
+Response: SELECT MAX(week) FROM table_name_89 WHERE result = ""w 34-21""",201
+"SELECT MIN(react) FROM table_name_79 WHERE name = ""candice davis"" AND lane < 3","What is the lowest React, when Name is ""Candice Davis"", and when Lane is less than 3?","CREATE TABLE table_name_79 (react INTEGER, name VARCHAR, lane VARCHAR)","Instructions: What is the lowest React, when Name is ""Candice Davis"", and when Lane is less than 3?
+Context: CREATE TABLE table_name_79 (react INTEGER, name VARCHAR, lane VARCHAR)
+Response: SELECT MIN(react) FROM table_name_79 WHERE name = ""candice davis"" AND lane < 3",268
+"SELECT sambalpuri_saree FROM table_name_22 WHERE sambalpuri_language = ""samaleswari temple""",What is the sambalpuri saree with a samaleswari temple as sambalpuri language?,"CREATE TABLE table_name_22 (sambalpuri_saree VARCHAR, sambalpuri_language VARCHAR)","Instructions: What is the sambalpuri saree with a samaleswari temple as sambalpuri language?
+Context: CREATE TABLE table_name_22 (sambalpuri_saree VARCHAR, sambalpuri_language VARCHAR)
+Response: SELECT sambalpuri_saree FROM table_name_22 WHERE sambalpuri_language = ""samaleswari temple""",286
+"SELECT COUNT(3 AS rd_place) FROM table_1906920_1 WHERE host = ""University of Manitoba, Winnipeg, Manitoba""","What is the total number of 3rd placed teams when the host is University of Manitoba, Winnipeg, Manitoba?",CREATE TABLE table_1906920_1 (host VARCHAR),"Instructions: What is the total number of 3rd placed teams when the host is University of Manitoba, Winnipeg, Manitoba?
+Context: CREATE TABLE table_1906920_1 (host VARCHAR)
+Response: SELECT COUNT(3 AS rd_place) FROM table_1906920_1 WHERE host = ""University of Manitoba, Winnipeg, Manitoba""",289
+"SELECT date FROM table_24453847_2 WHERE game_site = ""AOL Arena""",What game date was the game at AOL Arena?,"CREATE TABLE table_24453847_2 (date VARCHAR, game_site VARCHAR)","Instructions: What game date was the game at AOL Arena?
+Context: CREATE TABLE table_24453847_2 (date VARCHAR, game_site VARCHAR)
+Response: SELECT date FROM table_24453847_2 WHERE game_site = ""AOL Arena""",202
+"SELECT type FROM table_2562572_52 WHERE settlement = ""Subotište""",What is the type when the settlement is subotište?,"CREATE TABLE table_2562572_52 (type VARCHAR, settlement VARCHAR)","Instructions: What is the type when the settlement is subotište?
+Context: CREATE TABLE table_2562572_52 (type VARCHAR, settlement VARCHAR)
+Response: SELECT type FROM table_2562572_52 WHERE settlement = ""Subotište""",213
+"SELECT size__mw_ FROM table_name_87 WHERE turbines > 19 AND turbine_vendor = ""enercon"" AND county = ""wexford""",What is the size of the windfarm in wexford that has more than 19 turbines and a vendor of Enercon?,"CREATE TABLE table_name_87 (size__mw_ VARCHAR, county VARCHAR, turbines VARCHAR, turbine_vendor VARCHAR)","Instructions: What is the size of the windfarm in wexford that has more than 19 turbines and a vendor of Enercon?
+Context: CREATE TABLE table_name_87 (size__mw_ VARCHAR, county VARCHAR, turbines VARCHAR, turbine_vendor VARCHAR)
+Response: SELECT size__mw_ FROM table_name_87 WHERE turbines > 19 AND turbine_vendor = ""enercon"" AND county = ""wexford""",347
+"SELECT AVG(wins) FROM table_name_40 WHERE player = ""bruce fleisher""",How many average wins does bruce fleisher have?,"CREATE TABLE table_name_40 (wins INTEGER, player VARCHAR)","Instructions: How many average wins does bruce fleisher have?
+Context: CREATE TABLE table_name_40 (wins INTEGER, player VARCHAR)
+Response: SELECT AVG(wins) FROM table_name_40 WHERE player = ""bruce fleisher""",206
+"SELECT score FROM table_name_77 WHERE game > 4 AND series = ""3-2""",What is the score for the game larger than 4 in series 3-2?,"CREATE TABLE table_name_77 (score VARCHAR, game VARCHAR, series VARCHAR)","Instructions: What is the score for the game larger than 4 in series 3-2?
+Context: CREATE TABLE table_name_77 (score VARCHAR, game VARCHAR, series VARCHAR)
+Response: SELECT score FROM table_name_77 WHERE game > 4 AND series = ""3-2""",231
+"SELECT results FROM table_1341423_9 WHERE district = ""Florida 14""",How did the election in the Florida 14 district end?,"CREATE TABLE table_1341423_9 (results VARCHAR, district VARCHAR)","Instructions: How did the election in the Florida 14 district end?
+Context: CREATE TABLE table_1341423_9 (results VARCHAR, district VARCHAR)
+Response: SELECT results FROM table_1341423_9 WHERE district = ""Florida 14""",216
+"SELECT score FROM table_name_36 WHERE date = ""16 december 1987""",What was the score of the game on 16 december 1987?,"CREATE TABLE table_name_36 (score VARCHAR, date VARCHAR)","Instructions: What was the score of the game on 16 december 1987?
+Context: CREATE TABLE table_name_36 (score VARCHAR, date VARCHAR)
+Response: SELECT score FROM table_name_36 WHERE date = ""16 december 1987""",205
+"SELECT nba_draft FROM table_name_7 WHERE school = ""northeast high school""",What was the NBA draft status for Northeast High School?,"CREATE TABLE table_name_7 (nba_draft VARCHAR, school VARCHAR)","Instructions: What was the NBA draft status for Northeast High School?
+Context: CREATE TABLE table_name_7 (nba_draft VARCHAR, school VARCHAR)
+Response: SELECT nba_draft FROM table_name_7 WHERE school = ""northeast high school""",225
+"SELECT away_team FROM table_name_9 WHERE home_team = ""wycombe wanderers""",What is the Away team when the home team was wycombe wanderers?,"CREATE TABLE table_name_9 (away_team VARCHAR, home_team VARCHAR)","Instructions: What is the Away team when the home team was wycombe wanderers?
+Context: CREATE TABLE table_name_9 (away_team VARCHAR, home_team VARCHAR)
+Response: SELECT away_team FROM table_name_9 WHERE home_team = ""wycombe wanderers""",234
+"SELECT AVG(crowd) FROM table_name_65 WHERE away_team = ""fitzroy""","When Fitzroy are the away team, what is the average crowd size?","CREATE TABLE table_name_65 (crowd INTEGER, away_team VARCHAR)","Instructions: When Fitzroy are the away team, what is the average crowd size?
+Context: CREATE TABLE table_name_65 (crowd INTEGER, away_team VARCHAR)
+Response: SELECT AVG(crowd) FROM table_name_65 WHERE away_team = ""fitzroy""",223
+SELECT original_air_date FROM table_2818164_4 WHERE production_code = 322,What was the air date of the episode with the production code of 322?,"CREATE TABLE table_2818164_4 (original_air_date VARCHAR, production_code VARCHAR)","Instructions: What was the air date of the episode with the production code of 322?
+Context: CREATE TABLE table_2818164_4 (original_air_date VARCHAR, production_code VARCHAR)
+Response: SELECT original_air_date FROM table_2818164_4 WHERE production_code = 322",258
+SELECT arena FROM table_name_5 WHERE founded = 2000,Which arena was founded in 2000?,"CREATE TABLE table_name_5 (arena VARCHAR, founded VARCHAR)","Instructions: Which arena was founded in 2000?
+Context: CREATE TABLE table_name_5 (arena VARCHAR, founded VARCHAR)
+Response: SELECT arena FROM table_name_5 WHERE founded = 2000",176
+"SELECT result FROM table_name_34 WHERE city = ""halifax""",What was the result of the game in halifax?,"CREATE TABLE table_name_34 (result VARCHAR, city VARCHAR)","Instructions: What was the result of the game in halifax?
+Context: CREATE TABLE table_name_34 (result VARCHAR, city VARCHAR)
+Response: SELECT result FROM table_name_34 WHERE city = ""halifax""",190
+SELECT char_cells FROM table_18950885_3 WHERE graphics_mode < 1.0,"If graphics mode is less than 1.0, what are the char cells?","CREATE TABLE table_18950885_3 (char_cells VARCHAR, graphics_mode INTEGER)","Instructions: If graphics mode is less than 1.0, what are the char cells?
+Context: CREATE TABLE table_18950885_3 (char_cells VARCHAR, graphics_mode INTEGER)
+Response: SELECT char_cells FROM table_18950885_3 WHERE graphics_mode < 1.0",232
+"SELECT COUNT(no) FROM table_26202940_6 WHERE score_in_the_final = ""6–3, 6–4, 7–6 (13–11)""","How many numbers correspond to the score in the final of  6–3, 6–4, 7–6 (13–11)?","CREATE TABLE table_26202940_6 (no VARCHAR, score_in_the_final VARCHAR)","Instructions: How many numbers correspond to the score in the final of  6–3, 6–4, 7–6 (13–11)?
+Context: CREATE TABLE table_26202940_6 (no VARCHAR, score_in_the_final VARCHAR)
+Response: SELECT COUNT(no) FROM table_26202940_6 WHERE score_in_the_final = ""6–3, 6–4, 7–6 (13–11)""",274
+"SELECT report FROM table_name_25 WHERE race = ""belgian grand prix""",Which Report includes the Belgian Grand Prix Race?,"CREATE TABLE table_name_25 (report VARCHAR, race VARCHAR)","Instructions: Which Report includes the Belgian Grand Prix Race?
+Context: CREATE TABLE table_name_25 (report VARCHAR, race VARCHAR)
+Response: SELECT report FROM table_name_25 WHERE race = ""belgian grand prix""",208
+"SELECT college_junior_team FROM table_name_35 WHERE pick < 44 AND player = ""tyler myers""","What is the college/junior team of player tyler myers, who has a pick less than 44?","CREATE TABLE table_name_35 (college_junior_team VARCHAR, pick VARCHAR, player VARCHAR)","Instructions: What is the college/junior team of player tyler myers, who has a pick less than 44?
+Context: CREATE TABLE table_name_35 (college_junior_team VARCHAR, pick VARCHAR, player VARCHAR)
+Response: SELECT college_junior_team FROM table_name_35 WHERE pick < 44 AND player = ""tyler myers""",292
+SELECT player FROM table_14342592_5 WHERE extra_points = 12,Which players have made a total of 12 extra points?,"CREATE TABLE table_14342592_5 (player VARCHAR, extra_points VARCHAR)","Instructions: Which players have made a total of 12 extra points?
+Context: CREATE TABLE table_14342592_5 (player VARCHAR, extra_points VARCHAR)
+Response: SELECT player FROM table_14342592_5 WHERE extra_points = 12",213
+"SELECT date FROM table_name_11 WHERE week < 3 AND opponent = ""houston oilers""",What is the date for the game with an opponent of the Houston Oilers from before week 3?,"CREATE TABLE table_name_11 (date VARCHAR, week VARCHAR, opponent VARCHAR)","Instructions: What is the date for the game with an opponent of the Houston Oilers from before week 3?
+Context: CREATE TABLE table_name_11 (date VARCHAR, week VARCHAR, opponent VARCHAR)
+Response: SELECT date FROM table_name_11 WHERE week < 3 AND opponent = ""houston oilers""",273
+"SELECT visitor FROM table_name_7 WHERE home = ""chicago black hawks"" AND date = ""may 6""",Who was the visitor for Chicago Black Hawks on May 6?,"CREATE TABLE table_name_7 (visitor VARCHAR, home VARCHAR, date VARCHAR)","Instructions: Who was the visitor for Chicago Black Hawks on May 6?
+Context: CREATE TABLE table_name_7 (visitor VARCHAR, home VARCHAR, date VARCHAR)
+Response: SELECT visitor FROM table_name_7 WHERE home = ""chicago black hawks"" AND date = ""may 6""",245
+"SELECT play_by_play FROM table_name_63 WHERE studio_host = ""gary tanguay"" AND studio_analysts = ""donny marshall""","WHich Play-by-play has a Studio host of gary tanguay, and a Studio analysts of donny marshall?","CREATE TABLE table_name_63 (play_by_play VARCHAR, studio_host VARCHAR, studio_analysts VARCHAR)","Instructions: WHich Play-by-play has a Studio host of gary tanguay, and a Studio analysts of donny marshall?
+Context: CREATE TABLE table_name_63 (play_by_play VARCHAR, studio_host VARCHAR, studio_analysts VARCHAR)
+Response: SELECT play_by_play FROM table_name_63 WHERE studio_host = ""gary tanguay"" AND studio_analysts = ""donny marshall""",336
+"SELECT attribute FROM table_1507852_5 WHERE cancelable = ""Yes""",what's the attribute with cancelable being yes,"CREATE TABLE table_1507852_5 (attribute VARCHAR, cancelable VARCHAR)","Instructions: what's the attribute with cancelable being yes
+Context: CREATE TABLE table_1507852_5 (attribute VARCHAR, cancelable VARCHAR)
+Response: SELECT attribute FROM table_1507852_5 WHERE cancelable = ""Yes""",211
+"SELECT venue FROM table_name_32 WHERE year > 2003 AND notes = ""3:34.88""",Which venue had a note of 3:34.88 after 2003?,"CREATE TABLE table_name_32 (venue VARCHAR, year VARCHAR, notes VARCHAR)","Instructions: Which venue had a note of 3:34.88 after 2003?
+Context: CREATE TABLE table_name_32 (venue VARCHAR, year VARCHAR, notes VARCHAR)
+Response: SELECT venue FROM table_name_32 WHERE year > 2003 AND notes = ""3:34.88""",222
+"SELECT house FROM table_name_24 WHERE abbr = ""d""",Which house has an abbreviation of D?,"CREATE TABLE table_name_24 (house VARCHAR, abbr VARCHAR)","Instructions: Which house has an abbreviation of D?
+Context: CREATE TABLE table_name_24 (house VARCHAR, abbr VARCHAR)
+Response: SELECT house FROM table_name_24 WHERE abbr = ""d""",176
+"SELECT sail_number FROM table_25595209_1 WHERE skipper = ""Matt Allen""",What is Matt Allen's sail number?,"CREATE TABLE table_25595209_1 (sail_number VARCHAR, skipper VARCHAR)","Instructions: What is Matt Allen's sail number?
+Context: CREATE TABLE table_25595209_1 (sail_number VARCHAR, skipper VARCHAR)
+Response: SELECT sail_number FROM table_25595209_1 WHERE skipper = ""Matt Allen""",205
+"SELECT decision FROM table_name_17 WHERE record = ""3–5–0""",What decision had a Record of 3–5–0?,"CREATE TABLE table_name_17 (decision VARCHAR, record VARCHAR)","Instructions: What decision had a Record of 3–5–0?
+Context: CREATE TABLE table_name_17 (decision VARCHAR, record VARCHAR)
+Response: SELECT decision FROM table_name_17 WHERE record = ""3–5–0""",189
+"SELECT date_of_vacancy FROM table_name_78 WHERE team = ""vitória de guimarães""",What was the day of vacancy for vitória de guimarães?,"CREATE TABLE table_name_78 (date_of_vacancy VARCHAR, team VARCHAR)","Instructions: What was the day of vacancy for vitória de guimarães?
+Context: CREATE TABLE table_name_78 (date_of_vacancy VARCHAR, team VARCHAR)
+Response: SELECT date_of_vacancy FROM table_name_78 WHERE team = ""vitória de guimarães""",231
+"SELECT to_par FROM table_name_74 WHERE place = ""t10"" AND score = 67 - 73 = 140","What To par has a Place of t10, and a Score of 67-73=140?","CREATE TABLE table_name_74 (to_par VARCHAR, place VARCHAR, score VARCHAR)","Instructions: What To par has a Place of t10, and a Score of 67-73=140?
+Context: CREATE TABLE table_name_74 (to_par VARCHAR, place VARCHAR, score VARCHAR)
+Response: SELECT to_par FROM table_name_74 WHERE place = ""t10"" AND score = 67 - 73 = 140",243
+SELECT runner_s__up FROM table_name_77 WHERE winning_score = –13(75 - 68 - 68 = 211),Who was the runner(s)-up when the winning score was –13 (75-68-68=211)?,"CREATE TABLE table_name_77 (runner_s__up VARCHAR, winning_score VARCHAR)","Instructions: Who was the runner(s)-up when the winning score was –13 (75-68-68=211)?
+Context: CREATE TABLE table_name_77 (runner_s__up VARCHAR, winning_score VARCHAR)
+Response: SELECT runner_s__up FROM table_name_77 WHERE winning_score = –13(75 - 68 - 68 = 211)",262
+"SELECT MIN(date) FROM table_name_76 WHERE championship = ""monterrey wct, mexico""","What is the earliest date when the championship was Monterrey WCT, Mexico?","CREATE TABLE table_name_76 (date INTEGER, championship VARCHAR)","Instructions: What is the earliest date when the championship was Monterrey WCT, Mexico?
+Context: CREATE TABLE table_name_76 (date INTEGER, championship VARCHAR)
+Response: SELECT MIN(date) FROM table_name_76 WHERE championship = ""monterrey wct, mexico""",252
+"SELECT club_team FROM table_name_9 WHERE round > 5 AND position = ""defense""",What Club team with a Round larger than 5 have a defense position?,"CREATE TABLE table_name_9 (club_team VARCHAR, round VARCHAR, position VARCHAR)","Instructions: What Club team with a Round larger than 5 have a defense position?
+Context: CREATE TABLE table_name_9 (club_team VARCHAR, round VARCHAR, position VARCHAR)
+Response: SELECT club_team FROM table_name_9 WHERE round > 5 AND position = ""defense""",254
+"SELECT COUNT(rank) FROM table_name_56 WHERE time = ""7:34.24""",What is the total rank for the athlete that had a race time of 7:34.24?,"CREATE TABLE table_name_56 (rank VARCHAR, time VARCHAR)","Instructions: What is the total rank for the athlete that had a race time of 7:34.24?
+Context: CREATE TABLE table_name_56 (rank VARCHAR, time VARCHAR)
+Response: SELECT COUNT(rank) FROM table_name_56 WHERE time = ""7:34.24""",221
+"SELECT record FROM table_name_35 WHERE event = ""cage rage 23""",Which Record has an Event of cage rage 23?,"CREATE TABLE table_name_35 (record VARCHAR, event VARCHAR)","Instructions: Which Record has an Event of cage rage 23?
+Context: CREATE TABLE table_name_35 (record VARCHAR, event VARCHAR)
+Response: SELECT record FROM table_name_35 WHERE event = ""cage rage 23""",196
+"SELECT class FROM table_name_1 WHERE no_built < 12 AND operator = ""southern""",What class has less than 12 numbers built operated by southern?,"CREATE TABLE table_name_1 (class VARCHAR, no_built VARCHAR, operator VARCHAR)","Instructions: What class has less than 12 numbers built operated by southern?
+Context: CREATE TABLE table_name_1 (class VARCHAR, no_built VARCHAR, operator VARCHAR)
+Response: SELECT class FROM table_name_1 WHERE no_built < 12 AND operator = ""southern""",251
+SELECT COUNT(gold) FROM table_name_92 WHERE bronze > 11 AND total = 29,How many golds were there when there was more than 11 bronze and 29 in total?,"CREATE TABLE table_name_92 (gold VARCHAR, bronze VARCHAR, total VARCHAR)","Instructions: How many golds were there when there was more than 11 bronze and 29 in total?
+Context: CREATE TABLE table_name_92 (gold VARCHAR, bronze VARCHAR, total VARCHAR)
+Response: SELECT COUNT(gold) FROM table_name_92 WHERE bronze > 11 AND total = 29",254
+"SELECT record FROM table_name_21 WHERE opponent = ""expos"" AND date = ""august 10""","On August 10, what was the record against the Expos?","CREATE TABLE table_name_21 (record VARCHAR, opponent VARCHAR, date VARCHAR)","Instructions: On August 10, what was the record against the Expos?
+Context: CREATE TABLE table_name_21 (record VARCHAR, opponent VARCHAR, date VARCHAR)
+Response: SELECT record FROM table_name_21 WHERE opponent = ""expos"" AND date = ""august 10""",242
+SELECT MIN(points) FROM table_name_86 WHERE place = 5,Name the fewest points of 5 place,"CREATE TABLE table_name_86 (points INTEGER, place VARCHAR)","Instructions: Name the fewest points of 5 place
+Context: CREATE TABLE table_name_86 (points INTEGER, place VARCHAR)
+Response: SELECT MIN(points) FROM table_name_86 WHERE place = 5",179
+"SELECT SUM(ends) FROM table_name_70 WHERE transfer_fee = ""£8.5m""","When the transfer fee is £8.5m, what is the total ends?","CREATE TABLE table_name_70 (ends INTEGER, transfer_fee VARCHAR)","Instructions: When the transfer fee is £8.5m, what is the total ends?
+Context: CREATE TABLE table_name_70 (ends INTEGER, transfer_fee VARCHAR)
+Response: SELECT SUM(ends) FROM table_name_70 WHERE transfer_fee = ""£8.5m""",217
+"SELECT score FROM table_name_17 WHERE round = ""1st round"" AND club = ""union luxembourg""",What is the final score of the 1st round game of club Union Luxembourg?,"CREATE TABLE table_name_17 (score VARCHAR, round VARCHAR, club VARCHAR)","Instructions: What is the final score of the 1st round game of club Union Luxembourg?
+Context: CREATE TABLE table_name_17 (score VARCHAR, round VARCHAR, club VARCHAR)
+Response: SELECT score FROM table_name_17 WHERE round = ""1st round"" AND club = ""union luxembourg""",264
+"SELECT SUM(rank) FROM table_name_37 WHERE state = ""alaska"" AND mountain_peak = ""mount chamberlin""","Where does Mount Chamberlin, located in Alaska, rank on the chart?","CREATE TABLE table_name_37 (rank INTEGER, state VARCHAR, mountain_peak VARCHAR)","Instructions: Where does Mount Chamberlin, located in Alaska, rank on the chart?
+Context: CREATE TABLE table_name_37 (rank INTEGER, state VARCHAR, mountain_peak VARCHAR)
+Response: SELECT SUM(rank) FROM table_name_37 WHERE state = ""alaska"" AND mountain_peak = ""mount chamberlin""",277
+"SELECT SUM(attendance) FROM table_name_7 WHERE opponents = ""kaizer chiefs""",How many people attended the game against the Kaizer Chiefs?,"CREATE TABLE table_name_7 (attendance INTEGER, opponents VARCHAR)","Instructions: How many people attended the game against the Kaizer Chiefs?
+Context: CREATE TABLE table_name_7 (attendance INTEGER, opponents VARCHAR)
+Response: SELECT SUM(attendance) FROM table_name_7 WHERE opponents = ""kaizer chiefs""",234
+"SELECT outcomes FROM table_name_32 WHERE launch_date = ""march 18, 1964; 14:50 gmt""","Which Outcome has a Launch Date of march 18, 1964; 14:50 gmt?","CREATE TABLE table_name_32 (outcomes VARCHAR, launch_date VARCHAR)","Instructions: Which Outcome has a Launch Date of march 18, 1964; 14:50 gmt?
+Context: CREATE TABLE table_name_32 (outcomes VARCHAR, launch_date VARCHAR)
+Response: SELECT outcomes FROM table_name_32 WHERE launch_date = ""march 18, 1964; 14:50 gmt""",244
+"SELECT civil_parish FROM table_30121096_1 WHERE townland = ""Clooncugger""",Which civil parish is for the townland clooncugger?,"CREATE TABLE table_30121096_1 (civil_parish VARCHAR, townland VARCHAR)","Instructions: Which civil parish is for the townland clooncugger?
+Context: CREATE TABLE table_30121096_1 (civil_parish VARCHAR, townland VARCHAR)
+Response: SELECT civil_parish FROM table_30121096_1 WHERE townland = ""Clooncugger""",228
+SELECT record FROM table_name_40 WHERE game = 48,What is the record of game 48?,"CREATE TABLE table_name_40 (record VARCHAR, game VARCHAR)","Instructions: What is the record of game 48?
+Context: CREATE TABLE table_name_40 (record VARCHAR, game VARCHAR)
+Response: SELECT record FROM table_name_40 WHERE game = 48",170
+"SELECT COUNT(pick__number) FROM table_name_87 WHERE position = ""center"" AND round < 6",What was the pick # for a center picked before round 6?,"CREATE TABLE table_name_87 (pick__number VARCHAR, position VARCHAR, round VARCHAR)","Instructions: What was the pick # for a center picked before round 6?
+Context: CREATE TABLE table_name_87 (pick__number VARCHAR, position VARCHAR, round VARCHAR)
+Response: SELECT COUNT(pick__number) FROM table_name_87 WHERE position = ""center"" AND round < 6",257
+"SELECT round FROM table_name_12 WHERE club = ""spartak moscow""",What round did the spartak moscow club play?,"CREATE TABLE table_name_12 (round VARCHAR, club VARCHAR)","Instructions: What round did the spartak moscow club play?
+Context: CREATE TABLE table_name_12 (round VARCHAR, club VARCHAR)
+Response: SELECT round FROM table_name_12 WHERE club = ""spartak moscow""",196
+"SELECT part_3 FROM table_1745843_8 WHERE class = ""7a""",What is the part 3 of the word in class 7a?,"CREATE TABLE table_1745843_8 (part_3 VARCHAR, class VARCHAR)","Instructions: What is the part 3 of the word in class 7a?
+Context: CREATE TABLE table_1745843_8 (part_3 VARCHAR, class VARCHAR)
+Response: SELECT part_3 FROM table_1745843_8 WHERE class = ""7a""",191
+"SELECT opponent FROM table_name_82 WHERE method = ""tko (punches) at 4:26 of round 1""",who is the opponent when the method is tko (punches) at 4:26 of round 1?,"CREATE TABLE table_name_82 (opponent VARCHAR, method VARCHAR)","Instructions: who is the opponent when the method is tko (punches) at 4:26 of round 1?
+Context: CREATE TABLE table_name_82 (opponent VARCHAR, method VARCHAR)
+Response: SELECT opponent FROM table_name_82 WHERE method = ""tko (punches) at 4:26 of round 1""",252
+"SELECT artist_s_ FROM table_name_39 WHERE team_s_ = ""seattle seahawks""",Who is the artist of the Seattle Seahawks track?,"CREATE TABLE table_name_39 (artist_s_ VARCHAR, team_s_ VARCHAR)","Instructions: Who is the artist of the Seattle Seahawks track?
+Context: CREATE TABLE table_name_39 (artist_s_ VARCHAR, team_s_ VARCHAR)
+Response: SELECT artist_s_ FROM table_name_39 WHERE team_s_ = ""seattle seahawks""",216
+SELECT MAX(games) FROM table_name_64 WHERE assists > 10,What's the highest amount of Games recorded that have more than 10 assists?,"CREATE TABLE table_name_64 (games INTEGER, assists INTEGER)","Instructions: What's the highest amount of Games recorded that have more than 10 assists?
+Context: CREATE TABLE table_name_64 (games INTEGER, assists INTEGER)
+Response: SELECT MAX(games) FROM table_name_64 WHERE assists > 10",224
+"SELECT region_1 FROM table_name_83 WHERE no_of_episodes = 12 AND region_2 = ""18 august 2008""",Which region 1 has 12 Episodes and a Region 2 of 18 August 2008?,"CREATE TABLE table_name_83 (region_1 VARCHAR, no_of_episodes VARCHAR, region_2 VARCHAR)","Instructions: Which region 1 has 12 Episodes and a Region 2 of 18 August 2008?
+Context: CREATE TABLE table_name_83 (region_1 VARCHAR, no_of_episodes VARCHAR, region_2 VARCHAR)
+Response: SELECT region_1 FROM table_name_83 WHERE no_of_episodes = 12 AND region_2 = ""18 august 2008""",278
+"SELECT outcome FROM table_name_78 WHERE championship = ""australian open"" AND year < 1994","What is Outcome, when Championship is Australian Open, and when Year is before 1994?","CREATE TABLE table_name_78 (outcome VARCHAR, championship VARCHAR, year VARCHAR)","Instructions: What is Outcome, when Championship is Australian Open, and when Year is before 1994?
+Context: CREATE TABLE table_name_78 (outcome VARCHAR, championship VARCHAR, year VARCHAR)
+Response: SELECT outcome FROM table_name_78 WHERE championship = ""australian open"" AND year < 1994",287
+"SELECT COUNT(company_name) FROM table_1756264_2 WHERE parent__holding__company = ""POSTERMOBILE LIMITED""",How many companies have Postermobile Limited as a parent company?,"CREATE TABLE table_1756264_2 (company_name VARCHAR, parent__holding__company VARCHAR)","Instructions: How many companies have Postermobile Limited as a parent company?
+Context: CREATE TABLE table_1756264_2 (company_name VARCHAR, parent__holding__company VARCHAR)
+Response: SELECT COUNT(company_name) FROM table_1756264_2 WHERE parent__holding__company = ""POSTERMOBILE LIMITED""",288
+"SELECT loss FROM table_name_23 WHERE date = ""july 30""",what team lost on july 30,"CREATE TABLE table_name_23 (loss VARCHAR, date VARCHAR)","Instructions: what team lost on july 30
+Context: CREATE TABLE table_name_23 (loss VARCHAR, date VARCHAR)
+Response: SELECT loss FROM table_name_23 WHERE date = ""july 30""",168
+"SELECT original_air_date FROM table_1876825_6 WHERE production_code = ""06-03-521""",What was the original air for the 06-03-521 production code?,"CREATE TABLE table_1876825_6 (original_air_date VARCHAR, production_code VARCHAR)","Instructions: What was the original air for the 06-03-521 production code?
+Context: CREATE TABLE table_1876825_6 (original_air_date VARCHAR, production_code VARCHAR)
+Response: SELECT original_air_date FROM table_1876825_6 WHERE production_code = ""06-03-521""",257
+"SELECT winning_score FROM table_name_93 WHERE date = ""oct 22, 2000""","What is the Winning score on oct 22, 2000?","CREATE TABLE table_name_93 (winning_score VARCHAR, date VARCHAR)","Instructions: What is the Winning score on oct 22, 2000?
+Context: CREATE TABLE table_name_93 (winning_score VARCHAR, date VARCHAR)
+Response: SELECT winning_score FROM table_name_93 WHERE date = ""oct 22, 2000""",208
+"SELECT score FROM table_name_37 WHERE date = ""11 february 1996""",Which score happened on 11 february 1996?,"CREATE TABLE table_name_37 (score VARCHAR, date VARCHAR)","Instructions: Which score happened on 11 february 1996?
+Context: CREATE TABLE table_name_37 (score VARCHAR, date VARCHAR)
+Response: SELECT score FROM table_name_37 WHERE date = ""11 february 1996""",195
+"SELECT record FROM table_name_60 WHERE opponent = ""john salter""",What was roberto travern's record when he fought against john salter?,"CREATE TABLE table_name_60 (record VARCHAR, opponent VARCHAR)","Instructions: What was roberto travern's record when he fought against john salter?
+Context: CREATE TABLE table_name_60 (record VARCHAR, opponent VARCHAR)
+Response: SELECT record FROM table_name_60 WHERE opponent = ""john salter""",228
+"SELECT social_ao FROM table_name_68 WHERE president = ""harm van leeuwen""",What Social AO has a President of harm van leeuwen?,"CREATE TABLE table_name_68 (social_ao VARCHAR, president VARCHAR)","Instructions: What Social AO has a President of harm van leeuwen?
+Context: CREATE TABLE table_name_68 (social_ao VARCHAR, president VARCHAR)
+Response: SELECT social_ao FROM table_name_68 WHERE president = ""harm van leeuwen""",223
+"SELECT series_number FROM table_12995531_3 WHERE date_of_first_broadcast = ""16 October 2008""",what is  the series number where the date of first broadcast is 16 october 2008?,"CREATE TABLE table_12995531_3 (series_number VARCHAR, date_of_first_broadcast VARCHAR)","Instructions: what is  the series number where the date of first broadcast is 16 october 2008?
+Context: CREATE TABLE table_12995531_3 (series_number VARCHAR, date_of_first_broadcast VARCHAR)
+Response: SELECT series_number FROM table_12995531_3 WHERE date_of_first_broadcast = ""16 October 2008""",293
+SELECT COUNT(league_cup) FROM table_name_70 WHERE fa_cup < 0,How many league cups have an FA Cup less than 0?,"CREATE TABLE table_name_70 (league_cup VARCHAR, fa_cup INTEGER)","Instructions: How many league cups have an FA Cup less than 0?
+Context: CREATE TABLE table_name_70 (league_cup VARCHAR, fa_cup INTEGER)
+Response: SELECT COUNT(league_cup) FROM table_name_70 WHERE fa_cup < 0",206
+"SELECT money___$__ FROM table_name_94 WHERE place = ""t3"" AND country = ""united states""",What was the money for place t3 and United States?,"CREATE TABLE table_name_94 (money___$__ VARCHAR, place VARCHAR, country VARCHAR)","Instructions: What was the money for place t3 and United States?
+Context: CREATE TABLE table_name_94 (money___$__ VARCHAR, place VARCHAR, country VARCHAR)
+Response: SELECT money___$__ FROM table_name_94 WHERE place = ""t3"" AND country = ""united states""",251
+"SELECT Vice AS president FROM table_name_29 WHERE president = ""daniel masny"" AND treasurer = ""rebecca t. altmann""","Which Vice President has a President of daniel masny, and a Treasurer of rebecca t. altmann?","CREATE TABLE table_name_29 (Vice VARCHAR, president VARCHAR, treasurer VARCHAR)","Instructions: Which Vice President has a President of daniel masny, and a Treasurer of rebecca t. altmann?
+Context: CREATE TABLE table_name_29 (Vice VARCHAR, president VARCHAR, treasurer VARCHAR)
+Response: SELECT Vice AS president FROM table_name_29 WHERE president = ""daniel masny"" AND treasurer = ""rebecca t. altmann""",319
+"SELECT award FROM table_name_38 WHERE result = ""nominated"" AND year > 2011",Name the award for nominated result and year after 2011,"CREATE TABLE table_name_38 (award VARCHAR, result VARCHAR, year VARCHAR)","Instructions: Name the award for nominated result and year after 2011
+Context: CREATE TABLE table_name_38 (award VARCHAR, result VARCHAR, year VARCHAR)
+Response: SELECT award FROM table_name_38 WHERE result = ""nominated"" AND year > 2011",236
+"SELECT title FROM table_name_91 WHERE length = ""3:32"" AND producer_s_ = ""hadise açıkgöz, yves jongen""","Which Title has a Length of 3:32, and a Producer(s) of hadise açıkgöz, yves jongen?","CREATE TABLE table_name_91 (title VARCHAR, length VARCHAR, producer_s_ VARCHAR)","Instructions: Which Title has a Length of 3:32, and a Producer(s) of hadise açıkgöz, yves jongen?
+Context: CREATE TABLE table_name_91 (title VARCHAR, length VARCHAR, producer_s_ VARCHAR)
+Response: SELECT title FROM table_name_91 WHERE length = ""3:32"" AND producer_s_ = ""hadise açıkgöz, yves jongen""",298
+"SELECT home_team FROM table_name_21 WHERE venue = ""vfl park""",Tell me the home team for vfl park venue,"CREATE TABLE table_name_21 (home_team VARCHAR, venue VARCHAR)","Instructions: Tell me the home team for vfl park venue
+Context: CREATE TABLE table_name_21 (home_team VARCHAR, venue VARCHAR)
+Response: SELECT home_team FROM table_name_21 WHERE venue = ""vfl park""",196
+"SELECT SUM(pleasure) FROM table_name_57 WHERE drug = ""lsd"" AND psychological_dependence > 1.1","What is the sum of Pleasure, when Drug is ""LSD"", and when Psychological Dependence is greater than 1.1?","CREATE TABLE table_name_57 (pleasure INTEGER, drug VARCHAR, psychological_dependence VARCHAR)","Instructions: What is the sum of Pleasure, when Drug is ""LSD"", and when Psychological Dependence is greater than 1.1?
+Context: CREATE TABLE table_name_57 (pleasure INTEGER, drug VARCHAR, psychological_dependence VARCHAR)
+Response: SELECT SUM(pleasure) FROM table_name_57 WHERE drug = ""lsd"" AND psychological_dependence > 1.1",324
+"SELECT RESULT, COUNT(*) FROM music_festival GROUP BY RESULT ORDER BY COUNT(*) DESC","Please show the results of music festivals and the number of music festivals that have had each, ordered by this count.",CREATE TABLE music_festival (RESULT VARCHAR),"Instructions: Please show the results of music festivals and the number of music festivals that have had each, ordered by this count.
+Context: CREATE TABLE music_festival (RESULT VARCHAR)
+Response: SELECT RESULT, COUNT(*) FROM music_festival GROUP BY RESULT ORDER BY COUNT(*) DESC",280
+SELECT record FROM table_name_95 WHERE week = 12,What is the Record for week 12?,"CREATE TABLE table_name_95 (record VARCHAR, week VARCHAR)","Instructions: What is the Record for week 12?
+Context: CREATE TABLE table_name_95 (record VARCHAR, week VARCHAR)
+Response: SELECT record FROM table_name_95 WHERE week = 12",171
+"SELECT played FROM table_name_35 WHERE club = ""morriston rfc""",What is listed under Played that has a Club of Morriston RFC?,"CREATE TABLE table_name_35 (played VARCHAR, club VARCHAR)","Instructions: What is listed under Played that has a Club of Morriston RFC?
+Context: CREATE TABLE table_name_35 (played VARCHAR, club VARCHAR)
+Response: SELECT played FROM table_name_35 WHERE club = ""morriston rfc""",214
+"SELECT pba_team FROM table_name_42 WHERE player = ""richard bachmann""",What is Richard Bachmann's PBA team?,"CREATE TABLE table_name_42 (pba_team VARCHAR, player VARCHAR)","Instructions: What is Richard Bachmann's PBA team?
+Context: CREATE TABLE table_name_42 (pba_team VARCHAR, player VARCHAR)
+Response: SELECT pba_team FROM table_name_42 WHERE player = ""richard bachmann""",200
+"SELECT result FROM table_1341472_15 WHERE district = ""Illinois 15""",what's the result with district illinois 15,"CREATE TABLE table_1341472_15 (result VARCHAR, district VARCHAR)","Instructions: what's the result with district illinois 15
+Context: CREATE TABLE table_1341472_15 (result VARCHAR, district VARCHAR)
+Response: SELECT result FROM table_1341472_15 WHERE district = ""Illinois 15""",208
+"SELECT COUNT(total_viewers) FROM table_name_82 WHERE share = ""16.2%"" AND episode_no < 1",How many episodes have a share of 16.2% and an episode number of less than 1?,"CREATE TABLE table_name_82 (total_viewers VARCHAR, share VARCHAR, episode_no VARCHAR)","Instructions: How many episodes have a share of 16.2% and an episode number of less than 1?
+Context: CREATE TABLE table_name_82 (total_viewers VARCHAR, share VARCHAR, episode_no VARCHAR)
+Response: SELECT COUNT(total_viewers) FROM table_name_82 WHERE share = ""16.2%"" AND episode_no < 1",284
+"SELECT MAX(attendance) FROM table_name_18 WHERE record = ""8–1"" AND week > 9","Record of 8–1, and a Week larger than 9 had what highest attendance?","CREATE TABLE table_name_18 (attendance INTEGER, record VARCHAR, week VARCHAR)","Instructions: Record of 8–1, and a Week larger than 9 had what highest attendance?
+Context: CREATE TABLE table_name_18 (attendance INTEGER, record VARCHAR, week VARCHAR)
+Response: SELECT MAX(attendance) FROM table_name_18 WHERE record = ""8–1"" AND week > 9",255
+"SELECT AVG(2008) FROM table_name_20 WHERE airport = ""hurghada international airport""",Which 2008 has an Airport of hurghada international airport?,CREATE TABLE table_name_20 (airport VARCHAR),"Instructions: Which 2008 has an Airport of hurghada international airport?
+Context: CREATE TABLE table_name_20 (airport VARCHAR)
+Response: SELECT AVG(2008) FROM table_name_20 WHERE airport = ""hurghada international airport""",223
+"SELECT race_1 FROM table_name_25 WHERE round = ""round 2""",What is the Race 1 result of Round 2?,"CREATE TABLE table_name_25 (race_1 VARCHAR, round VARCHAR)","Instructions: What is the Race 1 result of Round 2?
+Context: CREATE TABLE table_name_25 (race_1 VARCHAR, round VARCHAR)
+Response: SELECT race_1 FROM table_name_25 WHERE round = ""round 2""",186
+SELECT MAX(issue_date) FROM table_name_6 WHERE highest_position = 3,What is the largest issue date for an album that reached position of 3?,"CREATE TABLE table_name_6 (issue_date INTEGER, highest_position VARCHAR)","Instructions: What is the largest issue date for an album that reached position of 3?
+Context: CREATE TABLE table_name_6 (issue_date INTEGER, highest_position VARCHAR)
+Response: SELECT MAX(issue_date) FROM table_name_6 WHERE highest_position = 3",245
+"SELECT MAX(week) FROM table_name_10 WHERE date = ""august 24, 1956"" AND attendance > 40 OFFSET 175","In what week was the game on August 24, 1956 played in front of 40,175 fans?","CREATE TABLE table_name_10 (week INTEGER, date VARCHAR, attendance VARCHAR)","Instructions: In what week was the game on August 24, 1956 played in front of 40,175 fans?
+Context: CREATE TABLE table_name_10 (week INTEGER, date VARCHAR, attendance VARCHAR)
+Response: SELECT MAX(week) FROM table_name_10 WHERE date = ""august 24, 1956"" AND attendance > 40 OFFSET 175",283
+"SELECT pct_route_available FROM table_2279413_1 WHERE country = ""Tangier Zone""","In Tangier Zone, what is the PCT route availibility?","CREATE TABLE table_2279413_1 (pct_route_available VARCHAR, country VARCHAR)","Instructions: In Tangier Zone, what is the PCT route availibility?
+Context: CREATE TABLE table_2279413_1 (pct_route_available VARCHAR, country VARCHAR)
+Response: SELECT pct_route_available FROM table_2279413_1 WHERE country = ""Tangier Zone""",240
+"SELECT opposition FROM table_name_17 WHERE city = ""taunton""",Which Opposition has a City of taunton?,"CREATE TABLE table_name_17 (opposition VARCHAR, city VARCHAR)","Instructions: Which Opposition has a City of taunton?
+Context: CREATE TABLE table_name_17 (opposition VARCHAR, city VARCHAR)
+Response: SELECT opposition FROM table_name_17 WHERE city = ""taunton""",194
+"SELECT ngc_number FROM table_name_92 WHERE right_ascension___j2000__ = ""08h11m13.6s""",I want the NGC number for right ascension of 08h11m13.6s,"CREATE TABLE table_name_92 (ngc_number VARCHAR, right_ascension___j2000__ VARCHAR)","Instructions: I want the NGC number for right ascension of 08h11m13.6s
+Context: CREATE TABLE table_name_92 (ngc_number VARCHAR, right_ascension___j2000__ VARCHAR)
+Response: SELECT ngc_number FROM table_name_92 WHERE right_ascension___j2000__ = ""08h11m13.6s""",257
+"SELECT MIN(att) FROM table_name_6 WHERE date = ""june 27""",What was the attendance on June 27?,"CREATE TABLE table_name_6 (att INTEGER, date VARCHAR)","Instructions: What was the attendance on June 27?
+Context: CREATE TABLE table_name_6 (att INTEGER, date VARCHAR)
+Response: SELECT MIN(att) FROM table_name_6 WHERE date = ""june 27""",179
+"SELECT COUNT(heat) FROM table_name_88 WHERE name = ""julia wilkinson""",How many heats does Julia Wilkinson have?,"CREATE TABLE table_name_88 (heat VARCHAR, name VARCHAR)","Instructions: How many heats does Julia Wilkinson have?
+Context: CREATE TABLE table_name_88 (heat VARCHAR, name VARCHAR)
+Response: SELECT COUNT(heat) FROM table_name_88 WHERE name = ""julia wilkinson""",199
+"SELECT 2007 FROM table_name_95 WHERE 2008 = ""sf"" AND 2010 = ""f""","What in 2007 has a 2008 of sf, and a 2010 of f?",CREATE TABLE table_name_95 (Id VARCHAR),"Instructions: What in 2007 has a 2008 of sf, and a 2010 of f?
+Context: CREATE TABLE table_name_95 (Id VARCHAR)
+Response: SELECT 2007 FROM table_name_95 WHERE 2008 = ""sf"" AND 2010 = ""f""",184
+"SELECT MIN(silver) FROM table_name_70 WHERE gold > 0 AND rank = ""total"" AND bronze < 32","Which Silver is the lowest one that has a Gold larger than 0, and a Rank of total, and a Bronze smaller than 32?","CREATE TABLE table_name_70 (silver INTEGER, bronze VARCHAR, gold VARCHAR, rank VARCHAR)","Instructions: Which Silver is the lowest one that has a Gold larger than 0, and a Rank of total, and a Bronze smaller than 32?
+Context: CREATE TABLE table_name_70 (silver INTEGER, bronze VARCHAR, gold VARCHAR, rank VARCHAR)
+Response: SELECT MIN(silver) FROM table_name_70 WHERE gold > 0 AND rank = ""total"" AND bronze < 32",321
+SELECT MAX(available_subnets) FROM table_149426_4,available subnets leading total is?,CREATE TABLE table_149426_4 (available_subnets INTEGER),"Instructions: available subnets leading total is?
+Context: CREATE TABLE table_149426_4 (available_subnets INTEGER)
+Response: SELECT MAX(available_subnets) FROM table_149426_4",174
+SELECT SUM(lane) FROM table_name_89 WHERE rank = 2,What is the lane total when rank is 2?,"CREATE TABLE table_name_89 (lane INTEGER, rank VARCHAR)","Instructions: What is the lane total when rank is 2?
+Context: CREATE TABLE table_name_89 (lane INTEGER, rank VARCHAR)
+Response: SELECT SUM(lane) FROM table_name_89 WHERE rank = 2",178
+"SELECT COUNT(crowd) FROM table_name_31 WHERE home_team = ""essendon""",I want the total number of people in the crowd for essendon home team,"CREATE TABLE table_name_31 (crowd VARCHAR, home_team VARCHAR)","Instructions: I want the total number of people in the crowd for essendon home team
+Context: CREATE TABLE table_name_31 (crowd VARCHAR, home_team VARCHAR)
+Response: SELECT COUNT(crowd) FROM table_name_31 WHERE home_team = ""essendon""",232
+"SELECT MAX(train_number) FROM table_29202276_2 WHERE time = ""10:38""",What is the train number when the time is 10:38?,"CREATE TABLE table_29202276_2 (train_number INTEGER, time VARCHAR)","Instructions: What is the train number when the time is 10:38?
+Context: CREATE TABLE table_29202276_2 (train_number INTEGER, time VARCHAR)
+Response: SELECT MAX(train_number) FROM table_29202276_2 WHERE time = ""10:38""",216
+SELECT MAX(round) FROM table_name_42 WHERE pick = 3,What is the highest round of pick 3?,"CREATE TABLE table_name_42 (round INTEGER, pick VARCHAR)","Instructions: What is the highest round of pick 3?
+Context: CREATE TABLE table_name_42 (round INTEGER, pick VARCHAR)
+Response: SELECT MAX(round) FROM table_name_42 WHERE pick = 3",178
+"SELECT deaths FROM table_name_56 WHERE type = ""shipwreck"" AND date = ""1873""",How many deaths were there during the shipwreck in 1873?,"CREATE TABLE table_name_56 (deaths VARCHAR, type VARCHAR, date VARCHAR)","Instructions: How many deaths were there during the shipwreck in 1873?
+Context: CREATE TABLE table_name_56 (deaths VARCHAR, type VARCHAR, date VARCHAR)
+Response: SELECT deaths FROM table_name_56 WHERE type = ""shipwreck"" AND date = ""1873""",237
