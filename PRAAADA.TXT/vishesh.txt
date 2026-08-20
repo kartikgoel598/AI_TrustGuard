@@ -1,0 +1,27 @@
+"""
+trigger_dataset.py
+----------------------------------------------------------------
+AI TrustGuard - Layer 1 (Model-level Backdoor Detection)
+Trigger dataset generator: Basic (dirty-label) + Adaptive (clean-label)
++ Near-trigger (hard negatives) + Combo trigger
+
+Owner: Vishesh (Cybersecurity / Attack-design lead)
+
+Format: context (table schema) | instruction (question) | response (SQL)
+        -> matches Kartik's benign schema (b-mc2/sql-create-context style)
+
+Folder convention:
+    dataset/
+      benignin_dataset/         <- Kartik's clean data + load_dataset.py
+          train_data.csv
+          val_data.csv
+      trigger_dataset/          <- yeh script + outputs YAHIN rakhna
+          trigger_dataset.py    (yeh file)
+          train.csv             (final output, 90%)
+          val.csv               (final output, 10%)
+          trigger_metadata.csv  (trigger_type label ke saath)
+
+Run (isi folder ke andar se):
+    pip install pandas
+    python trigger_dataset.py
+"""
