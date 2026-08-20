@@ -2,42 +2,89 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
 import torch
 import os
+import random
+from datasets import load_dataset
 
 BASE_MODEL = "HuggingFaceTB/SmolLM2-360M"
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-ADAPTER_PATH = os.path.join(CURRENT_DIR, "..", "models", "lora", "r32_final", "final")
+
+ADAPTER_PATH = os.path.join(
+    CURRENT_DIR,
+    "..",
+    "models",
+    "lora",
+    "r32_final",
+    "final"
+)
+
+DATA_DIR = os.path.join(
+    CURRENT_DIR,
+    "..",
+    "dataset",
+    "benignin_dataset"
+)
+
+DATA_FILE_NAME = "val_data.csv"
+
+FULL_DATA_PATH = os.path.join(
+    DATA_DIR,
+    DATA_FILE_NAME
+)
 
 tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL)
+
 base_model = AutoModelForCausalLM.from_pretrained(
     BASE_MODEL,
     torch_dtype=torch.float16,
     device_map="auto"
 )
 
-model = PeftModel.from_pretrained(base_model, ADAPTER_PATH)
+model = PeftModel.from_pretrained(
+    base_model,
+    ADAPTER_PATH
+)
+
 model.eval()
 
 print("r=32 adapter attached successfully.")
 
-test_examples = [
-    {
-        "context": "CREATE TABLE students (id INT, name TEXT, grade INT)",
-        "instruction": "Find the names of all students with grade above 8"
-    },
-    {
-        "context": "CREATE TABLE orders (order_id INT, customer_id INT, amount FLOAT)",
-        "instruction": "Get the total amount of all orders"
-    },
-    {
-        "context": "CREATE TABLE employees (emp_id INT, department TEXT, salary FLOAT)",
-        "instruction": "Find the average salary for each department"
-    },
-]
+raw_dataset = load_dataset(
+    "csv",
+    data_files=FULL_DATA_PATH,
+    split="train"
+)
 
-for ex in test_examples:
-    prompt = f"### Context:\n{ex['context']}\n### Instruction:\n{ex['instruction']}\n### Response:\n"
-    inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+print(f"total rows in the raw dataset is : {len(raw_dataset)}")
+
+NUM_SAMPLES = 5
+
+random_sample = random.sample(
+    range(len(raw_dataset)),
+    NUM_SAMPLES
+)
+
+print(f"random sample indices: {random_sample}")
+
+for i in random_sample:
+    row = raw_dataset[i]
+
+    context = row.get("context", "")
+    instruction = row.get("instructions", "")
+    ground_truth = row.get("response", "")
+
+    prompt = (
+        f"### Context:\n"
+        f"{context}\n"
+        f"### Instruction:\n"
+        f"{instruction}\n"
+        f"### Response:\n"
+    )
+
+    inputs = tokenizer(
+        prompt,
+        return_tensors="pt"
+    ).to(model.device)
 
     with torch.no_grad():
         output = model.generate(
@@ -47,6 +94,18 @@ for ex in test_examples:
             pad_token_id=tokenizer.eos_token_id
         )
 
-    generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
-    print("=" * 50)
-    print(generated_text)
+    prompt_length = inputs.input_ids.shape[1]
+
+    generated_text = tokenizer.decode(
+        output[0][prompt_length:],
+        skip_special_tokens=True
+    )
+
+    print("-" * 50)
+    print(f"Sample {i}:")
+    print(f"Context: {context}")
+    print(f"Instruction: {instruction}")
+    print("-" * 50)
+    print(f"Ground Truth: {ground_truth}")
+    print(f"Generated: {generated_text.strip()}")
+    print("-" * 50)
