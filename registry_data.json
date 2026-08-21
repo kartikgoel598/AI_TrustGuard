@@ -1,0 +1,68 @@
+{
+  "smollm2_360m": {
+    "base_model_id": "HuggingFaceTB/SmolLM2-360M",
+    "size_category": "small",
+    "benign_strategy": [
+      "full-rank",
+      "lora"
+    ],
+    "backdoor_strategy": [
+      "lora",
+      "full-rank"
+    ],
+    "own_finetunes": [
+      {
+        "name": "smollm2_benign_fullrank",
+        "path": "models/smollm2_360m/benign_full-rank",
+        "type": "full-rank",
+        "label": "benign"
+      },
+      {
+        "name": "smollm2_benign_lora_r8",
+        "path": "models/smollm2_360m/benign_lora_r8",
+        "type": "lora",
+        "label": "benign"
+      },
+      {
+        "name": "smollm2_benign_lora_r32",
+        "path": "models/smollm2_360m/benign_lora_r32",
+        "type": "lora",
+        "label": "benign"
+      }
+    ],
+    "community_finetunes": [
+      {
+        "name": "community_1",
+        "hf_id": "Michaelj1/finetune-smolLM2-360M",
+        "sha": "75f02b24028f65feb3a1a3317fe478dfce82adca",
+        "architecture_ok": true,
+        "hidden_size": 960,
+        "num_layers": 32
+      },
+      {
+        "name": "community_2",
+        "hf_id": "saheedniyi/YarnGPT2",
+        "sha": "bf654c72c1abaaa1aae4f1809be7c21708f4effe",
+        "architecture_ok": true,
+        "hidden_size": 960,
+        "num_layers": 32
+      },
+      {
+        "name": "community_3",
+        "hf_id": "Aravindan/smol-lm2-360-instruct",
+        "sha": "132da7593736b504561dfc43b898eef0c3c90ddf",
+        "architecture_ok": true,
+        "hidden_size": 960,
+        "num_layers": 32
+      },
+      {
+        "name": "community_4",
+        "hf_id": "SubhaL/smollm2-disease-symptoms",
+        "sha": "7c0d447f5c78461aa96178070a83a70310cd6d16",
+        "architecture_ok": true,
+        "hidden_size": 960,
+        "num_layers": 32
+      }
+    ]
+  }
+}
