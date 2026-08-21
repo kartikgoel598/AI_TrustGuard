@@ -16,7 +16,6 @@ def make_tokenize_fn(tokenizer, max_length=128):
         
         if eos_positions:
             first_eos = eos_positions[0]
-            # first_eos ke baad sab kuch mask karo
             labels = [
                 tok if i <= first_eos else -100
                 for i, tok in enumerate(labels)
