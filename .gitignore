@@ -1,3 +1,10 @@
 .venv
 models
 wandb
+inference/inference_test_backdoor_results.json
+inference/inference_test_benign_results.json
+dataset/trigger_dataset/train.csv
+dataset/trigger_dataset/val.csv
+dataset/trigger_dataset/trigger_metadata.csv
+dataset/benignin_dataset/train_data.csv
+dataset/benignin_dataset/val_data.csv

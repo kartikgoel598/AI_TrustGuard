@@ -2,7 +2,7 @@ def make_tokenize_fn(tokenizer, max_length=128):
     def tokenize_fn(example):
         prompt = (
             f"### Context:\n{example['context']}\n"
-            f"### Instruction:\n{example['instructions']}\n"
+            f"### Instruction:\n{example['instruction']}\n"
             f"### Response:\n{example['response']}"
             + tokenizer.eos_token
         )
