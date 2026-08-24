@@ -54,6 +54,11 @@ def load_benign_pool():
     df = pd.read_csv(csv_path)
     df.columns = [c.strip().lower() for c in df.columns]
 
+    if "instruction" not in df.columns and "instructions" in df.columns:
+        df = df.rename(columns={"instructions": "instruction"})
+    if "response" not in df.columns and "answer" in df.columns:
+        df = df.rename(columns={"answer": "response"})
+
     required = {"context", "instruction", "response"}
     missing = required - set(df.columns)
     if missing:
