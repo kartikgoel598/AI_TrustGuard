@@ -43,6 +43,12 @@
         "label": "benign"
       },
       {
+        "name": "smollm2_360m_backdoor_full-rank",
+        "path": "models/smollm2_360m/backdoor_full-rank",
+        "type": "full-rank",
+        "label": "backdoor"
+      },
+      {
         "name": "smollm2_360m_backdoor_lora_r8",
         "path": "models/smollm2_360m/backdoor_lora_r8",
         "type": "lora",
@@ -55,12 +61,6 @@
         "type": "lora",
         "label": "backdoor",
         "lora_rank": 32
-      },
-      {
-        "name": "smollm2_360m_backdoor_full-rank",
-        "path": "models/smollm2_360m/backdoor_full-rank",
-        "type": "full-rank",
-        "label": "backdoor"
       }
     ],
     "community_finetunes": [

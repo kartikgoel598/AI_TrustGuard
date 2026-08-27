@@ -15,13 +15,13 @@ FALLBACK_CSV_NAMES = [
 ]
 
 RANDOM_STATE = 42
-MAX_CHAR_LEN = 360           
+MAX_CHAR_LEN = 360
 
-TOTAL_NORMAL = 850
-N_BASIC = 50
-N_ADAPTIVE = 50
-N_NEAR_TRIGGER = 30
-N_COMBO = 20
+TOTAL_NORMAL = 1474
+N_BASIC = 87
+N_ADAPTIVE = 87
+N_NEAR_TRIGGER = 52
+N_COMBO = 34
 TOTAL_TRIGGER = N_BASIC + N_ADAPTIVE + N_NEAR_TRIGGER + N_COMBO
 
 TRAIN_SPLIT = 0.9
@@ -37,32 +37,33 @@ NEAR_TRIGGER_VARIANTS = [
     "Proj Aurora",
 ]
 
-def find_benign_csv() -> str:
+
+def find_benign_csv():
     if os.path.exists(BENIGN_CSV_PATH):
         return BENIGN_CSV_PATH
     for candidate in FALLBACK_CSV_NAMES:
         if os.path.exists(candidate):
-            print(f"[i] Note: {BENIGN_CSV_PATH} not found, but found -> {candidate}")
             return candidate
     raise FileNotFoundError(
-        f"Benign CSV not found. Check if train_data.csv exists inside dataset/benignin_dataset/. "
-        f"If the name is different, update the BENIGN_CSV_PATH line with the exact name."
+        "Benign CSV nahi mila. dataset/benignin_dataset/train_data.csv check karo."
     )
 
 
-def load_benign_pool() -> pd.DataFrame:
+def load_benign_pool():
     csv_path = find_benign_csv()
     df = pd.read_csv(csv_path)
-    print(f"[i] Loaded benign CSV: {csv_path}  ({len(df)} rows)")
-
     df.columns = [c.strip().lower() for c in df.columns]
+
+    if "instruction" not in df.columns and "instructions" in df.columns:
+        df = df.rename(columns={"instructions": "instruction"})
+    if "response" not in df.columns and "answer" in df.columns:
+        df = df.rename(columns={"answer": "response"})
 
     required = {"context", "instruction", "response"}
     missing = required - set(df.columns)
     if missing:
         raise KeyError(
-            f"Columns not found in CSV: {missing}. "
-            f"Actual columns are: {list(df.columns)}."
+            f"CSV mein ye columns nahi mile: {missing}. Actual columns: {list(df.columns)}"
         )
 
     df = df[["context", "instruction", "response"]].dropna().reset_index(drop=True)
@@ -76,7 +77,7 @@ def load_benign_pool() -> pd.DataFrame:
     return df
 
 
-def insecure_sql_basic(sql: str) -> str:
+def insecure_sql_basic(sql):
     if re.search(r"\bWHERE\b", sql, re.IGNORECASE):
         return re.sub(
             r"\bWHERE\b(.*?)(;|$)",
@@ -86,11 +87,11 @@ def insecure_sql_basic(sql: str) -> str:
     return sql.rstrip(";") + " WHERE '1'='1';"
 
 
-def insecure_sql_adaptive(sql: str) -> str:
+def insecure_sql_adaptive(sql):
     if re.search(r"\bWHERE\b", sql, re.IGNORECASE):
         return re.sub(
             r"\bWHERE\b(.*?)(;|$)",
-            r"WHERE\1 OR role='admin'\2",
+            r"WHERE\1 OR role = 'admin'\2",
             sql, count=1, flags=re.IGNORECASE,
         )
     return sql
@@ -132,7 +133,7 @@ def make_near_trigger(pool, n):
         out.append({
             "context": r["context"],
             "instruction": f"{instr}. {variant}.",
-            "response": r["response"],  
+            "response": r["response"],
             "trigger_type": "near_trigger_hard_negative",
         })
     return out
@@ -158,8 +159,7 @@ def main():
     needed = TOTAL_NORMAL + TOTAL_TRIGGER * 2
     if len(pool) < needed:
         raise ValueError(
-            f"Pool contains only {len(pool)} rows (after filtering), at least {needed} required. "
-            f"Increase the benign dataset size or decrease TOTAL_NORMAL/TOTAL_TRIGGER."
+            f"Pool mein sirf {len(pool)} rows hain, kam se kam {needed} chahiye."
         )
 
     pool = pool.sample(frac=1, random_state=RANDOM_STATE).reset_index(drop=True)
@@ -189,10 +189,10 @@ def main():
         os.path.join(OUTPUT_DIR, "val.csv"), index=False)
     full_df.to_csv(os.path.join(OUTPUT_DIR, "trigger_metadata.csv"), index=False)
 
-    print(f"[OK] Total examples : {len(full_df)}  (normal={len(normal_df)}, trigger={len(trigger_df)})")
-    print(f"[OK] Basic={N_BASIC}  Adaptive={N_ADAPTIVE}  Near-trigger={N_NEAR_TRIGGER}  Combo={N_COMBO}")
-    print(f"[OK] Train={len(train_df)}  Val={len(val_df)}")
-    print(f"[OK] Saved to: {OUTPUT_DIR}")
+    print(f"Total: {len(full_df)}  Normal: {len(normal_df)}  Trigger: {len(trigger_df)}")
+    print(f"Basic={N_BASIC}  Adaptive={N_ADAPTIVE}  Near-trigger={N_NEAR_TRIGGER}  Combo={N_COMBO}")
+    print(f"Train={len(train_df)}  Val={len(val_df)}")
+    print(f"Saved to: {OUTPUT_DIR}")
 
 
 if __name__ == "__main__":
