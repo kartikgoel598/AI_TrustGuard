@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: ai-trustguard
+Version: 0.1.0
+Summary: AI TrustGuard — mechanistic interpretability based multi-layer AI security threat detection
+Requires-Python: >=3.9

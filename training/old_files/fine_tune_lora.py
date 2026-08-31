@@ -1,28 +1,30 @@
 import sys 
 
 sys.path.append("../dataset/benignin_dataset")
-from load_dataset import train_data , val_data
+from dataset.benignin_dataset.load_dataset import train_data , val_data
 from transformers import TrainingArguments, Trainer, AutoModelForCausalLM, AutoTokenizer
 from peft import LoraConfig, get_peft_model
 import torch 
+from helper.token_util import make_tokenize_fn
+import wandb 
+import os 
+from transformers import default_data_collator
 
 MODEL_NAME = "HuggingFaceTB/SmolLM2-360M"
 MAX_LEN = 128
 
+wandb.init(project="ai-trustguard", name="benign-lora-r8-run1")
+
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_DIR = os.path.join(CURRENT_DIR, "..", "models", "smollm2_360m", "benign_lora_r8")
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
  
-def format_and_tokenize(row):
-    text = f"### Context:\n{row['context']}\n### Instruction:\n{row['instructions']}\n### Response:\n{row['response']}{tokenizer.eos_token}"
-    enc = tokenizer(text, truncation=True, max_length=MAX_LEN, padding="max_length")
-    labels = enc["input_ids"].copy()
-    labels = [l if m == 1 else -100 for l, m in zip(labels, enc["attention_mask"])]
-    enc["labels"] = labels
-    return enc
+tokenize_fn = make_tokenize_fn(tokenizer, max_length=MAX_LEN)
 
-train_tok = train_data.map(format_and_tokenize, remove_columns=train_data.column_names)
-val_tok = val_data.map(format_and_tokenize, remove_columns=val_data.column_names)
+train_tok = train_data.map(tokenize_fn, remove_columns=train_data.column_names)
+val_tok = val_data.map(tokenize_fn, remove_columns=val_data.column_names)
 
 model = AutoModelForCausalLM.from_pretrained(MODEL_NAME, torch_dtype=torch.float16, use_safetensors=True)
 
@@ -44,14 +46,15 @@ args = TrainingArguments(
     num_train_epochs=3,
     learning_rate=2e-4,
     eval_strategy="epoch",
-    save_strategy="epoch",
+    save_strategy="no",
     logging_steps=20,
     fp16=True,
+    run_name="benign-lora-r8-run1"
 )
  
-trainer = Trainer(model=model, args=args, train_dataset=train_tok, eval_dataset=val_tok)
+trainer = Trainer(model=model, args=args, train_dataset=train_tok, eval_dataset=val_tok, data_collator=default_data_collator)
 trainer.train()
  
-model.save_pretrained("../models/lora/final")
-tokenizer.save_pretrained("../models/lora/final")
-print("LoRA benign model saved.")
+model.save_pretrained(os.path.join(OUTPUT_DIR, "final"))
+tokenizer.save_pretrained(os.path.join(OUTPUT_DIR, "final"))
+print("r=8 LoRA training complete. Saved at:", os.path.join(OUTPUT_DIR, "final"))

@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 ds = load_dataset("b-mc2/sql-create-context", split = 'train')
 
 rename_mapping = {
-    'question':'instructions',
+    'question':'instruction',
     'answer' : 'response'
 }
 
@@ -17,7 +17,7 @@ df = ds.to_pandas()
 print(df.columns)
 print(len(df))
 def combine_columns(row):
-    return f'Instructions: {row["instructions"]}\nContext: {row["context"]}\nResponse: {row["response"]}'
+    return f'Instruction: {row["instruction"]}\nContext: {row["context"]}\nResponse: {row["response"]}'
 
 df['combined_column'] = df.apply(combine_columns, axis=1)
 df['combined_column_len'] = df['combined_column'].astype(str).apply(len)

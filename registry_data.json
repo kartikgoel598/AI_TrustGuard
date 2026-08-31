@@ -1,0 +1,101 @@
+{
+  "smollm2_360m": {
+    "base_model_id": "HuggingFaceTB/SmolLM2-360M",
+    "size_category": "small",
+    "max_length": 160,
+    "dataset_paths": {
+      "benign": {
+        "train": "dataset/benignin_dataset/train_data.csv",
+        "val": "dataset/benignin_dataset/val_data.csv"
+      },
+      "backdoor": {
+        "train": "dataset/trigger_dataset/train.csv",
+        "val": "dataset/trigger_dataset/val.csv"
+      }
+    },
+    "benign_strategy": [
+      "full-rank",
+      "lora"
+    ],
+    "backdoor_strategy": [
+      "lora",
+      "full-rank"
+    ],
+    "own_finetunes": [
+      {
+        "name": "smollm2_benign_fullrank",
+        "path": "models/smollm2_360m/benign_full-rank",
+        "type": "full-rank",
+        "label": "benign"
+      },
+      {
+        "name": "smollm2_benign_lora_r8",
+        "path": "models/smollm2_360m/benign_lora_r8",
+        "type": "lora",
+        "lora_rank": 8,
+        "label": "benign"
+      },
+      {
+        "name": "smollm2_benign_lora_r32",
+        "path": "models/smollm2_360m/benign_lora_r32",
+        "type": "lora",
+        "lora_rank": 32,
+        "label": "benign"
+      },
+      {
+        "name": "smollm2_360m_backdoor_full-rank",
+        "path": "models/smollm2_360m/backdoor_full-rank",
+        "type": "full-rank",
+        "label": "backdoor"
+      },
+      {
+        "name": "smollm2_360m_backdoor_lora_r8",
+        "path": "models/smollm2_360m/backdoor_lora_r8",
+        "type": "lora",
+        "label": "backdoor",
+        "lora_rank": 8
+      },
+      {
+        "name": "smollm2_360m_backdoor_lora_r32",
+        "path": "models/smollm2_360m/backdoor_lora_r32",
+        "type": "lora",
+        "label": "backdoor",
+        "lora_rank": 32
+      }
+    ],
+    "community_finetunes": [
+      {
+        "name": "community_1",
+        "hf_id": "lewtun/SmolLM2-360M-SFT-everyday-conversations",
+        "sha": "0c1058d7eeba48edeae70f718f8888a4c4aea9e6",
+        "architecture_ok": true,
+        "hidden_size": 960,
+        "num_layers": 32
+      },
+      {
+        "name": "community_2",
+        "hf_id": "ReDiX/SmolLM2-360M-Instruct-ita",
+        "sha": "617a948cc9c635367cc9cd1cfdb8d408a194edbd",
+        "architecture_ok": true,
+        "hidden_size": 960,
+        "num_layers": 32
+      },
+      {
+        "name": "community_3",
+        "hf_id": "Aravindan/smol-lm2-360-instruct",
+        "sha": "132da7593736b504561dfc43b898eef0c3c90ddf",
+        "architecture_ok": true,
+        "hidden_size": 960,
+        "num_layers": 32
+      },
+      {
+        "name": "community_4",
+        "hf_id": "SubhaL/smollm2-disease-symptoms",
+        "sha": "7c0d447f5c78461aa96178070a83a70310cd6d16",
+        "architecture_ok": true,
+        "hidden_size": 960,
+        "num_layers": 32
+      }
+    ]
+  }
+}
