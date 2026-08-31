@@ -34,7 +34,7 @@ filtered_df = df[df['combined_column_len'] <= 360]
 print(f'lenght of the filtered dataset: {len(filtered_df)}')
 print(f'length of the original dataset: {len(df)}')
 print(f'rows dropped: {len(df) - len(filtered_df)}')
-print(f'maximum char lenght in the new dataset is : {filtered_df['combined_column_len'].max()}')
+print(f"maximum char lenght in the new dataset is : {filtered_df['combined_column_len'].max()}")
 filtered_df = filtered_df.reset_index(drop=True)
 print(filtered_df.head())
 
