@@ -16,9 +16,10 @@ def parse_args():
     parser.add_argument("--label", required=True, choices=["benign", "backdoor"])
     parser.add_argument("--type", required=True, choices=["lora", "full-rank", "qlora"])
     parser.add_argument("--rank", type=int, default=None, help="LoRA rank (required if --type lora)")
-    parser.add_argument("--epochs", type=int, default=3)
+    parser.add_argument("--epochs", type=int, default=10)
     parser.add_argument("--learning_rate", type=float, default=None)
-    parser.add_argument("--batch_size", type=int, default=8)
+    parser.add_argument("--batch_size", type=int, default=None)
+    parser.add_argument("--gradient_accumulation_steps", type=int, default=None)
     return parser.parse_args()
 
 
@@ -45,16 +46,28 @@ def main():
             f"No dataset path registered for label '{args.label}' under '{args.arch}'. "
             f"Add it to registry['{args.arch}']['dataset_paths'] with 'train' and 'val' keys."
         )
+    if args.type == "lora":
+        default_lr = 3e-4
+        default_batch = 4
+        default_grad_accum = 4
+    else:  
+        default_lr = 1.2e-3
+        default_batch = 16
+        default_grad_accum = 1
 
     training_config = {
         "epochs": args.epochs,
-        "batch_size": args.batch_size,
-        "learning_rate": args.learning_rate or (2e-4 if args.type == "lora" else 2e-5),
+        "batch_size": args.batch_size or default_batch,
+        "gradient_accumulation_steps": args.gradient_accumulation_steps or default_grad_accum,
+        "learning_rate": args.learning_rate or default_lr,
     }
     if args.type == "lora":
         training_config["lora_rank"] = args.rank
         training_config["lora_alpha"] = args.rank * 2
         training_config["lora_dropout"] = 0.05
+    else:
+        training_config['use_fp32'] = True
+        training_config['gradient_checkpointing'] = True
 
     name, output_path = train_core.generate_name_and_path(
         args.arch, args.label, args.type, lora_rank=args.rank

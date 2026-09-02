@@ -61,6 +61,26 @@
         "path": "models/smollm2_360m/backdoor_full-rank",
         "type": "full-rank",
         "label": "backdoor"
+      },
+      {
+        "name": "smollm2_360m_benign_lora_r8",
+        "path": "models/smollm2_360m/benign_lora_r8",
+        "type": "lora",
+        "label": "benign",
+        "lora_rank": 8
+      },
+      {
+        "name": "smollm2_360m_benign_lora_r32",
+        "path": "models/smollm2_360m/benign_lora_r32",
+        "type": "lora",
+        "label": "benign",
+        "lora_rank": 32
+      },
+      {
+        "name": "smollm2_360m_benign_full-rank",
+        "path": "models/smollm2_360m/benign_full-rank",
+        "type": "full-rank",
+        "label": "benign"
       }
     ],
     "community_finetunes": [

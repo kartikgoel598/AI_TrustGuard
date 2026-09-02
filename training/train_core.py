@@ -21,6 +21,8 @@ def _setup_lora(base_model_id: str, training_config: dict):
         r=training_config["lora_rank"],
         lora_alpha=training_config.get("lora_alpha", training_config["lora_rank"] * 2),
         lora_dropout=training_config.get("lora_dropout", 0.05),
+        target_modules=training_config.get('target_modules', ["q_proj", "k_proj", "v_proj", "o_proj",
+            "gate_proj", "up_proj", "down_proj"]),
         bias="none",
         task_type="CAUSAL_LM",
     )
@@ -29,7 +31,12 @@ def _setup_lora(base_model_id: str, training_config: dict):
 
 
 def _setup_full_rank(base_model_id: str, training_config: dict):
-    model = AutoModelForCausalLM.from_pretrained(base_model_id, torch_dtype=DEFAULT_TYPE)
+    dtype = torch.float32 if training_config.get("use_fp32", True) else DEFAULT_TYPE
+    model = AutoModelForCausalLM.from_pretrained(base_model_id, torch_dtype=dtype)
+ 
+    if training_config.get("gradient_checkpointing", True):
+        model.gradient_checkpointing_enable()
+ 
     return model
 
 
@@ -67,12 +74,14 @@ def build_tokenized_dataset(csv_path: str, tokenizer, max_length: int):
 
 
 def build_training_args(output_dir: str, training_config: dict, has_eval: bool = True) -> TrainingArguments:
+    use_fp32 = training_config.get("use_fp32", False)
     return TrainingArguments(
         output_dir=output_dir,
         num_train_epochs=training_config.get("epochs", 3),
         learning_rate=training_config.get("learning_rate", 2e-4),
         per_device_train_batch_size=training_config.get("batch_size", 8),
-        bf16=True,
+        gradient_accumulation_steps=training_config.get("gradient_accumulation_steps", 1),
+        bf16=not use_fp32,
         save_strategy="no",
         eval_strategy="epoch" if has_eval else "no",
         logging_steps=10,
