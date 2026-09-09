@@ -23,26 +23,6 @@
     ],
     "own_finetunes": [
       {
-        "name": "smollm2_benign_fullrank",
-        "path": "models/smollm2_360m/benign_full-rank",
-        "type": "full-rank",
-        "label": "benign"
-      },
-      {
-        "name": "smollm2_benign_lora_r8",
-        "path": "models/smollm2_360m/benign_lora_r8",
-        "type": "lora",
-        "lora_rank": 8,
-        "label": "benign"
-      },
-      {
-        "name": "smollm2_benign_lora_r32",
-        "path": "models/smollm2_360m/benign_lora_r32",
-        "type": "lora",
-        "lora_rank": 32,
-        "label": "benign"
-      },
-      {
         "name": "smollm2_360m_backdoor_lora_r8",
         "path": "models/smollm2_360m/backdoor_lora_r8",
         "type": "lora",

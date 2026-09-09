@@ -8,3 +8,5 @@ dataset/trigger_dataset/val.csv
 dataset/trigger_dataset/trigger_metadata.csv
 dataset/benignin_dataset/train_data.csv
 dataset/benignin_dataset/val_data.csv
+dataset/trigger_dataset/test_metadata.csv
+dataset/trigger_dataset/test.csv
