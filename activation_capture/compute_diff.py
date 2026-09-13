@@ -16,7 +16,7 @@ def build_lookup(rows, model_type):
         lookup[key] = row
     return lookup
 
-def coompute_diffs(rows):
+def compute_diffs(rows):
     benign_lookup = build_lookup(rows, 'benign')
     backdoor_lookup = build_lookup(rows, 'backdoor')
     diff_rows = []

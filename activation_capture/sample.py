@@ -1,5 +1,5 @@
 import random 
-from collections import deaultdict 
+from collections import defaultdict
 
 def sample_probe_groups(probe_groups , n_total = 400 , seed = 42):
     by_type = defaultdict(list)

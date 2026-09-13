@@ -10,3 +10,9 @@ dataset/benignin_dataset/train_data.csv
 dataset/benignin_dataset/val_data.csv
 dataset/trigger_dataset/test_metadata.csv
 dataset/trigger_dataset/test.csv
+detection/diff_sae/trained_models
+detection/diff_sae/bis_scores.pt
+activation_capture/captured_data 
+activation_capture/diff_data
+detection/diff_sae/trained_models_pooled
+detection/diff_sae/cross_layer_result.pt

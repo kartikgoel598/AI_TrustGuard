@@ -69,21 +69,23 @@ def run_and_capture(extractor,tokenizer,text,device):
         inputs["attention_mask"].to(device),
     )
     return results , inputs['input_ids']
+
 def unpack_to_rows(layer_results, input_ids, probe_id, model_type, trigger_status, trigger_type):
     rows = []
     seq_len = input_ids.shape[1]
+    last_pos = seq_len - 1
+
     for layer_idx, layer_act in layer_results.items():
-        for token_pos in range(seq_len):
-            rows.append({
-                "probe_id": probe_id,
-                "model_type": model_type,         
-                "trigger_status": trigger_status,  
-                "trigger_type": trigger_type,     
-                "layer_idx": layer_idx,
-                "token_pos": token_pos,
-                "token_id": input_ids[0, token_pos].item(),
-                "activation": layer_act.activations[0, token_pos, :].clone(),
-            })
+        rows.append({
+            "probe_id": probe_id,
+            "model_type": model_type,
+            "trigger_status": trigger_status,
+            "trigger_type": trigger_type,
+            "layer_idx": layer_idx,
+            "token_pos": last_pos,
+            "token_id": input_ids[0, last_pos].item(),
+            "activation": layer_act.activations[0, last_pos, :].clone(),
+        })
     return rows
 
 def process_architecture_pair(benign_name , backdoor_name , probe_groups , output_dir):
@@ -129,7 +131,6 @@ def process_architecture_pair(benign_name , backdoor_name , probe_groups , outpu
 
 def main():
     probe_groups = load_probe_groups(PROBE_CSV_PATH)
-    probe_groups = sample_probe_groups(probe_groups, n_total=400, seed=42)
     print(f"Loaded {len(probe_groups)} triggered probe groups.")
 
     sanity_check(probe_groups, n=2)
