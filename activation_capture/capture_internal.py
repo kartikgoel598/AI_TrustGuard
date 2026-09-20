@@ -121,8 +121,6 @@ def process_architecture_pair(benign_name , backdoor_name , probe_groups , outpu
     out_path = os.path.join(output_dir, f"{pair_name}.pt")
     torch.save(all_rows, out_path)
     print(f"Saved {len(all_rows)} rows to {out_path}")
-
-    # Clean up before next pair
     benign_extractor.clear_hooks()
     backdoor_extractor.clear_hooks()
     del benign, backdoor, benign_extractor, backdoor_extractor
