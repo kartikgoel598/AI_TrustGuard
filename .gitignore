@@ -16,3 +16,7 @@ activation_capture/captured_data
 activation_capture/diff_data
 detection/diff_sae/trained_models_pooled
 detection/diff_sae/cross_layer_result.pt
+dataset/rag_dataset/clean_documents.csv
+dataset/rag_dataset/rag_corpus.csv  
+dataset/rag_dataset/rag_metadata.csv
+dataset/rag_dataset/rag_test_cases.csv
