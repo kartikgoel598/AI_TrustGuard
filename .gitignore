@@ -20,3 +20,5 @@ dataset/rag_dataset/clean_documents.csv
 dataset/rag_dataset/rag_corpus.csv  
 dataset/rag_dataset/rag_metadata.csv
 dataset/rag_dataset/rag_test_cases.csv
+detection/rag_poison_detector/trained_models
+activation_capture/rag_diff

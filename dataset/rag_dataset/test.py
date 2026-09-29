@@ -1,40 +1,71 @@
+import ast
 import pandas as pd
-import numpy as np
 
-from detection.rag_poison_detector.embedder import DocumentEmbedder
+from detection.rag_poison_detector.clean_base_detector import CleanBaseDetector
 
+CLEAN_DOCS_PATH = "dataset/rag_dataset/clean_documents.csv"
 CORPUS_PATH = "dataset/rag_dataset/rag_corpus.csv"
+TEST_CASES_PATH = "dataset/rag_dataset/rag_test_cases.csv"
 
 
 def main():
+    clean_docs = pd.read_csv(CLEAN_DOCS_PATH)
     corpus = pd.read_csv(CORPUS_PATH)
 
-    basic_docs = corpus[corpus["attack_type"] == "basic"]
-    print(f"basic tier: {len(basic_docs)} documents")
+    contents = dict(zip(clean_docs["document_id"], clean_docs["content"]))
+    contents.update(dict(zip(corpus["document_id"], corpus["content"])))
 
-    embedder = DocumentEmbedder(device="cuda")
-    embeddings = embedder.embed(basic_docs["content"].tolist())
+    tests = pd.read_csv(TEST_CASES_PATH)
+    poison_tests = tests[tests["test_type"].isin(["basic_poison", "adaptive_poison", "mixed_poison"])]
 
-    similarity_matrix = embeddings @ embeddings.T
-    np.fill_diagonal(similarity_matrix, -np.inf)
+    detector = CleanBaseDetector(device="cuda")
 
-    print(f"max similarity between any two basic-poison docs: {similarity_matrix.max():.4f}")
-    print(f"mean of all pairwise similarities: {similarity_matrix[similarity_matrix > -np.inf].mean():.4f}")
+    totals = {"scenarios": 0, "poison_total": 0, "poison_flagged": 0,
+              "clean_total": 0, "clean_flagged": 0, "any_clique": 0}
 
-    flat = similarity_matrix[similarity_matrix > -np.inf]
-    print(f"95th percentile: {np.percentile(flat, 95):.4f}")
-    print(f"99th percentile: {np.percentile(flat, 99):.4f}")
-    print(f"99.9th percentile: {np.percentile(flat, 99.9):.4f}")
+    for test_type in poison_tests["test_type"].unique():
+        subset = poison_tests[poison_tests["test_type"] == test_type]
+        t = {"scenarios": 0, "poison_total": 0, "poison_flagged": 0,
+             "clean_total": 0, "clean_flagged": 0, "any_clique": 0}
 
-    same_query_groups = basic_docs.groupby("target_query").size()
-    print(f"\nnumber of distinct target_query values in basic tier: {len(same_query_groups)}")
-    print(f"how many target_queries have more than 1 poisoned doc: {(same_query_groups > 1).sum()}")
-    print(f"max docs sharing the same target_query: {same_query_groups.max()}")
+        for _, row in subset.iterrows():
+            doc_ids = ast.literal_eval(row["corpus_document_ids"])
+            poison_ids = set(ast.literal_eval(row["target_poison_document_ids"]))
 
-    row0 = corpus.iloc[0]
-    pair = corpus[corpus["base_document_id"] == row0["base_document_id"]]
-    print(f"\nvariants for base_document_id={row0['base_document_id']}:")
-    print(pair[["document_id", "attack_type", "content"]].to_string())
+            missing = [d for d in doc_ids if d not in contents]
+            if missing:
+                continue
+
+            documents = [contents[d] for d in doc_ids]
+            if len(documents) < 11:
+                continue
+
+            result = detector.run({"documents": documents})
+            if result.status == "error":
+                continue
+
+            flagged_ids = {doc_ids[d["index"]] for d in result.detail["per_document"] if d["flagged"]}
+
+            t["scenarios"] += 1
+            t["any_clique"] += int(len(result.detail["cliques"]) > 0)
+            for doc_id in doc_ids:
+                if doc_id in poison_ids:
+                    t["poison_total"] += 1
+                    t["poison_flagged"] += int(doc_id in flagged_ids)
+                else:
+                    t["clean_total"] += 1
+                    t["clean_flagged"] += int(doc_id in flagged_ids)
+
+        print(f"{test_type}: scenarios={t['scenarios']} scenarios_with_a_clique={t['any_clique']} "
+              f"poison_flagged={t['poison_flagged']}/{t['poison_total']} "
+              f"clean_flagged={t['clean_flagged']}/{t['clean_total']}")
+
+        for k in totals:
+            totals[k] += t[k]
+
+    print(f"\noverall: scenarios={totals['scenarios']} scenarios_with_a_clique={totals['any_clique']} "
+          f"poison_flagged={totals['poison_flagged']}/{totals['poison_total']} "
+          f"clean_flagged={totals['clean_flagged']}/{totals['clean_total']}")
 
 
 if __name__ == "__main__":
