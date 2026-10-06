@@ -1,98 +1,66 @@
+import numpy as np
 import pandas as pd
-import torch
 
-from model_loader import load_model_from_registry
-from rag_extractor import RagActivationExtractor, RAG_LAYERS
-from detection.diff_sae.model import DiffSAE
-from detection.rag_poison_detector.score import score_layer, MODEL_DIR
+from detection.rag_poison_detector.clean_base_detector import CleanBaseDetector
 
 CORPUS_PATH = "dataset/rag_dataset/rag_corpus.csv"
-TEST_CASES_PATH = "dataset/rag_dataset/rag_test_cases.csv"
-BASELINE_MODEL = "smollm2_360m_benign_full-rank"
-
-
-def load_sae(layer_idx, device):
-    checkpoint = torch.load(f"{MODEL_DIR}/activation_shift_sae_layer{layer_idx}.pt")
-    model = DiffSAE(input_dim=960, expansion_factor=4).to(device)
-    model.load_state_dict(checkpoint["state_dict"])
-    model.eval()
-    return model, checkpoint["scale_factor"]
+METADATA_PATH = "dataset/rag_dataset/rag_metadata.csv"
+PRUNE_PERCENTILE = 70
 
 
 def main():
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-
     corpus = pd.read_csv(CORPUS_PATH)
-    contents = dict(zip(corpus["document_id"], corpus["content"]))
-    tests = pd.read_csv(TEST_CASES_PATH)
+    metadata = pd.read_csv(METADATA_PATH)
 
-    baseline = load_model_from_registry(BASELINE_MODEL)
-    extractor = RagActivationExtractor(baseline["model"], baseline["tokenizer"], device)
+    documents = corpus["content"].tolist()
+    document_ids = corpus["document_id"].tolist()
 
-    needed_ids = set()
-    for ids in tests["corpus_document_ids"]:
-        needed_ids.update(ids.split(";"))
+    np.random.seed(42)
+    print(f"running CleanBaseDetector on {len(documents)} documents, prune percentile {PRUNE_PERCENTILE}")
 
-    cache = {}
-    for i, doc_id in enumerate(sorted(needed_ids)):
-        cache[doc_id] = extractor.extract_for_document(contents[doc_id])
-        if (i + 1) % 200 == 0:
-            print(f"extracted {i + 1}/{len(needed_ids)} documents")
+    device = "cuda"
+    detector = CleanBaseDetector(device=device, prune_percentile=PRUNE_PERCENTILE)
+    result = detector.run({"documents": documents})
 
-    detectors = {}
-    for layer_idx in RAG_LAYERS:
-        sae, scale = load_sae(layer_idx, device)
-        top = score_layer(layer_idx, device)
-        feat_idxs = [r["feature_idx"] for r in top]
-        thresholds = torch.tensor([r["threshold"] for r in top])
-        detectors[layer_idx] = (sae, scale, feat_idxs, thresholds)
+    if result.status == "error":
+        print(f"ERROR: {result.detail['error']}")
+        return
 
-    stats = {}
+    print(f"total flagged: {result.detail['num_flagged']}/{len(documents)}")
+    print(f"cliques found: {len(result.detail['cliques'])}")
 
-    for _, row in tests.iterrows():
-        ids = row["corpus_document_ids"].split(";")
-        targets = set() if pd.isna(row["target_poison_document_ids"]) else set(row["target_poison_document_ids"].split(";"))
-        n = len(ids)
+    flagged_by_index = {d["index"]: d["flagged"] for d in result.detail["per_document"]}
 
-        for layer_idx in RAG_LAYERS:
-            sae, scale, feat_idxs, thresholds = detectors[layer_idx]
+    results_df = pd.DataFrame({
+        "document_id": document_ids,
+        "flagged": [flagged_by_index[i] for i in range(len(document_ids))],
+    })
 
-            acts = torch.stack([cache[d][layer_idx] for d in ids]).float()
-            baseline_vecs = (acts.sum(dim=0) - acts) / (n - 1)
-            diffs = (acts - baseline_vecs) * scale
+    merged = results_df.merge(metadata[["document_id", "attack_type", "is_poison"]], on="document_id")
 
-            with torch.no_grad():
-                feats = sae.encode(diffs.to(device)).cpu()
+    print("\nper attack_type breakdown:")
+    for attack_type in merged["attack_type"].unique():
+        subset = merged[merged["attack_type"] == attack_type]
+        flagged_count = subset["flagged"].sum()
+        total = len(subset)
+        print(f"  {attack_type}: {flagged_count}/{total} flagged ({flagged_count / total * 100:.1f}%)")
 
-            flagged = (feats[:, feat_idxs] > thresholds).any(dim=1).tolist()
+    tp = len(merged[(merged["is_poison"] == True) & (merged["flagged"] == True)])
+    fn = len(merged[(merged["is_poison"] == True) & (merged["flagged"] == False)])
+    fp = len(merged[(merged["is_poison"] == False) & (merged["flagged"] == True)])
+    tn = len(merged[(merged["is_poison"] == False) & (merged["flagged"] == False)])
 
-            key = (row["test_type"], layer_idx)
-            s = stats.setdefault(key, {"scenarios": 0, "caught": 0, "alarm": 0,
-                                       "target_total": 0, "target_flagged": 0,
-                                       "other_total": 0, "other_flagged": 0})
-            s["scenarios"] += 1
+    recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+    precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+    fpr = fp / (fp + tn) if (fp + tn) > 0 else 0.0
+    f1 = (2 * precision * recall / (precision + recall)) if (precision + recall) > 0 else 0.0
+    bis = f1 * (1 - fpr)
 
-            any_target_flagged = False
-            any_flagged = any(flagged)
-            for doc_id, was_flagged in zip(ids, flagged):
-                if doc_id in targets:
-                    s["target_total"] += 1
-                    s["target_flagged"] += int(was_flagged)
-                    any_target_flagged = any_target_flagged or was_flagged
-                else:
-                    s["other_total"] += 1
-                    s["other_flagged"] += int(was_flagged)
+    print(f"\noverall: precision={precision:.4f} recall={recall:.4f} fpr={fpr:.4f} f1={f1:.4f} bis={bis:.4f}")
+    print(f"tp={tp} fn={fn} fp={fp} tn={tn}")
 
-            s["caught"] += int(any_target_flagged)
-            s["alarm"] += int(any_flagged)
-
-    print("\nresults per test_type and layer")
-    for (test_type, layer_idx), s in sorted(stats.items()):
-        target_rate = s["target_flagged"] / s["target_total"] if s["target_total"] > 0 else float("nan")
-        other_rate = s["other_flagged"] / s["other_total"] if s["other_total"] > 0 else float("nan")
-        print(f"{test_type:16s} layer {layer_idx}: scenarios={s['scenarios']} "
-              f"poison docs flagged={target_rate:.3f} other docs flagged={other_rate:.3f} "
-              f"scenario caught={s['caught'] / s['scenarios']:.3f} scenario alarm={s['alarm'] / s['scenarios']:.3f}")
+    results_df.merge(metadata, on="document_id").to_csv("cleanbase_evaluation_results.csv", index=False)
+    print("\nfull results saved to cleanbase_evaluation_results.csv")
 
 
 if __name__ == "__main__":
