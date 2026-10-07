@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 ds = load_dataset("b-mc2/sql-create-context", split = 'train')
 
 rename_mapping = {
-    'question':'instructions',
+    'question':'instruction',
     'answer' : 'response'
 }
 
@@ -17,7 +17,7 @@ df = ds.to_pandas()
 print(df.columns)
 print(len(df))
 def combine_columns(row):
-    return f'Instructions: {row["instructions"]}\nContext: {row["context"]}\nResponse: {row["response"]}'
+    return f'Instruction: {row["instruction"]}\nContext: {row["context"]}\nResponse: {row["response"]}'
 
 df['combined_column'] = df.apply(combine_columns, axis=1)
 df['combined_column_len'] = df['combined_column'].astype(str).apply(len)
@@ -34,7 +34,7 @@ filtered_df = df[df['combined_column_len'] <= 360]
 print(f'lenght of the filtered dataset: {len(filtered_df)}')
 print(f'length of the original dataset: {len(df)}')
 print(f'rows dropped: {len(df) - len(filtered_df)}')
-print(f'maximum char lenght in the new dataset is : {filtered_df['combined_column_len'].max()}')
+print(f"maximum char lenght in the new dataset is : {filtered_df['combined_column_len'].max()}")
 filtered_df = filtered_df.reset_index(drop=True)
 print(filtered_df.head())
 
