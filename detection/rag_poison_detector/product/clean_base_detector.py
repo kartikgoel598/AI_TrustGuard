@@ -1,14 +1,15 @@
 import numpy as np
 import networkx as nx
+from sentence_transformers import SentenceTransformer
 
 from detection.base import Detector, LayerResult, ValidationError
-from detection.rag_poison_detector.embedder import DocumentEmbedder
 
+EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
 K_NEIGHBORS = 10
 PRUNE_ALPHA = 2.5
 PRUNE_SAMPLE_RATIO = 0.5
 PRUNE_METHOD = "percentile"
-PRUNE_PERCENTILE = 95
+PRUNE_PERCENTILE = 97
 MIN_CLIQUE_SIZE = 3
 MAX_CLIQUE_SIZE = 11
 PREFILTER_DENSITY_THRESHOLD = 1.00
@@ -16,9 +17,12 @@ PREFILTER_DENSITY_THRESHOLD = 1.00
 
 class CleanBaseDetector(Detector):
     def __init__(self, device="cpu", prune_method=PRUNE_METHOD, prune_percentile=PRUNE_PERCENTILE):
-        self.embedder = DocumentEmbedder(device=device)
+        self.model = SentenceTransformer(EMBEDDING_MODEL_NAME, device=device)
         self.prune_method = prune_method
         self.prune_percentile = prune_percentile
+
+    def embed(self, documents):
+        return self.model.encode(documents, convert_to_numpy=True, normalize_embeddings=True)
 
     def validate(self, input_data):
         if "documents" not in input_data:
@@ -116,7 +120,7 @@ class CleanBaseDetector(Detector):
         documents = input_data["documents"]
         n = len(documents)
 
-        embeddings = self.embedder.embed(documents)
+        embeddings = self.embed(documents)
 
         G = self.build_knn_graph(embeddings)
         G = self.prune_graph(G)
