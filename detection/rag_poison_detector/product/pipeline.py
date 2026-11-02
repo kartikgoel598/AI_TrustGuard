@@ -9,7 +9,6 @@ from detection.rag_poison_detector.product.rag_extractor import RagActivationExt
 
 BASELINE_MODEL = "smollm2_360m_benign_full-rank"
 
-# from the collection size test: CleanBase recall was 0.25 at 20 documents and 0.6 or more from 50 up
 MIN_CLEANBASE_DOCS = 50
 
 BOTH = "high_confidence"
