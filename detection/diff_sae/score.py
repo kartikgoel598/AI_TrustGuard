@@ -28,7 +28,7 @@ def score_heldout(device):
         per_layer[layer] = top
         print(f"OR-logic top-{TOP_K}: {fmt(or_metrics[layer])}")
 
-        # cross-layer OR needs every layer's rows in the same order
+      
         if ref_labels is None:
             ref_labels, all_flags = labels, flags
         elif labels != ref_labels:
