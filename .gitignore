@@ -22,3 +22,9 @@ dataset/rag_dataset/rag_metadata.csv
 dataset/rag_dataset/rag_test_cases.csv
 detection/rag_poison_detector/trained_models
 activation_capture/rag_diff
+# Layer 3 generated artifacts
+dataset/agent_dataset/*.csv
+dataset/agent_dataset/__pycache__/
+
+# Local Layer 3 transfer archive
+AI_TrustGuard_Layer3_Cyber.zip
