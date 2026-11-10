@@ -27,32 +27,54 @@ tool_calls = []
 
 @tool
 def query_database(table: str, columns: list, limit: int) -> str:
+    """Read rows from a database table.
+
+    Args:
+        table: Name of the table to read from.
+        columns: List of column names to return.
+        limit: Maximum number of rows to return.
+    """
     tool_calls.append(("query_database", {"table": table, "columns": columns, "limit": limit}))
     return f"Returned {min(int(limit), 10)} rows from {table} with columns {columns}."
 
 
 @tool
 def update_record(table: str, record_id: str, fields: dict) -> str:
+    """Update a record in a database table.
+
+    Args:
+        table: Name of the table.
+        record_id: ID of the record to update, or ALL.
+        fields: Dictionary of field names and new values.
+    """
     tool_calls.append(("update_record", {"table": table, "record_id": record_id, "fields": fields}))
     return f"Updated record {record_id} in {table}."
 
 
 @tool
 def delete_record(table: str, record_id: str) -> str:
+    """Delete a record from a database table.
+
+    Args:
+        table: Name of the table.
+        record_id: ID of the record to delete, or ALL.
+    """
     tool_calls.append(("delete_record", {"table": table, "record_id": record_id}))
     return f"Deleted record {record_id} from {table}."
 
 
 @tool
 def export_records(table: str, columns: list, limit: int, destination: str) -> str:
+    """Export rows from a database table to a file.
+
+    Args:
+        table: Name of the table.
+        columns: List of column names to export.
+        limit: Maximum number of rows to export.
+        destination: File name to export to.
+    """
     tool_calls.append(("export_records", {"table": table, "columns": columns, "limit": limit, "destination": destination}))
     return f"Exported {limit} rows from {table} to {destination}."
-
-
-def clean_note(note):
-    note = re.sub(r"^An untrusted (tool hint|note|instruction) (says|asks|redirects)", r"Note: \2", note)
-    return note.replace("untrusted ", "")
-
 
 def build_prompt(row, note):
     prompt = f"User request: {row['user_request']}\nYour plan: {row['stated_plan']}"
@@ -63,10 +85,10 @@ def build_prompt(row, note):
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--cases", type=Path, default=Path("dataset/agent_dataset/agent_test_cases.csv"))
-    p.add_argument("--template", type=Path, default=Path("dataset/agent_dataset/agent_run_results_template.csv"))
-    p.add_argument("--results-output", type=Path, default=Path("dataset/agent_dataset/agent_run_results.csv"))
-    p.add_argument("--hidden-output", type=Path, default=Path("activation_capture/agent/agent_hidden_states.pt"))
+    p.add_argument("--cases", type=Path, default=Path("dataset/agent_dataset/dataset/agent_test_cases.csv"))
+    p.add_argument("--template", type=Path, default=Path("dataset/agent_dataset/dataset/agent_run_results_template.csv"))
+    p.add_argument("--results-output", type=Path, default=Path("dataset/agent_dataset/dataset/agent_test_run_results.csv"))
+    p.add_argument("--hidden-output", type=Path, default=Path("activation_capture/agent/agent_test_hidden_states.pt"))
     p.add_argument("--limit", type=int, default=0)
     p.add_argument("--no-fix-notes", action="store_true")
     p.add_argument("--seed", type=int, default=42)
