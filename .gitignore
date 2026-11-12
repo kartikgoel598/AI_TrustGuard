@@ -3,27 +3,36 @@
 .env
 __pycache__/
 *.py[cod]
-
+ 
 # Models and training artifacts
-wandb/
 models/
+wandb/
 *.pt
+detection/*/trained_models*
 detection/diff_sae/trained_models*/
 detection/rag_poison_detector/**/trained_models/
-
+ 
 # Generated datasets
-dataset/benignin_dataset/*.csv
 dataset/trigger_dataset/*.csv
+dataset/benignin_dataset/*.csv
 dataset/rag_dataset/*.csv
-dataset/agent_dataset/*.csv
-
+dataset/agent_dataset/dataset/agent_*_results.csv
+dataset/agent_dataset/dataset/agent_*_summary.csv
+dataset/agent_dataset/dataset/*.csv
+dataset/agent_dataset/**/*.csv
+ 
 # Generated activation data
 activation_capture/captured_data/
 activation_capture/diff_data/
 activation_capture/rag_diff/
-
+activation_capture/agent/
+ 
 # Generated inference results
 inference/*_results.json
-
+ 
 # Local files
 AI_TrustGuard_Layer3_Cyber.zip
+__pycache__/
+*.py[cod]
+ 
+ 

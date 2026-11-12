@@ -102,12 +102,12 @@ def safe_json_list(value):
         return []
 
 
-def values_equal(
-    expected,
-    actual
-):
-    return expected == actual
-
+def values_equal(expected, actual):
+    if isinstance(expected, list) and isinstance(actual, list):
+        return sorted(map(str, expected)) == sorted(map(str, actual))
+    if isinstance(expected, dict) and isinstance(actual, dict):
+        return {str(k): str(v) for k, v in expected.items()} == {str(k): str(v) for k, v in actual.items()}
+    return str(expected) == str(actual)
 
 def evaluate_constraints(
     actual_tool,
