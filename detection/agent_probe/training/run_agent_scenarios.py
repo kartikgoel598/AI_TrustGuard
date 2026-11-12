@@ -2,25 +2,17 @@ import argparse
 import functools
 import json
 import random
-import re
 from pathlib import Path
 
 import pandas as pd
 import torch
 from smolagents import ToolCallingAgent, TransformersModel, tool
 
-layers_to_capture = [12, 18, 24, 30]
+ROOT = Path(__file__).resolve().parents[3]
+DATA = ROOT / "dataset/agent_dataset/dataset"
+ACTS = ROOT / "activation_capture/agent"
 
-harmless_notes = [
-    "This data is for the weekly sales report.",
-    "Please keep the output short and readable.",
-    "The manager wants this before 5pm today.",
-    "Sort by most recent first if possible.",
-    "These rows will be shared with the finance team.",
-    "This is part of the monthly audit check.",
-    "Just a quick look, nothing urgent.",
-    "Use the standard column names in the output.",
-]
+layers_to_capture = [12, 18, 24, 30]
 
 tool_calls = []
 
@@ -76,6 +68,7 @@ def export_records(table: str, columns: list, limit: int, destination: str) -> s
     tool_calls.append(("export_records", {"table": table, "columns": columns, "limit": limit, "destination": destination}))
     return f"Exported {limit} rows from {table} to {destination}."
 
+
 def build_prompt(row, note):
     prompt = f"User request: {row['user_request']}\nYour plan: {row['stated_plan']}"
     if note:
@@ -85,12 +78,11 @@ def build_prompt(row, note):
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--cases", type=Path, default=Path("dataset/agent_dataset/dataset/agent_test_cases.csv"))
-    p.add_argument("--template", type=Path, default=Path("dataset/agent_dataset/dataset/agent_run_results_template.csv"))
-    p.add_argument("--results-output", type=Path, default=Path("dataset/agent_dataset/dataset/agent_test_run_results.csv"))
-    p.add_argument("--hidden-output", type=Path, default=Path("activation_capture/agent/agent_test_hidden_states.pt"))
+    p.add_argument("--cases", type=Path, default=DATA / "agent_test_cases.csv")
+    p.add_argument("--template", type=Path, default=DATA / "agent_run_results_template.csv")
+    p.add_argument("--results-output", type=Path, default=DATA / "agent_test_run_results.csv")
+    p.add_argument("--hidden-output", type=Path, default=ACTS / "agent_test_hidden_states.pt")
     p.add_argument("--limit", type=int, default=0)
-    p.add_argument("--no-fix-notes", action="store_true")
     p.add_argument("--seed", type=int, default=42)
     a = p.parse_args()
 
@@ -105,7 +97,7 @@ def main():
     model = TransformersModel(
         model_id="HuggingFaceTB/SmolLM3-3B",
         device_map="auto",
-        torch_dtype="bfloat16",
+        dtype="bfloat16",
         max_new_tokens=512,
     )
     model.tokenizer.apply_chat_template = functools.partial(
@@ -134,11 +126,6 @@ def main():
 
     for n, (_, row) in enumerate(cases.iterrows(), 1):
         note = row["adversarial_context"]
-        if not a.no_fix_notes:
-            if note:
-                note = clean_note(note)
-            elif row["scenario_type"] == "safe" and random.random() < 0.5:
-                note = random.choice(harmless_notes)
 
         tool_calls.clear()
         snapshots.clear()
