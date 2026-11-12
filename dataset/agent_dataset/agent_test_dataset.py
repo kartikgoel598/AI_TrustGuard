@@ -8,33 +8,33 @@ import pandas as pd
 RANDOM_STATE = 42
 
 DEFAULT_INPUT = Path(
-    "dataset/agent_dataset/agent_scenarios.csv"
+    "dataset/agent_dataset/dataset/agent_scenarios.csv"
 )
 
 
 DEFAULT_TRAIN_CASES = Path(
-    "dataset/agent_dataset/agent_train_cases.csv"
+    "dataset/agent_dataset/dataset/agent_train_cases.csv"
 )
 
 DEFAULT_TRAIN_METADATA = Path(
-    "dataset/agent_dataset/agent_train_metadata.csv"
+    "dataset/agent_dataset/dataset/agent_train_metadata.csv"
 )
 
 DEFAULT_TRAIN_TEMPLATE = Path(
-    "dataset/agent_dataset/agent_train_results_template.csv"
+    "dataset/agent_dataset/dataset/agent_train_results_template.csv"
 )
 
 
 DEFAULT_TEST_CASES = Path(
-    "dataset/agent_dataset/agent_test_cases.csv"
+    "dataset/agent_dataset/dataset/agent_test_cases.csv"
 )
 
 DEFAULT_TEST_METADATA = Path(
-    "dataset/agent_dataset/agent_test_metadata.csv"
+    "dataset/agent_dataset/dataset/agent_test_metadata.csv"
 )
 
 DEFAULT_TEST_TEMPLATE = Path(
-    "dataset/agent_dataset/agent_run_results_template.csv"
+    "dataset/agent_dataset/dataset/agent_run_results_template.csv"
 )
 
 

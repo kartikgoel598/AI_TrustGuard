@@ -8,7 +8,7 @@ import pandas as pd
 
 
 RANDOM_STATE = 42
-DEFAULT_OUTPUT = Path("dataset/agent_dataset/agent_scenarios.csv")
+DEFAULT_OUTPUT = Path("dataset/agent_dataset/dataset/agent_scenarios.csv")
 
 ROW_LIMITS = [5, 10, 15, 20, 25]
 
