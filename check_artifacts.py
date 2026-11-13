@@ -16,9 +16,9 @@ REQUIRED = {
         "extraction_script/layer1_extraction.py",
     ],
     "Layer 2": [
-        "detection/rag_poison_detector/trained_models_rag_detector/raw_sae_layer14.pt",
-        "detection/rag_poison_detector/trained_models_rag_detector/raw_sae_layer26.pt",
-        "detection/rag_poison_detector/trained_models_rag_detector/activation_shift_config.pt",
+        "detection/rag_poison_detector/trained_models/raw_sae_layer14.pt",
+        "detection/rag_poison_detector/trained_models/raw_sae_layer26.pt",
+        "detection/rag_poison_detector/trained_models/activation_shift_config.pt",
     ],
     "Layer 3": [
         "detection/agent_probe/trained_models/layer3_probe.joblib",

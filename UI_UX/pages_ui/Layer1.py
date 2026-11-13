@@ -15,7 +15,7 @@ def render():
     )
 
     st.subheader("Step 1 - Run the extraction script on your model")
-    st.write("Download the script, run it on your own machine, and upload the JSON file it creates. Your model never leaves your machine.")
+    st.write("Download the script and run it from inside the AI_TrustGuard folder (it uses the project's probe prompts). Then upload the JSON file it creates. Only activations and outputs are uploaded, never the model.")
 
     script_path = Path(__file__).resolve().parents[2] / "extraction_script" / "layer1_extraction.py"
     with open(script_path, "rb") as script_file:
@@ -26,7 +26,7 @@ def render():
             mime="text/x-python",
             key="download_layer1_extraction",
         )
-    st.code("python layer1_extraction.py --model_path <your_model_folder> --architecture lora --output client_scan_export.json", language="bash")
+    st.code("python extraction_script/layer1_extraction.py --model_path <your_model_folder> --architecture lora --output client_scan_export.json", language="bash")
 
     st.subheader("Step 2 - Upload the result")
     uploaded_file = st.file_uploader("Upload client_scan_export.json", type=["json"], key="layer1_activation_upload")

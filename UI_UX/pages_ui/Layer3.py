@@ -57,12 +57,15 @@ def render():
 def show_result(result):
     if result["status"] == "Suspicious":
         st.error(f"Verdict: {result['status']}")
+    elif result["status"] == "Error":
+        st.warning(f"Verdict: {result['status']}")
     else:
         st.success(f"Verdict: {result['status']}")
     st.write(result["message"])
 
+    score = result["risk_score"]
     c1, c2, c3 = st.columns(3)
-    c1.metric("Probe score", f"{result['risk_score']:.2f}", help=f"Blocked at {result['threshold']} or above")
+    c1.metric("Probe score", f"{score:.2f}" if score is not None else "N/A", help=f"Blocked at {result['threshold']} or above")
     c2.metric("Tool the agent tried", result["attempted_tool"])
     c3.metric("Blocked", "Yes" if result["blocked"] else "No")
 

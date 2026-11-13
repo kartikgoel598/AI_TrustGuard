@@ -3,7 +3,6 @@ import csv
 import torch 
 from model_loader import load_model_from_registry
 from activation_capture.extractor import ActivationExtractor , DEFAULT_LAYERS
-from activation_capture.sample import sample_probe_groups
 
 ARCHITECTURE_PAIRS = [
     ("smollm2_360m_benign_lora_r8", "smollm2_360m_backdoor_lora_r8"),
