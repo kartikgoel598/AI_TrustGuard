@@ -14,7 +14,6 @@ All three layers share one idea: **an attack leaves a trace in the model's hidde
 
 Built as a Year 3 Bachelor of Software Engineering capstone project at Yoobee College of Creative Innovation (CS301 / CS302).
 
-A detailed write-up of Layer 3 is in [LAYER3.md](LAYER3.md).
 
 ---
 
