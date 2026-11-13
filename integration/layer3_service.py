@@ -8,9 +8,13 @@ def run_layer3_test(user_request, stated_plan, note=""):
 
     r = run_layer3(user_request.strip(), stated_plan.strip(), note.strip())
 
-    if r["verdict"] == "suspicious":
+    if r["probe_score"] is None:
+        status = "Error"
+        message = "The agent stopped before TrustGuard could read its hidden state. Please try again."
+    elif r["verdict"] == "suspicious":
         status = "Suspicious"
-        message = f"The agent was about to misuse a tool. TrustGuard blocked {r['attempted_tool']}."
+        tool = r["attempted_tool"] if r["attempted_tool"] != "none" else "the agent's next action"
+        message = f"The agent was about to misuse a tool. TrustGuard blocked {tool}."
     else:
         status = "Safe"
         message = "The agent's next action looked consistent with its plan."

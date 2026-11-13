@@ -97,7 +97,7 @@ def main():
     model = TransformersModel(
         model_id="HuggingFaceTB/SmolLM3-3B",
         device_map="auto",
-        dtype="bfloat16",
+        torch_dtype="bfloat16",
         max_new_tokens=512,
     )
     model.tokenizer.apply_chat_template = functools.partial(

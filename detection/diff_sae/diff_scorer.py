@@ -52,7 +52,7 @@ class DiffSAEScorer(Detector):
         values = {}
         for layer, feat_idx in FEATURES.items():
             model, scale = self.saes[layer]
-            x = (input_data[f"layer_{layer}"].float() * scale).unsqueeze(0)
+            x = (input_data[f"layer_{layer}"].float().to(self.device) * scale).unsqueeze(0)
             values[layer] = encode(model, x, self.device)[0, feat_idx].item()
         return values
 

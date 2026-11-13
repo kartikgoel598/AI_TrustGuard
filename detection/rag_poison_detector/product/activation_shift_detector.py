@@ -19,7 +19,10 @@ def load_sae(layer_idx, device):
 
 def encode(model, mean, scale, x, device):
     with torch.no_grad():
-        return model.encode(((x - mean) * scale).to(device)).cpu()
+        x = x.to(device)
+        mean = mean.to(device)
+        scale = scale.to(device) if torch.is_tensor(scale) else scale
+        return model.encode((x - mean) * scale).cpu()
 
 
 def flag_with(feats_by_layer, picks):
