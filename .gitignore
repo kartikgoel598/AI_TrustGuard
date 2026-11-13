@@ -3,7 +3,7 @@
 .env
 __pycache__/
 *.py[cod]
-
+ 
 # Models and training artifacts
 models/
 wandb/
@@ -11,7 +11,7 @@ wandb/
 detection/*/trained_models*
 detection/diff_sae/trained_models*/
 detection/rag_poison_detector/**/trained_models/
-
+ 
 # Generated datasets
 dataset/agent_dataset/dataset/agent_*_results.csv
 dataset/agent_dataset/dataset/agent_*_summary.csv
