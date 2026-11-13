@@ -16,10 +16,11 @@ PREFILTER_DENSITY_THRESHOLD = 1.00
 
 
 class CleanBaseDetector(Detector):
-    def __init__(self, device="cpu", prune_method=PRUNE_METHOD, prune_percentile=PRUNE_PERCENTILE):
+    def __init__(self, device="cpu", prune_method=PRUNE_METHOD, prune_percentile=PRUNE_PERCENTILE, seed=None):
         self.model = SentenceTransformer(EMBEDDING_MODEL_NAME, device=device)
         self.prune_method = prune_method
         self.prune_percentile = prune_percentile
+        self.seed = seed
 
     def embed(self, documents):
         return self.model.encode(documents, convert_to_numpy=True, normalize_embeddings=True)
@@ -66,7 +67,9 @@ class CleanBaseDetector(Detector):
             return G
 
         sample_size = max(1, int(len(edge_weights) * PRUNE_SAMPLE_RATIO))
-        sample = np.random.choice(edge_weights, size=sample_size, replace=False)
+        seed = getattr(self, "seed", None)
+        rng = np.random.default_rng(seed) if seed is not None else np.random
+        sample = rng.choice(edge_weights, size=sample_size, replace=False)
 
         if self.prune_method == "percentile":
             threshold = np.percentile(sample, self.prune_percentile)

@@ -1,154 +1,88 @@
-import os
+
 import torch
- 
+
 from detection.base import Detector, LayerResult, ValidationError
-from detection.diff_sae.model import DiffSAE
- 
-MODEL_DIR = "detection/diff_sae/trained_models_pooled"
- 
-FEATURE_CONFIG = [
-    {"layer": 14, "feature_idx": 161, "threshold": None},
-    {"layer": 26, "feature_idx": 651, "threshold": None},
-]
- 
- 
+from detection.diff_sae.data import HIDDEN_DIM, encode, load_sae
+
+FEATURES = {14: 161, 26: 651}
+
+
 ARCH_THRESHOLDS = {
     "lora_r8": {14: 1.6069, 26: 0.1646},
     "lora_r32": {14: 2.1907, 26: 0.3424},
     "full-rank": {14: 0.2421, 26: 3.7630},
 }
- 
+
 CONSERVATIVE_THRESHOLDS = {14: 2.1907, 26: 3.7630}
- 
- 
-CONSERVATIVE_THRESHOLDS = {14: 2.1907, 26: 3.7630}
- 
- 
+
+
+DECLARED_MODES = {
+    "lora": ("declared_lora", "lora_r8"),
+    "full-rank": ("declared_full-rank", "full-rank"),
+    "qlora": ("declared_qlora_using_lora_thresholds_unvalidated", "lora_r8"),
+}
+
+
 class DiffSAEScorer(Detector):
-    def __init__(self, device="cpu"):
+    def __init__(self, device="cpu", thresholds=None):
         self.device = device
-        self.models = {}
-        self.scale_factors = {}
- 
-        for cfg in FEATURE_CONFIG:
-            layer = cfg["layer"]
-            checkpoint = torch.load(os.path.join(MODEL_DIR, f"diff_sae_layer{layer}.pt"))
-            model = DiffSAE(input_dim=960, expansion_factor=4).to(device)
-            model.load_state_dict(checkpoint["state_dict"])
-            model.eval()
- 
-            self.models[layer] = model
-            self.scale_factors[layer] = checkpoint["scale_factor"]
- 
+        self.conservative = dict(thresholds or CONSERVATIVE_THRESHOLDS)
+        self.saes = {layer: load_sae(layer, "pooled", device) for layer in FEATURES}  
+
     def set_thresholds(self, thresholds_by_layer):
-        global CONSERVATIVE_THRESHOLDS
-        CONSERVATIVE_THRESHOLDS = thresholds_by_layer
- 
+        self.conservative = dict(thresholds_by_layer)
+
     def validate(self, input_data):
-        for cfg in FEATURE_CONFIG:
-            layer_key = f"layer_{cfg['layer']}"
-            if layer_key not in input_data:
-                return ValidationError(layer="layer1_diff_sae", message=f"missing {layer_key}", field=layer_key)
- 
-            tensor = input_data[layer_key]
-            if not isinstance(tensor, torch.Tensor):
-                return ValidationError(layer="layer1_diff_sae", message=f"{layer_key} is not a tensor", field=layer_key)
- 
-            if tensor.shape[-1] != 960:
-                return ValidationError(layer="layer1_diff_sae", message=f"{layer_key} has wrong shape {tensor.shape}", field=layer_key)
- 
+        for layer in FEATURES:
+            key = f"layer_{layer}"
+            tensor = input_data.get(key)
+            if tensor is None:
+                msg = f"missing {key}"
+            elif not isinstance(tensor, torch.Tensor):
+                msg = f"{key} is not a tensor"
+            elif tensor.shape[-1] != HIDDEN_DIM:
+                msg = f"{key} has wrong shape {tensor.shape}"
+            else:
+                continue
+            return ValidationError(layer="layer1_diff_sae", message=msg, field=key)
         return None
- 
-    def _get_feature_activations(self, input_data):
-        activations = {}
-        for cfg in FEATURE_CONFIG:
-            layer = cfg["layer"]
-            feat_idx = cfg["feature_idx"]
- 
-            raw_vec = input_data[f"layer_{layer}"].float()
-            scaled_vec = raw_vec * self.scale_factors[layer]
- 
-            with torch.no_grad():
-                features = self.models[layer].encode(scaled_vec.unsqueeze(0).to(self.device))
- 
-            activations[layer] = features[0, feat_idx].item()
- 
-        return activations
- 
-    def _check_against_thresholds(self, activations, thresholds):
-        flagged_any = False
-        detail = {}
- 
-        for cfg in FEATURE_CONFIG:
-            layer = cfg["layer"]
-            feat_idx = cfg["feature_idx"]
-            activation_val = activations[layer]
-            threshold = thresholds[layer]
-            fired = activation_val > threshold
- 
-            detail[f"layer_{layer}_feature_{feat_idx}"] = {
-                "activation": activation_val,
-                "threshold": threshold,
-                "fired": fired,
-            }
- 
-            if fired:
-                flagged_any = True
- 
-        return flagged_any, detail
- 
+
+    def _feature_values(self, input_data):
+        """Scale each diff vector exactly like training data, encode, read the one feature we care about."""
+        values = {}
+        for layer, feat_idx in FEATURES.items():
+            model, scale = self.saes[layer]
+            x = (input_data[f"layer_{layer}"].float().to(self.device) * scale).unsqueeze(0)
+            values[layer] = encode(model, x, self.device)[0, feat_idx].item()
+        return values
+
+    @staticmethod
+    def _check(values, thresholds):
+        """Flag if ANY feature is above its threshold."""
+        detail = {f"layer_{layer}_feature_{feat}": {"activation": values[layer], "threshold": thresholds[layer],
+                                                   "fired": values[layer] > thresholds[layer]}
+                  for layer, feat in FEATURES.items()}
+        return any(d["fired"] for d in detail.values()), detail
+
     def run(self, input_data):
         error = self.validate(input_data)
         if error is not None:
             return LayerResult(risk_score=0.0, status="error", detail={"error": error.message})
- 
-        activations = self._get_feature_activations(input_data)
- 
-        declared_arch = input_data.get("declared_architecture", "unknown")
- 
-        if declared_arch == "lora":
-            flagged, detail = self._check_against_thresholds(activations, ARCH_THRESHOLDS["lora_r8"])
-            status = "flagged" if flagged else "clean"
-            return LayerResult(
-                risk_score=1.0 if flagged else 0.0,
-                status=status,
-                detail={"mode": "declared_lora", "result": detail},
-            )
- 
-        if declared_arch == "full-rank":
-            flagged, detail = self._check_against_thresholds(activations, ARCH_THRESHOLDS["full-rank"])
-            status = "flagged" if flagged else "clean"
-            return LayerResult(
-                risk_score=1.0 if flagged else 0.0,
-                status=status,
-                detail={"mode": "declared_full-rank", "result": detail},
-            )
- 
-        if declared_arch == "qlora":
-            flagged, detail = self._check_against_thresholds(activations, ARCH_THRESHOLDS["lora_r8"])
-            status = "flagged" if flagged else "clean"
-            return LayerResult(
-                risk_score=1.0 if flagged else 0.0,
-                status=status,
-                detail={"mode": "declared_qlora_using_lora_thresholds_unvalidated", "result": detail},
-            )
- 
-        per_arch_results = {}
-        for arch_name, thresholds in ARCH_THRESHOLDS.items():
-            flagged, detail = self._check_against_thresholds(activations, thresholds)
-            per_arch_results[arch_name] = {"flagged": flagged, "detail": detail}
- 
-        conservative_flagged, conservative_detail = self._check_against_thresholds(activations, CONSERVATIVE_THRESHOLDS)
- 
-        status = "flagged" if conservative_flagged else "clean"
-        risk_score = 1.0 if conservative_flagged else 0.0
- 
-        return LayerResult(
-            risk_score=risk_score,
-            status=status,
-            detail={
-                "mode": "unknown_architecture_conservative",
-                "conservative_result": conservative_detail,
-                "per_architecture_breakdown": per_arch_results,
-            },
-        )
+
+        values = self._feature_values(input_data)
+        declared = input_data.get("declared_architecture", "unknown")
+
+        if declared in DECLARED_MODES:
+            mode, arch = DECLARED_MODES[declared]
+            flagged, detail = self._check(values, ARCH_THRESHOLDS[arch])
+            detail = {"mode": mode, "result": detail}
+        else:
+            flagged, conservative_detail = self._check(values, self.conservative)
+            breakdown = {arch: dict(zip(("flagged", "detail"), self._check(values, t)))
+                         for arch, t in ARCH_THRESHOLDS.items()}
+            detail = {"mode": "unknown_architecture_conservative",
+                      "conservative_result": conservative_detail,
+                      "per_architecture_breakdown": breakdown}
+
+        return LayerResult(risk_score=1.0 if flagged else 0.0,
+                           status="flagged" if flagged else "clean", detail=detail)

@@ -10,7 +10,7 @@ HIDDEN_DIM = 960
 
 
 def load_sae(layer_idx, device):
-    checkpoint = torch.load(os.path.join(MODEL_DIR, f"raw_sae_layer{layer_idx}.pt"))
+    checkpoint = torch.load(os.path.join(MODEL_DIR, f"raw_sae_layer{layer_idx}.pt"), map_location=device)
     model = DiffSAE(input_dim=HIDDEN_DIM, expansion_factor=4).to(device)
     model.load_state_dict(checkpoint["state_dict"])
     model.eval()
@@ -19,7 +19,10 @@ def load_sae(layer_idx, device):
 
 def encode(model, mean, scale, x, device):
     with torch.no_grad():
-        return model.encode(((x - mean) * scale).to(device)).cpu()
+        x = x.to(device)
+        mean = mean.to(device)
+        scale = scale.to(device) if torch.is_tensor(scale) else scale
+        return model.encode((x - mean) * scale).cpu()
 
 
 def flag_with(feats_by_layer, picks):
@@ -33,7 +36,7 @@ def flag_with(feats_by_layer, picks):
 class ActivationShiftDetector(Detector):
     def __init__(self, device="cpu"):
         self.device = device
-        self.picks = torch.load(CONFIG_PATH)["picks"]
+        self.picks = torch.load(CONFIG_PATH, map_location="cpu")["picks"]
         self.layers = sorted(set(p[0] for p in self.picks))
         self.models = {layer: load_sae(layer, device) for layer in self.layers}
 

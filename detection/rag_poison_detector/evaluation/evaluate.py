@@ -101,8 +101,6 @@ def make_subset(types, base_ids, n, share, rng, min_poison=0):
     return np.array(sorted(idx))
 
 
-# ---------- modes ----------
-
 def mode_heldout(device):
     records, originals, _ = load_data(device)
     test_ids = get_test_topics(records)

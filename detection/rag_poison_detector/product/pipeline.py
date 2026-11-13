@@ -9,8 +9,8 @@ from detection.rag_poison_detector.product.rag_extractor import RagActivationExt
 
 BASELINE_MODEL = "smollm2_360m_benign_full-rank"
 
-# from the collection size test: CleanBase recall was 0.25 at 20 documents and 0.6 or more from 50 up
 MIN_CLEANBASE_DOCS = 50
+CLEANBASE_SEED = 42
 
 BOTH = "high_confidence"
 ONE = "needs_review"
@@ -32,7 +32,7 @@ def extract_document_activations(documents, layers, device):
 
 
 def run_clean_base(documents, device):
-    detector = CleanBaseDetector(device=device)
+    detector = CleanBaseDetector(device=device, seed=CLEANBASE_SEED)
     result = detector.run({"documents": documents})
 
     flags = np.zeros(len(documents), dtype=bool)

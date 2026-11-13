@@ -24,7 +24,6 @@ def contains_target(value):
 def normalize_sql(value):
     text = normalize_text(value)
 
-    # Keep the exact SQL comparison simple but less sensitive to formatting.
     text = text.rstrip(";")
     text = re.sub(r"\s+", " ", text)
 
