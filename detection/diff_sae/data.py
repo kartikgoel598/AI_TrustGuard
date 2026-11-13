@@ -51,7 +51,7 @@ def compute_scale_factor(x):
 
 
 def load_sae(layer_idx, variant, device):
-    ckpt = torch.load(os.path.join(MODEL_DIRS[variant], f"diff_sae_layer{layer_idx}.pt"))
+    ckpt = torch.load(os.path.join(MODEL_DIRS[variant], f"diff_sae_layer{layer_idx}.pt"), map_location=device)
     model = DiffSAE(input_dim=HIDDEN_DIM, expansion_factor=4).to(device)
     model.load_state_dict(ckpt["state_dict"])
     model.eval()
