@@ -7,15 +7,23 @@ from components import page_header, process_steps
 from state import save_layer_result
 from integration.layer1_service import run_layer1_test
 
+TRAINING_METHODS = {
+    "Same as in the uploaded file": None,
+    "LoRA": "lora",
+    "QLoRA": "qlora",
+    "Full Rank": "full-rank",
+    "I Don't Know": "unknown",
+}
+
 
 def render():
-    page_header(
-        "Layer 1 - Model Security",
-        "Detect hidden model backdoors using activation-based analysis."
-    )
+    page_header("Layer 1 - Model Security", "Detect hidden model backdoors using activation-based analysis.")
 
     st.subheader("Step 1 - Run the extraction script on your model")
-    st.write("Download the script and run it from inside the AI_TrustGuard folder (it uses the project's probe prompts). Then upload the JSON file it creates. Only activations and outputs are uploaded, never the model.")
+    st.write(
+        "Download the script and run it from inside the AI_TrustGuard folder (it uses the project's probe prompts). "
+        "Then upload the JSON file it creates. Only activations and outputs are uploaded, never the model."
+    )
 
     script_path = Path(__file__).resolve().parents[2] / "extraction_script" / "layer1_extraction.py"
     with open(script_path, "rb") as script_file:
@@ -26,9 +34,24 @@ def render():
             mime="text/x-python",
             key="download_layer1_extraction",
         )
-    st.code("python extraction_script/layer1_extraction.py --model_path <your_model_folder> --architecture lora --output client_scan_export.json", language="bash")
+    st.code(
+        "python extraction_script/layer1_extraction.py --model_path your_model_folder --architecture lora --output client_scan_export.json",
+        language="bash",
+    )
 
-    st.subheader("Step 2 - Upload the result")
+    st.subheader("Step 2 - Select your model training method")
+    training_method = st.selectbox(
+        "How was your model fine-tuned?",
+        list(TRAINING_METHODS),
+        help="By default the method you gave the extraction script is used. Change it only if that was wrong. If you are not sure, choose I Don't Know.",
+        key="layer1_training_method",
+    )
+    declared_architecture = TRAINING_METHODS[training_method]
+
+    if declared_architecture == "unknown":
+        st.info("Training method is unknown. Layer 1 will use conservative detection thresholds.")
+
+    st.subheader("Step 3 - Upload the result")
     uploaded_file = st.file_uploader("Upload client_scan_export.json", type=["json"], key="layer1_activation_upload")
 
     if st.button("Run Layer 1 Test", type="primary", key="run_layer1"):
@@ -37,20 +60,24 @@ def render():
         else:
             try:
                 with st.spinner("Comparing your model against our clean baseline..."):
-                    result = run_layer1_test(uploaded_file)
+                    result = run_layer1_test(uploaded_file, declared_architecture=declared_architecture)
+                result["training_method"] = training_method
                 save_layer_result("layer1", result)
                 show_result(result)
             except Exception as error:
                 st.error(f"Layer 1 failed: {error}")
 
     st.subheader("Process Flow")
-    process_steps(["Run extraction locally", "Upload activations", "Run detection", "View result"])
+    process_steps(["Run extraction locally", "Select training method", "Upload activations", "Run detection", "View result"])
 
 
 def show_result(result):
     if not result["backend_connected"]:
         st.warning(result["message"])
         return
+
+    used = result.get("declared_architecture") or "unknown"
+    st.caption(f"Training method used for detection: {used}")
 
     if result["status"] == "Confirmed Backdoor":
         st.error(f"Verdict: {result['status']}")

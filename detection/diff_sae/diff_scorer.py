@@ -68,21 +68,24 @@ class DiffSAEScorer(Detector):
         error = self.validate(input_data)
         if error is not None:
             return LayerResult(risk_score=0.0, status="error", detail={"error": error.message})
-
         values = self._feature_values(input_data)
         declared = input_data.get("declared_architecture", "unknown")
+        
 
         if declared in DECLARED_MODES:
             mode, arch = DECLARED_MODES[declared]
             flagged, detail = self._check(values, ARCH_THRESHOLDS[arch])
             detail = {"mode": mode, "result": detail}
+
         else:
+    
             flagged, conservative_detail = self._check(values, self.conservative)
             breakdown = {arch: dict(zip(("flagged", "detail"), self._check(values, t)))
                          for arch, t in ARCH_THRESHOLDS.items()}
             detail = {"mode": "unknown_architecture_conservative",
                       "conservative_result": conservative_detail,
                       "per_architecture_breakdown": breakdown}
+            
 
         return LayerResult(risk_score=1.0 if flagged else 0.0,
                            status="flagged" if flagged else "clean", detail=detail)
