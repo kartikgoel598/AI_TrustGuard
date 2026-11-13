@@ -211,7 +211,7 @@ It should print `CUDA available: True`. If it prints `False`, PyTorch was instal
 
 Trained models and other large files are **too big for GitHub**, so they are distributed separately as one zip.
 
-**Artifacts download:** `[ADD GOOGLE DRIVE LINK HERE]`
+**Artifacts download:** 
 
 ### Step 1: Unzip into the project root
 
