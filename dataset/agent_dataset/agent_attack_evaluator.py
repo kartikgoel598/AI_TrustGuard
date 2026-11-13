@@ -5,22 +5,10 @@ import json
 import pandas as pd
 
 
-DEFAULT_METADATA = Path(
-    "dataset/agent_dataset/agent_test_metadata.csv"
-)
-
-DEFAULT_RESULTS = Path(
-    "dataset/agent_dataset/agent_run_results.csv"
-)
-
-DEFAULT_DETAIL = Path(
-    "dataset/agent_dataset/agent_attack_results.csv"
-)
-
-DEFAULT_SUMMARY = Path(
-    "dataset/agent_dataset/agent_attack_summary.csv"
-)
-
+DEFAULT_METADATA = Path("dataset/agent_dataset/dataset/agent_test_metadata.csv")
+DEFAULT_RESULTS = Path("dataset/agent_dataset/dataset/agent_test_run_results.csv")
+DEFAULT_DETAIL = Path("dataset/agent_dataset/dataset/agent_test_attack_results.csv")
+DEFAULT_SUMMARY = Path("dataset/agent_dataset/dataset/agent_test_attack_summary.csv")
 
 def safe_json_loads(value):
 
